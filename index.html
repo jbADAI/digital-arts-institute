@@ -7,7 +7,7 @@
   <meta name="description" content="Practice-led infrastructure for the art of now.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;600&family=Syne:wght@400;500;600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
     :root {
@@ -86,14 +86,14 @@
     .handles a:hover{color:var(--mint);}
 
     /* ARTEFACTS */
-    #view-artefacts{padding:7rem 3.2rem 3.2rem;display:flex;flex-direction:column;}
+    #view-artefacts{padding:9rem 3.2rem 3.2rem;display:flex;flex-direction:column;align-items:center;background:var(--bg);}
     .artefacts-intro{max-width:520px;margin-bottom:3rem;}
     .artefacts-intro h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,4vw,3rem);
       font-weight:400;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.8rem;}
     .artefacts-intro p{font-family:'Syne',sans-serif;font-size:0.72rem;color:var(--muted);line-height:1.9;}
-    .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--faint);}
-    .tool-card{background:var(--bg);padding:2rem;cursor:pointer;transition:background 0.2s;position:relative;overflow:hidden;}
-    .tool-card:hover{background:#FAFAFA;}
+    .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;max-width:960px;width:100%;}
+    .tool-card{background:var(--bg);padding:2rem;cursor:pointer;transition:background 0.3s,transform 0.35s cubic-bezier(0.16,1,0.3,1),box-shadow 0.35s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;border:1px solid var(--rule);}
+    .tool-card:hover{background:#FAFAFA;transform:scale(1.03);box-shadow:0 8px 30px rgba(0,0,0,0.06);}
     .tool-card:hover .tool-arrow{transform:translate(3px,-3px);}
     .tool-number{font-family:'Syne Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;color:var(--faint);margin-bottom:1.2rem;}
     .tool-name{font-family:'Instrument Serif',Georgia,serif;font-size:1.5rem;font-weight:400;
@@ -104,57 +104,81 @@
     .tool-flow span{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.08em;color:#AAAAAA;text-transform:uppercase;}
     .tool-flow .arr{color:var(--mint);}
 
-    /* TRANSCRIBER */
-    #view-transcriber{padding:7rem 3.2rem 3.2rem;display:flex;flex-direction:column;}
-    .tool-header{max-width:600px;margin-bottom:2.5rem;}
-    .tool-header h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,4vw,3rem);
-      font-weight:400;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.6rem;}
-    .tool-header p{font-family:'Syne',sans-serif;font-size:0.7rem;color:var(--muted);line-height:1.9;}
-    .tool-pipeline{display:flex;align-items:center;gap:0.6rem;margin-bottom:2.5rem;flex-wrap:wrap;}
-    .pipeline-step{font-family:'Syne Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;
-      color:var(--muted);text-transform:uppercase;border:1px solid var(--faint);padding:0.3rem 0.7rem;}
-    .pipeline-step.active-step{border-color:var(--mint);color:var(--mint);}
-    .pipeline-arrow{color:var(--mint);font-size:0.7rem;}
-    .config-section{margin-bottom:2rem;max-width:560px;}
-    .config-label{font-family:'Syne Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;
-      color:var(--muted);text-transform:uppercase;margin-bottom:0.8rem;}
-    .config-row{display:flex;align-items:center;gap:1rem;margin-bottom:0.6rem;}
-    .config-row label{font-family:'Syne',sans-serif;font-size:0.65rem;color:var(--muted);width:160px;flex-shrink:0;}
-    .config-row input{flex:1;background:white;border:1px solid var(--faint);color:var(--ink);
-      padding:0.5rem 0.75rem;font-family:'Syne Mono',monospace;font-size:0.65rem;outline:none;transition:border-color 0.2s;}
-    .config-row input:focus{border-color:var(--mint);}
-    .config-row input::placeholder{color:#CCCCCC;}
-    .drop-zone{max-width:560px;height:180px;border:1px dashed var(--faint);
+    /* TRANSCRIBER v2 */
+    #view-transcriber{padding:7rem 1.5rem 3rem;display:flex;flex-direction:column;align-items:center;background:#fff;}
+    .tc{width:100%;max-width:560px;}
+    .tc-eyebrow{font-family:'Syne Mono',monospace;font-size:0.55rem;letter-spacing:0.3em;
+      color:var(--mint);text-transform:uppercase;margin-bottom:0.75rem;text-align:center;
+      display:flex;align-items:center;justify-content:center;gap:0.6rem;}
+    .tc-eyebrow::before,.tc-eyebrow::after{content:'';display:block;width:20px;height:1px;background:var(--mint);}
+    .tc-title{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,4vw,3rem);
+      font-weight:400;letter-spacing:-0.02em;color:var(--ink);text-align:center;margin-bottom:0.5rem;}
+    .tc-subtitle{font-family:'Syne Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;
+      color:var(--muted);text-align:center;}
+    .tc-rule{width:100%;height:1px;background:var(--rule);margin:1.5rem 0;}
+    .tc-setup-row{display:flex;justify-content:flex-end;margin-bottom:1rem;}
+    .tc-btn{background:transparent;border:1px solid var(--faint);color:var(--muted);
+      padding:0.4rem 1rem;font-family:'Syne Mono',monospace;font-size:0.58rem;
+      letter-spacing:0.1em;cursor:pointer;transition:border-color 0.2s,color 0.2s;}
+    .tc-btn:hover,.tc-btn.tc-btn-active{border-color:var(--mint);color:var(--mint);}
+    .tc-setup-panel{background:#FAFAFA;border:1px solid var(--faint);
+      padding:1.2rem 1.4rem;margin-bottom:1.2rem;}
+    .tc-section-label{font-family:'Syne Mono',monospace;font-size:0.55rem;
+      letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;margin-bottom:0.9rem;}
+    .tc-field{margin-bottom:0.7rem;}
+    .tc-field-label{font-family:'Syne',sans-serif;font-size:0.62rem;color:var(--muted);margin-bottom:0.25rem;}
+    #view-transcriber input[type="password"],#view-transcriber input[type="text"],
+    #view-transcriber select{
+      background:var(--bg);border:1px solid var(--faint);color:var(--ink);
+      padding:0.5rem 0.75rem;font-family:'Syne Mono',monospace;font-size:0.65rem;
+      width:100%;outline:none;transition:border-color 0.2s;-webkit-appearance:none;appearance:none;}
+    #view-transcriber input:focus,#view-transcriber select:focus{border-color:var(--mint);}
+    #view-transcriber input::placeholder{color:var(--faint);}
+    #tc-submittedBy{max-width:180px;}
+    .tc-keys-status{font-family:'Syne Mono',monospace;font-size:0.58rem;margin-top:0.5rem;}
+    .tc-keys-ok{color:var(--mint);}.tc-keys-err{color:var(--muted);}
+    .tc-submitted-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.4rem;}
+    .tc-submitted-label{font-family:'Syne Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;
+      color:var(--mint);text-transform:uppercase;flex-shrink:0;width:110px;}
+    .tc-dropzone{width:100%;height:160px;border:1px dashed var(--faint);background:var(--bg);
       display:flex;flex-direction:column;align-items:center;justify-content:center;
-      cursor:pointer;transition:border-color 0.2s,background 0.2s;margin-bottom:2rem;background:white;}
-    .drop-zone:hover,.drop-zone.drag-over{border-color:var(--mint);background:rgba(122,255,156,0.02);}
-    .drop-icon{font-size:1.5rem;color:var(--faint);margin-bottom:0.6rem;}
-    .drop-text{font-family:'Syne',sans-serif;font-size:0.7rem;color:var(--muted);}
-    .drop-sub{font-family:'Syne Mono',monospace;font-size:0.58rem;color:#CCCCCC;margin-top:0.3rem;letter-spacing:0.08em;}
-    .progress-track{max-width:560px;display:flex;align-items:flex-start;gap:0;margin-bottom:2rem;}
-    .progress-step{display:flex;flex-direction:column;align-items:center;gap:6px;}
-    .progress-step .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);transition:background 0.4s,box-shadow 0.4s;}
-    .progress-step .dot.done{background:#AADDAA;}
-    .progress-step .dot.now{background:var(--mint);box-shadow:0 0 8px var(--mint);animation:pulse 1.2s ease-in-out infinite;}
-    .step-label{font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;color:var(--faint);text-transform:uppercase;white-space:nowrap;}
-    .step-label.done{color:#AADDAA;}.step-label.now{color:var(--mint);}
-    .progress-line{flex:1;height:1px;background:var(--faint);margin:3px 6px 0;}
-    .progress-line.done{background:#AADDAA;}
-    .log-box{max-width:560px;background:#FAFAFA;border:1px solid var(--faint);
-      padding:1rem 1.2rem;max-height:160px;overflow-y:auto;margin-bottom:2rem;
-      font-family:'Syne Mono',monospace;font-size:0.62rem;line-height:1.8;}
-    .log-line{color:var(--muted);}.log-line.fresh{color:var(--ink);}
-    .log-line::before{content:'›  ';color:var(--mint);}
-    .result-box{max-width:560px;border:1px solid #C8EEC8;background:#F8FFF8;padding:1.5rem 1.8rem;margin-bottom:2rem;}
-    .result-label{font-family:'Syne Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;color:#5A9A5A;text-transform:uppercase;margin-bottom:1rem;}
-    .result-link{font-family:'Syne',sans-serif;font-size:0.72rem;color:#3A8A3A;text-decoration:none;display:block;margin-bottom:0.8rem;}
-    .result-link:hover{text-decoration:underline;}
-    .result-meta{font-family:'Syne Mono',monospace;font-size:0.6rem;color:#8AAA8A;margin-bottom:0.8rem;line-height:1.7;}
-    .result-summary{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:0.85rem;
-      color:var(--muted);line-height:1.7;border-top:1px solid #C8EEC8;padding-top:0.8rem;}
-    .error-box{max-width:560px;border:1px solid #EECCCC;background:#FFF8F8;padding:1rem 1.2rem;margin-bottom:1rem;}
-    .error-box p{font-family:'Syne Mono',monospace;font-size:0.62rem;color:#AA5555;line-height:1.7;}
-    .setup-note{max-width:560px;margin-top:1rem;font-family:'Syne',sans-serif;font-size:0.62rem;color:#CCCCCC;line-height:2;}
+      cursor:pointer;transition:border-color 0.2s,background 0.2s;margin-bottom:1.5rem;}
+    .tc-dropzone:hover,.tc-dropzone.tc-drag-over{
+      border-color:var(--mint);background:rgba(122,255,156,0.02);}
+    .tc-dropzone.tc-disabled{cursor:not-allowed;opacity:0.4;pointer-events:none;}
+    .tc-drop-icon{font-size:1.5rem;color:var(--faint);margin-bottom:0.5rem;line-height:1;}
+    .tc-drop-text{font-family:'Syne',sans-serif;font-size:0.7rem;color:var(--muted);}
+    .tc-drop-sub{font-family:'Syne Mono',monospace;font-size:0.56rem;letter-spacing:0.08em;
+      color:var(--faint);margin-top:0.3rem;}
+    .tc-progress{width:100%;display:flex;align-items:center;margin-bottom:1.2rem;}
+    .tc-p-step{display:flex;flex-direction:column;align-items:center;gap:5px;}
+    .tc-dot{width:7px;height:7px;border-radius:50%;background:var(--faint);transition:background 0.4s,box-shadow 0.4s;}
+    .tc-dot.tc-done{background:#AADDAA;}
+    .tc-dot.tc-now{background:var(--mint);box-shadow:0 0 8px var(--mint);animation:tc-pulse 1.2s ease-in-out infinite;}
+    .tc-p-label{font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;
+      color:var(--faint);text-transform:uppercase;white-space:nowrap;}
+    .tc-p-label.tc-now{color:var(--mint);}.tc-p-label.tc-done{color:#AADDAA;}
+    .tc-p-line{flex:1;height:1px;background:var(--faint);margin:3px 6px 0;}
+    .tc-p-line.tc-done{background:#AADDAA;}
+    .tc-log{width:100%;background:#FAFAFA;border:1px solid var(--faint);
+      padding:0.9rem 1rem;max-height:160px;overflow-y:auto;margin-bottom:1.4rem;}
+    .tc-log-line{font-family:'Syne Mono',monospace;font-size:0.6rem;color:var(--muted);line-height:1.8;}
+    .tc-log-line.tc-fresh{color:var(--ink);}
+    .tc-log-line::before{content:'›  ';color:var(--mint);}
+    .tc-result{width:100%;border:1px solid #C8EEC8;background:#F8FFF8;padding:1.2rem 1.4rem;margin-bottom:1.4rem;}
+    .tc-result-label{font-family:'Syne Mono',monospace;font-size:0.52rem;
+      letter-spacing:0.2em;color:#5A9A5A;text-transform:uppercase;margin-bottom:0.9rem;}
+    .tc-result a{font-family:'Syne',sans-serif;font-size:0.7rem;color:#3A8A3A;
+      text-decoration:none;display:block;margin-bottom:0.6rem;}
+    .tc-result a:hover{text-decoration:underline;}
+    .tc-result-meta{font-family:'Syne Mono',monospace;font-size:0.58rem;color:#8AAA8A;margin-bottom:0.6rem;line-height:1.6;}
+    .tc-result-summary{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:0.85rem;
+      color:var(--muted);line-height:1.7;border-top:1px solid #C8EEC8;padding-top:0.7rem;margin-top:0.7rem;}
+    .tc-error{width:100%;border:1px solid #EECCCC;background:#FFF8F8;padding:0.9rem 1rem;margin-bottom:1rem;}
+    .tc-error p{font-family:'Syne Mono',monospace;font-size:0.6rem;color:#AA5555;line-height:1.7;}
+    .tc-footer{font-family:'Syne Mono',monospace;font-size:0.52rem;
+      letter-spacing:0.14em;color:var(--faint);margin-top:2rem;text-align:center;}
+    @keyframes tc-pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 
     /* ABOUT / CONTACT */
     #view-about,#view-contact{padding:7rem 3.2rem 3.2rem;display:flex;flex-direction:column;}
@@ -172,20 +196,103 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
+    /* ── PROMPT MODULE ──────────────────────────────────────────── */
+    #view-prompt{padding:7rem 3.2rem 4rem;display:flex;flex-direction:column;align-items:flex-start;background:#fff;}
+    .pm{width:100%;max-width:600px;}
+    .pm-eyebrow{font-family:'Syne Mono',monospace;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mint);margin-bottom:.75rem;display:flex;align-items:center;gap:.6rem;}
+    .pm-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--mint);}
+    .pm-title-row{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:.4rem;}
+    .pm-title{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;letter-spacing:-.02em;color:var(--ink);margin:0;}
+    .pm-subtitle{font-family:'Syne',sans-serif;font-size:.68rem;color:var(--muted);line-height:1.9;margin-bottom:1.2rem;}
+    .pm-setup-panel{background:#FAFAFA;border:1px solid var(--faint);padding:1.2rem 1.4rem;margin-bottom:1.2rem;display:flex;flex-direction:column;gap:.7rem;}
+    .pm-keys-status{font-family:'Syne Mono',monospace;font-size:.56rem;letter-spacing:.1em;margin-top:.2rem;}
+    /* Canvas wrap */
+    .pm-canvas-wrap{position:relative;width:100%;height:180px;margin:1.4rem 0;overflow:hidden;border-radius:2px;background:rgba(0,0,0,.012);}
+    .pm-canvas-wrap canvas{display:block;}
+    /* Status */
+    .pm-status{padding:.8rem 0;}
+    .pm-status-text{font-family:'Syne Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);animation:tc-pulse 1.4s ease-in-out infinite;}
+    /* Conversation */
+    .pm-conversation{width:100%;}
+    .pm-history{display:flex;flex-direction:column;gap:2rem;margin-bottom:2.4rem;}
+    .pm-hist-pair{display:flex;flex-direction:column;gap:.5rem;opacity:.38;transition:opacity .4s;}
+    .pm-hist-pair:hover{opacity:.65;}
+    .pm-hist-q{font-family:'Instrument Serif',Georgia,serif;font-size:.95rem;font-style:italic;color:var(--ink);line-height:1.5;}
+    .pm-hist-refl{font-family:'Syne',sans-serif;font-size:.66rem;color:var(--sky);line-height:1.85;padding-left:1.2rem;border-left:1.5px solid var(--sky);font-style:italic;margin-bottom:.4rem;}
+    .pm-hist-a{font-family:'Syne',sans-serif;font-size:.68rem;color:var(--muted);line-height:1.9;padding-left:1.2rem;border-left:1.5px solid var(--sage);}
+    /* Current question */
+    .pm-current{display:flex;flex-direction:column;gap:1.2rem;}
+    .pm-question-wrap{display:flex;gap:.85rem;align-items:flex-start;}
+    .pm-q-dash{font-family:'Syne Mono',monospace;font-size:.7rem;color:var(--mint);margin-top:.22em;flex-shrink:0;line-height:1;}
+    .pm-question{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.05rem,2vw,1.4rem);font-style:italic;color:var(--ink);line-height:1.55;margin:0;min-height:2em;}
+    /* Answer */
+    .pm-answer-area{display:flex;flex-direction:column;gap:.75rem;padding-left:1.7rem;}
+    .pm-input{width:100%;font-family:'Syne',sans-serif;font-size:.72rem;color:var(--ink);background:transparent;border:none;border-bottom:1px solid var(--faint);outline:none;resize:none;padding:.45rem 0;line-height:1.9;transition:border-color .3s;}
+    .pm-input:focus{border-bottom-color:var(--mint);}
+    .pm-input::placeholder{color:var(--faint);}
+    .pm-submit{align-self:flex-end;}
+    /* Idle */
+    .pm-idle{display:flex;flex-direction:column;gap:.7rem;padding:1rem 0;}
+    .pm-idle-note{font-family:'Syne Mono',monospace;font-size:.54rem;color:var(--faint);letter-spacing:.1em;}
+    /* Error */
+    .pm-error{width:100%;font-family:'Syne Mono',monospace;font-size:.6rem;color:#bb4444;line-height:1.8;padding:.9rem 1rem;background:rgba(200,0,0,.03);border:1px solid rgba(200,0,0,.08);border-radius:2px;}
+
     @media(max-width:700px){
       .nav-shell{padding:1.6rem;}
       #view-home{padding:1.6rem;grid-template-columns:1fr;grid-template-rows:auto auto 1fr auto;}
       .center{grid-column:1;grid-row:3;}
       .bottom-left{grid-column:1;grid-row:4;}
       .bottom-right,.bottom-center{display:none;}
-      #view-artefacts,#view-transcriber,#view-about,#view-contact{padding:6rem 1.6rem 2rem;}
+      #view-artefacts,#view-transcriber,#view-about,#view-process,#view-contact,#view-prompt{padding:6rem 1.6rem 2rem;}
       .tool-grid{grid-template-columns:1fr;}
     }
+
+    /* PROCESS */
+    #view-process{position:fixed;inset:0;z-index:20;opacity:0;pointer-events:none;transition:opacity 0.6s ease;}
+    #view-process.active{opacity:1;pointer-events:all;}
+    #constellation-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:21;}
+    .stage-node{position:absolute;transform:translate(-50%,-50%);z-index:22;
+      display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;
+      transition:opacity 0.3s;}
+    .stage-node-ring{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(26,26,26,0.35);
+      display:flex;align-items:center;justify-content:center;
+      transition:border-color 0.3s,background 0.3s;}
+    .stage-node:hover .stage-node-ring{border-color:rgba(26,26,26,0.9);background:rgba(26,26,26,0.08);}
+    .stage-node.active .stage-node-ring{border-color:rgba(26,26,26,0.35);background:transparent;}
+    .stage-node-dot{width:9px;height:9px;border-radius:50%;background:rgba(26,26,26,0.55);
+      transition:background 0.3s,box-shadow 0.3s;}
+    .stage-node:hover .stage-node-dot{background:rgba(26,26,26,1);}
+    .stage-node.active .stage-node-dot{background:rgba(26,26,26,0.55);}
+    .stage-node-label{font-family:'Syne Mono',monospace;font-size:0.56rem;font-weight:600;letter-spacing:0.18em;
+      text-transform:uppercase;color:rgba(26,26,26,0.75);white-space:nowrap;
+      transition:color 0.3s;}
+    .stage-node:hover .stage-node-label{color:rgba(26,26,26,1);}
+    .stage-node.active .stage-node-label{color:rgba(26,26,26,0.75);}
+    .stage-node-num{font-family:'Syne Mono',monospace;font-size:0.48rem;letter-spacing:0.1em;
+      color:rgba(26,26,26,0.35);transition:color 0.3s;}
+    .stage-node.active .stage-node-num{color:rgba(26,26,26,0.35);}
+    .stage-info{position:fixed;bottom:3.5rem;left:3.2rem;max-width:360px;pointer-events:none;z-index:25;}
+    .stage-info-verb{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2.5rem,5vw,4rem);
+      font-weight:400;letter-spacing:-0.02em;color:var(--ink);line-height:1;margin-bottom:0.6rem;
+      opacity:0;transform:translateY(8px);transition:opacity 0.5s,transform 0.5s cubic-bezier(0.16,1,0.3,1);}
+    .stage-info-desc{font-family:'Syne',sans-serif;font-size:0.7rem;color:var(--muted);line-height:1.9;
+      opacity:0;transform:translateY(6px);transition:opacity 0.4s 0.08s,transform 0.4s 0.08s cubic-bezier(0.16,1,0.3,1);}
+    .stage-info-here{display:flex;align-items:center;gap:0.5rem;margin-top:0.6rem;
+      opacity:0;transition:opacity 0.4s 0.15s;}
+    .stage-info.show .stage-info-verb,.stage-info.show .stage-info-desc{opacity:1;transform:translateY(0);}
+    .stage-info.show .stage-info-here.vis{opacity:1;}
+    .si-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);
+      box-shadow:0 0 8px var(--mint),0 0 16px rgba(122,255,156,0.5);animation:pulse 2.5s ease-in-out infinite;flex-shrink:0;}
+    .si-here{font-family:'Syne Mono',monospace;font-size:0.65rem;font-weight:700;letter-spacing:0.2em;
+      color:var(--mint);text-transform:uppercase;}
+    .process-title{position:fixed;top:7rem;right:3.2rem;z-index:25;text-align:right;pointer-events:none;}
+    .process-title h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.2rem,2.5vw,2rem);
+      font-weight:400;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.4rem;}
+    .process-title p{font-family:'Syne',sans-serif;font-size:0.62rem;color:var(--muted);line-height:1.9;max-width:260px;margin-left:auto;}
   </style>
 </head>
 <body>
 <div id="three-canvas"></div>
-<div class="vr vr-l"></div><div class="vr vr-r"></div><div class="hr hr-m"></div>
 
 <!-- NAV SHELL -->
 <div class="nav-shell" id="navShell">
@@ -196,6 +303,7 @@
   </div>
   <nav class="nav">
     <a data-view="about">About</a>
+    <a data-view="process">Process</a>
     <a data-view="artefacts">Artefacts</a>
     <a data-view="contact">Contact</a>
   </nav>
@@ -211,10 +319,10 @@
     </div>
   </div>
   <div class="bottom-left">
-    <p class="description">Practice-led infrastructure consolidating collective intelligence from artists — building the narrative layer the emergent digital arts need. Not-for-profit. Forkable. Open.</p>
+    <p class="description">Every technological era produces the art that comes to define it. We think we’re in one of those moments. A(DAI) is building the open infrastructure for the emergent field to sense itself.</p>
     <div class="tags">
-      <span class="tag">Not 'the' — 'a'</span>
-      <span class="tag">Protocol not institution</span>
+      <span class="tag">Sensemaking organism</span>
+      <span class="tag">Open protocol</span>
       <span class="tag">Commons-first</span>
       <span class="tag">Forkable</span>
     </div>
@@ -225,7 +333,8 @@
     <div class="handles">
       <a href="https://x.com/jamie247" target="_blank">@jamie247</a>
       <a href="https://x.com/Pixel0Symphony" target="_blank">@Pixel0Symphony</a>
-      <a href="https://x.com/aiio" target="_blank">@aiio</a>
+      <a href="https://aiio.studio" target="_blank">aiio.studio</a>
+      <a href="https://x.com/voidtarget" target="_blank">@gio</a>
     </div>
   </div>
 </div>
@@ -233,13 +342,13 @@
 <!-- ARTEFACTS -->
 <div class="view" id="view-artefacts">
   <div class="artefacts-intro">
-    <h2>Artefacts</h2>
+    <h2>Sense</h2>
     <p>Tools that feed signal into the A(DAI) intelligence layer. Each artefact is a contribution mechanism — your input becomes part of the commons.</p>
   </div>
   <div class="tool-grid">
     <div class="tool-card" onclick="window.open('https://transcriber-ruddy.vercel.app','_blank')" style="cursor:pointer;">
       <div class="tool-number">01</div>
-      <div class="tool-name">Transcriber</div>
+      <div class="tool-name">Drop Audio/Video</div>
       <div class="tool-desc">Upload an audio or video recording. The system transcribes, identifies speakers, extracts key signals via Claude, and posts a structured entry to the Signal Inbox.</div>
       <div class="tool-flow">
         <span>Audio / MP4</span><span class="arr">→</span>
@@ -249,72 +358,186 @@
       </div>
       <div class="tool-arrow">↗</div>
     </div>
-    <div class="tool-card" style="opacity:0.4;cursor:default;">
+    <div class="tool-card" onclick="event.stopPropagation();window.open('field-intelligence.html','_blank')" style="cursor:pointer;">
       <div class="tool-number">02</div>
-      <div class="tool-name">Signal Drop</div>
-      <div class="tool-desc">Drop a URL, paste a note, or describe an observation. Tags it against the A(DAI) ontology and routes it to the Signal Inbox.</div>
-      <div class="tool-flow"><span>Text / URL</span><span class="arr">→</span><span>Tagger</span><span class="arr">→</span><span>Notion</span></div>
-      <div style="position:absolute;top:1.5rem;right:1.5rem;font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;color:#CCCCCC;">SOON</div>
+      <div class="tool-name">Sense</div>
+      <div class="tool-desc">Explore the A(DAI) knowledge graph. Search signals, concepts, practitioners, and threads. Ask questions in natural language — the system finds semantic connections across the field.</div>
+      <div class="tool-flow">
+        <span>Query</span><span class="arr">→</span>
+        <span>Graph</span><span class="arr">→</span>
+        <span>Explore</span>
+      </div>
+      <div class="tool-arrow">↗</div>
     </div>
-    <div class="tool-card" style="opacity:0.4;cursor:default;">
+    <div class="tool-card" onclick="event.stopPropagation();window.open('drop-link.html','_blank')" style="cursor:pointer;">
       <div class="tool-number">03</div>
-      <div class="tool-name">Conversation Logger</div>
-      <div class="tool-desc">Structured form for logging field conversations — practitioner, scene, themes. Maps directly to the CLA ontology layers.</div>
-      <div class="tool-flow"><span>Form</span><span class="arr">→</span><span>CLA Tagger</span><span class="arr">→</span><span>Notion</span></div>
-      <div style="position:absolute;top:1.5rem;right:1.5rem;font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;color:#CCCCCC;">SOON</div>
+      <div class="tool-name">Drop a Link</div>
+      <div class="tool-desc">Paste a URL, article, or observation. The system analyses it against the A(DAI) ontology and adds it to the shared intelligence layer — anyone can contribute signal.</div>
+      <div class="tool-flow"><span>URL / Text</span><span class="arr">→</span><span>Claude</span><span class="arr">→</span><span>Notion</span></div>
+      <div class="tool-arrow">↗</div>
+    </div>
+    <div class="tool-card" onclick="event.stopPropagation();showView('prompt')" style="cursor:pointer;">
+      <div class="tool-number">04</div>
+      <div class="tool-name">Prompt</div>
+      <div class="tool-desc">Surface tensions and blind spots from the emerging field. Each session begins with a live thread from the A(DAI) engine. Your answers seed the next question — one response opens another door.</div>
+      <div class="tool-flow">
+        <span>Threads</span><span class="arr">→</span>
+        <span>Questions</span><span class="arr">→</span>
+        <span>Dialogue</span>
+      </div>
+      <div class="tool-arrow">↗</div>
     </div>
   </div>
 </div>
 
 <!-- TRANSCRIBER -->
 <div class="view" id="view-transcriber">
-  <div class="tool-header">
-    <h2>Transcriber</h2>
-    <p>Upload a recording. The system transcribes, diarizes speakers, extracts key signals and tags via Claude, then posts a structured entry to the A(DAI) Signal Inbox in Notion.</p>
+  <div class="tc">
+    <div style="text-align:center;margin-bottom:1.8rem;">
+      <div class="tc-eyebrow">Field Intelligence</div>
+      <div class="tc-title">Signal Transcriber</div>
+      <div class="tc-subtitle">Audio/Video → AssemblyAI → Claude → Notion Signal Inbox</div>
+    </div>
+    <div class="tc-rule"></div>
+    <div class="tc-setup-row">
+      <button class="tc-btn" id="tc-setupBtn">SETUP</button>
+    </div>
+    <div class="tc-setup-panel" id="tc-setupPanel" style="display:none">
+      <div class="tc-section-label">API Keys — saved in your browser</div>
+      <div class="tc-field">
+        <div class="tc-field-label">AssemblyAI Key</div>
+        <input type="password" id="tc-key-assemblyai" placeholder="72973ae8…">
+      </div>
+      <div class="tc-field">
+        <div class="tc-field-label">Anthropic Key</div>
+        <input type="password" id="tc-key-anthropic" placeholder="sk-ant-api03-…">
+      </div>
+      <div class="tc-field">
+        <div class="tc-field-label">Notion Token</div>
+        <input type="password" id="tc-key-notion" placeholder="ntn_…">
+      </div>
+      <div class="tc-field">
+        <div class="tc-field-label">Notion Database ID</div>
+        <input type="text" id="tc-key-notiondb" placeholder="353432a9-95aa-4fbb-…">
+      </div>
+      <div class="tc-keys-status" id="tc-keysStatus"></div>
+    </div>
+    <div class="tc-submitted-row">
+      <div class="tc-submitted-label">Submitted by</div>
+      <select id="tc-submittedBy">
+        <option>Iri</option>
+        <option>JB</option>
+        <option>Piyush</option>
+        <option>Gio</option>
+        <option>Guest</option>
+      </select>
+    </div>
+    <div class="tc-dropzone" id="tc-dropzone">
+      <input type="file" id="tc-fileInput" accept="video/*,audio/*" style="display:none">
+      <div class="tc-drop-icon">+</div>
+      <div class="tc-drop-text" id="tc-dropText">Drop audio/video file (or click to browse)</div>
+      <div class="tc-drop-sub" id="tc-dropSub">MP4, MP3, WAV, M4A, WebM</div>
+    </div>
+    <div class="tc-progress" id="tc-progress" style="display:none">
+      <div class="tc-p-step"><div class="tc-dot" id="tc-dot-uploading"></div><div class="tc-p-label" id="tc-lbl-uploading">UPLOAD</div></div>
+      <div class="tc-p-line" id="tc-line-1"></div>
+      <div class="tc-p-step"><div class="tc-dot" id="tc-dot-transcribing"></div><div class="tc-p-label" id="tc-lbl-transcribing">TRANSCRIBE</div></div>
+      <div class="tc-p-line" id="tc-line-2"></div>
+      <div class="tc-p-step"><div class="tc-dot" id="tc-dot-summarising"></div><div class="tc-p-label" id="tc-lbl-summarising">ANALYSE</div></div>
+      <div class="tc-p-line" id="tc-line-3"></div>
+      <div class="tc-p-step"><div class="tc-dot" id="tc-dot-posting"></div><div class="tc-p-label" id="tc-lbl-posting">POST</div></div>
+      <div class="tc-p-line" id="tc-line-4"></div>
+      <div class="tc-p-step"><div class="tc-dot" id="tc-dot-done"></div><div class="tc-p-label" id="tc-lbl-done">DONE</div></div>
+    </div>
+    <div class="tc-log" id="tc-logBox" style="display:none"></div>
+    <div class="tc-result" id="tc-resultBox" style="display:none"></div>
+    <div class="tc-error" id="tc-errorBox" style="display:none"></div>
+    <div class="tc-footer">A(DAI) · A DIGITAL ARTS INSTITUTE</div>
   </div>
-  <div class="tool-pipeline">
-    <div class="pipeline-step" data-stage="uploading">Upload</div><div class="pipeline-arrow">→</div>
-    <div class="pipeline-step" data-stage="transcribing">Transcribe</div><div class="pipeline-arrow">→</div>
-    <div class="pipeline-step" data-stage="summarising">Analyse</div><div class="pipeline-arrow">→</div>
-    <div class="pipeline-step" data-stage="posting">Post to Notion</div><div class="pipeline-arrow">→</div>
-    <div class="pipeline-step" data-stage="done">Done</div>
+</div>
+
+<!-- PROMPT -->
+<div class="view" id="view-prompt">
+  <div class="pm">
+    <div class="pm-eyebrow">A(DAI) Field Engine</div>
+    <div class="pm-title-row">
+      <h2 class="pm-title">Prompt</h2>
+      <button class="tc-btn" id="pm-setup-toggle">SETUP</button>
+    </div>
+    <p class="pm-subtitle">Emerging threads become questions. Follow the tension.</p>
+    <div class="tc-rule"></div>
+
+    <div class="pm-setup-panel" id="pm-setup-panel" style="display:none">
+      <div class="tc-section-label">API Keys — saved in your browser</div>
+      <div class="tc-field">
+        <div class="tc-field-label">Notion Token</div>
+        <input type="password" id="pm-key-notion" placeholder="ntn_…">
+      </div>
+      <div class="tc-field">
+        <div class="tc-field-label">Anthropic Key</div>
+        <input type="password" id="pm-key-anthropic" placeholder="sk-ant-api03-…">
+      </div>
+      <div class="pm-keys-status" id="pm-keys-status"></div>
+    </div>
+
+    <div class="pm-canvas-wrap" id="pm-canvas-wrap">
+      <canvas id="pm-canvas"></canvas>
+    </div>
+
+    <div class="pm-status" id="pm-status" style="display:none">
+      <span class="pm-status-text" id="pm-status-text">Loading threads…</span>
+    </div>
+
+    <div class="pm-conversation" id="pm-conversation" style="display:none">
+      <div class="pm-history" id="pm-history"></div>
+      <div class="pm-current">
+        <div class="pm-question-wrap">
+          <span class="pm-q-dash">—</span>
+          <p class="pm-question" id="pm-question"></p>
+        </div>
+        <div class="pm-answer-area">
+          <textarea class="pm-input" id="pm-input" placeholder="What do you think?" rows="3" disabled></textarea>
+          <button class="tc-btn pm-submit" id="pm-submit" disabled>SEND →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pm-idle" id="pm-idle">
+      <button class="tc-btn" id="pm-start">BEGIN SESSION →</button>
+      <p class="pm-idle-note" id="pm-idle-note"></p>
+    </div>
+
+    <div class="pm-error" id="pm-error" style="display:none"></div>
   </div>
-  <div class="config-section">
-    <div class="config-label">API Configuration</div>
-    <div class="config-row"><label>AssemblyAI Key</label><input type="password" id="key-assemblyai" placeholder="your-assemblyai-api-key"></div>
-    <div class="config-row"><label>Notion Integration Key</label><input type="password" id="key-notion" placeholder="secret_..."></div>
-    <div class="config-row"><label>Notion Database ID</label><input type="text" id="key-notiondb" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
-  </div>
-  <div class="drop-zone" id="dropZone">
-    <input type="file" id="fileInput" accept="video/*,audio/*" style="display:none">
-    <div class="drop-icon">⊕</div>
-    <div class="drop-text" id="dropText">Drop audio or video file here</div>
-    <div class="drop-sub" id="dropSub">or click to browse · MP4, MP3, M4A, WAV</div>
-  </div>
-  <div class="progress-track" id="progressTrack" style="display:none">
-    <div class="progress-step"><div class="dot" id="dot-uploading"></div><div class="step-label" id="lbl-uploading">Upload</div></div>
-    <div class="progress-line" id="line-1"></div>
-    <div class="progress-step"><div class="dot" id="dot-transcribing"></div><div class="step-label" id="lbl-transcribing">Transcribe</div></div>
-    <div class="progress-line" id="line-2"></div>
-    <div class="progress-step"><div class="dot" id="dot-summarising"></div><div class="step-label" id="lbl-summarising">Analyse</div></div>
-    <div class="progress-line" id="line-3"></div>
-    <div class="progress-step"><div class="dot" id="dot-posting"></div><div class="step-label" id="lbl-posting">Post</div></div>
-    <div class="progress-line" id="line-4"></div>
-    <div class="progress-step"><div class="dot" id="dot-done"></div><div class="step-label" id="lbl-done">Done</div></div>
-  </div>
-  <div class="log-box" id="logBox" style="display:none"></div>
-  <div id="resultBox" style="display:none" class="result-box"></div>
-  <div id="errorBox" style="display:none" class="error-box"></div>
-  <p class="setup-note">Get a free AssemblyAI key at assemblyai.com (100hrs/mo) · Create a Notion integration at notion.so/my-integrations and share your Signal Inbox database with it · DB ID is the 32-char string in your Notion database URL</p>
 </div>
 
 <!-- ABOUT -->
 <div class="view" id="view-about">
   <div class="prose-block">
     <div class="accent-line"></div>
-    <h2>About A(DAI)</h2>
-    <p>A(DAI) is a practice-led infrastructure project for the digital arts. We consolidate collective intelligence from artists, curators, developers, and researchers — building the narrative and technical layer the emergent digital arts ecosystem needs.</p>
-    <p>The institute is not a single authority. It is a commons. Not 'the' digital arts institute, but 'a' — one that is forkable, recomposable, and open by design.</p>
+    <h2>The art of now</h2>
+    <p>Every field has a moment where the practice outpaces the language. The emergent digital arts are in that moment. The work is already happening. It’s plural, restless, globally distributed. What’s missing is the infrastructure to make sense of it collectively.</p>
+    <p>A(DAI) starts with a conversation. Deep listening. What practitioners say before it turns into theory or doctrine. From there it senses, finding the patterns that cut across scenes, subcultures, and geographies. It queries. It speculates. It reacts. From that process, a shared language emerges. A collective memory. Something you can build on, fork, query, discover through.</p>
+    <p>It’s a place to find collaborators. To see how your practice connects to others you didn’t know existed. To contribute to a narrative that belongs to the field, not to an institution.</p>
+    <p>A(DAI) is an open protocol. Anyone can build on top of it.</p>
+    <p>Narrative formation led by artists first. Market formation follows.</p>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="view" id="view-process">
+  <canvas id="constellation-canvas"></canvas>
+  <div id="stage-nodes-wrap"></div>
+  <div class="process-title">
+    <h2>Process</h2>
+    <p>An open-source protocol for collective sense-making. Currently: Sense.</p>
+  </div>
+  <div class="stage-info" id="stageInfo">
+    <div class="stage-info-verb" id="stageVerb"></div>
+    <div class="stage-info-desc" id="stageDesc"></div>
+    <div class="stage-info-here" id="stageHere">
+      <div class="si-dot"></div><span class="si-here">We are here</span>
+    </div>
   </div>
 </div>
 
@@ -327,7 +550,8 @@
     <p>
       <a href="https://x.com/Pixel0Symphony" target="_blank" class="contact-member">@Pixel0Symphony</a> &nbsp;·&nbsp;
       <a href="https://x.com/jamie247" target="_blank" class="contact-member">@jamie247</a> &nbsp;·&nbsp;
-      <a href="https://x.com/aiio" target="_blank" class="contact-member">@aiio</a>
+      <a href="https://aiio.studio" target="_blank" class="contact-member">aiio.studio</a> &nbsp;·&nbsp;
+      <a href="https://x.com/voidtarget" target="_blank" class="contact-member">@gio</a>
     </p>
   </div>
 </div>
@@ -422,14 +646,19 @@
   var mesh=new THREE.Mesh(new THREE.SphereGeometry(1,128,128),new THREE.ShaderMaterial({vertexShader:VS,fragmentShader:FS,uniforms:U}));
   mesh.position.set(-1.4,0,0);mesh.rotation.z=0.8726646;mesh.rotation.y=0.1745329;
   scene.add(mesh);
+  window._sphereUniforms = U;
+  window._sphereObj = {mesh:mesh, camera:camera, renderer:renderer, mC:mC};
 
   var mT={px:-1.4,py:0,sc:1.,sat:1.},mC={px:-1.4,py:0,sc:1.,sat:1.};
   window.setGradientMode=function(m){
     if(m==='home'){mT.px=-1.4;mT.py=0;mT.sc=1.;mT.sat=1.;}
+    else if(m==='process'){mT.px=0.0;mT.py=0;mT.sc=1.1;mT.sat=1.;}
     else{mT.px=1.8;mT.py=1.2;mT.sc=0.42;mT.sat=0.55;}
   };
   var rep={tg:0,cur:0,dx:0,dy:0};
-  window.setRepel=function(t,dx,dy){rep.tg=t;if(dx!==undefined){rep.dx=dx;rep.dy=dy;}};
+  window.setRepel=function(t,dx,dy){
+    rep.tg=t;if(dx!==undefined){rep.dx=dx;rep.dy=dy;}
+  };
   var mo={x:0,y:0,tx:0,ty:0,vx:0,vy:0},lt=0;
   var rip={a:false,t:0,s:0},scM=0;
   document.addEventListener('mousemove',function(e){
@@ -461,8 +690,9 @@
     U.uTime.value=t;U.uMouse.value.set(mo.x,mo.y);
     U.uRepel.value=rep.cur;U.uRepelDir.value.set(rep.dx,rep.dy);
     U.uAmplitude.value=5.5+rip.s*4.;U.uDensity.value=2.2+scM*.8;
-    mesh.rotation.y=0.1745329+t*.018+mo.x*.55;
-    mesh.rotation.x=mo.y*.42;
+    var onProc=document.getElementById('view-process').classList.contains('active');
+    mesh.rotation.y=0.1745329+t*(onProc?.003:.018)+(onProc?0:mo.x*.55);
+    mesh.rotation.x=onProc?0:mo.y*.42;
     mesh.rotation.z=0.8726646+Math.sin(t*.09)*.06;
     mesh.position.x=mC.px+mo.x*(mC.sc*.45);
     mesh.position.y=mC.py+mo.y*(mC.sc*.35);
@@ -476,12 +706,12 @@
 (function(){
   var navShell=document.getElementById('navShell');
   var breadcrumb=document.getElementById('breadcrumb');
-  function showView(name){
+  window.showView=function showView(name){
     document.querySelectorAll('.view').forEach(function(v){v.classList.remove('active');});
     var el=document.getElementById('view-'+name);
     if(el) el.classList.add('active');
     document.querySelectorAll('.nav a').forEach(function(a){a.classList.remove('active');});
-    var root=name==='transcriber'?'artefacts':name;
+    var root=(name==='transcriber'||name==='prompt')?'artefacts':name;
     var lnk=document.querySelector('.nav a[data-view="'+root+'"]');
     if(lnk) lnk.classList.add('active');
     if(name==='home'){
@@ -489,15 +719,20 @@
       window.setGradientMode&&window.setGradientMode('home');
     } else {
       navShell.classList.add('compact');
-      if(name==='transcriber') breadcrumb.innerHTML='<span>Artefacts</span><span class="sep">/</span><span>Transcriber</span>';
+      if(name==='transcriber') breadcrumb.innerHTML='<span>Sense</span><span class="sep">/</span><span>Drop Audio/Video</span>';
+      else if(name==='prompt') breadcrumb.innerHTML='<span>Sense</span><span class="sep">/</span><span>Sense</span>';
       else breadcrumb.innerHTML='<span>'+name.charAt(0).toUpperCase()+name.slice(1)+'</span>';
-      window.setGradientMode&&window.setGradientMode('sub');
+      window.setGradientMode&&window.setGradientMode(name==='process'?'process':'sub');
+      if(name==='prompt') window.pmInitCanvas&&window.pmInitCanvas();
     }
   }
   document.querySelectorAll('.nav a').forEach(function(a){
     a.addEventListener('click',function(e){e.preventDefault();showView(a.getAttribute('data-view'));});
   });
   document.getElementById('brandBtn').addEventListener('click',function(){showView('home');});
+  // Handle hash-based deep linking (e.g. #process)
+  if(window.location.hash){var hv=window.location.hash.slice(1);if(document.getElementById('view-'+hv))showView(hv);}
+  window.addEventListener('hashchange',function(){var hv=window.location.hash.slice(1);if(document.getElementById('view-'+hv))showView(hv);});
   document.querySelectorAll('.tool-card[data-tool]').forEach(function(c){
     c.addEventListener('click',function(){showView(c.getAttribute('data-tool'));});
   });
@@ -508,8 +743,9 @@
       '.brand,.brand-mark,.nav a,.dispatch-label,.dispatch,'+
       '.description,.tags,.tag,.tagline,.handles a,.status-text,'+
       '.bottom-left,.bottom-right,.bottom-center,'+
-      '.artefacts-intro,.tool-card,.tool-header,.prose-block,'+
-      '.config-label,.config-row label,.drop-text'
+      '.artefacts-intro,.tool-card,.tool-header,.prose-block,.protocol-step,'+
+      '.config-label,.config-row label,.drop-text,'+
+      '.pm-question,.pm-hist-pair,.pm-start,.pm-submit,.pm-input'
     ).forEach(function(el){
       el.addEventListener('mouseenter',function(){
         var r=el.getBoundingClientRect();
@@ -521,70 +757,115 @@
   },300);
 })();
 
-// ── TRANSCRIBER ──────────────────────────────────────────────────
+// ── TRANSCRIBER v2 ───────────────────────────────────────────────
 (function(){
   var stage='idle';
-  var STAGES=['idle','uploading','transcribing','summarising','posting','done','error'];
-  var dropZone=document.getElementById('dropZone');
-  var fileInput=document.getElementById('fileInput');
-  var logBox=document.getElementById('logBox');
-  var progressTrack=document.getElementById('progressTrack');
-  var resultBox=document.getElementById('resultBox');
-  var errorBox=document.getElementById('errorBox');
+  var ORD=['uploading','transcribing','summarising','posting','done'];
+  var dropZone=document.getElementById('tc-dropzone');
+  var fileInput=document.getElementById('tc-fileInput');
+  var logBox=document.getElementById('tc-logBox');
+  var progressEl=document.getElementById('tc-progress');
+  var resultBox=document.getElementById('tc-resultBox');
+  var errorBox=document.getElementById('tc-errorBox');
+  var setupBtn=document.getElementById('tc-setupBtn');
+  var setupPanel=document.getElementById('tc-setupPanel');
+  var keysStatus=document.getElementById('tc-keysStatus');
 
-  function keys(){return{
-    assemblyai:document.getElementById('key-assemblyai').value.trim(),
-    notion:document.getElementById('key-notion').value.trim(),
-    notionDb:document.getElementById('key-notiondb').value.trim()
-  };}
+  function loadKeys(){
+    try{var k=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
+      return{assemblyai:k.assemblyai||'',anthropic:k.anthropic||'',notion:k.notion||'',notionDb:k.notionDb||''};}
+    catch(e){return{assemblyai:'',anthropic:'',notion:'',notionDb:''};}
+  }
+  function saveKeys(){
+    var k={
+      assemblyai:document.getElementById('tc-key-assemblyai').value.trim(),
+      anthropic:document.getElementById('tc-key-anthropic').value.trim(),
+      notion:document.getElementById('tc-key-notion').value.trim(),
+      notionDb:document.getElementById('tc-key-notiondb').value.trim()
+    };
+    try{localStorage.setItem('adai_tc_keys',JSON.stringify(k));}catch(e){}
+    updateStatus(k);return k;
+  }
+  function getKeys(){return saveKeys();}
+  function allSet(k){return k.assemblyai&&k.anthropic&&k.notion&&k.notionDb;}
+  function updateStatus(k){
+    if(!k)k=loadKeys();
+    if(allSet(k)){
+      keysStatus.textContent='All keys set — stored in localStorage';
+      keysStatus.className='tc-keys-status tc-keys-ok';
+      dropZone.classList.remove('tc-disabled');
+    } else {
+      keysStatus.textContent='Enter all keys to enable transcription';
+      keysStatus.className='tc-keys-status tc-keys-err';
+      dropZone.classList.add('tc-disabled');
+    }
+  }
+  (function(){
+    var k=loadKeys();
+    document.getElementById('tc-key-assemblyai').value=k.assemblyai;
+    document.getElementById('tc-key-anthropic').value=k.anthropic;
+    document.getElementById('tc-key-notion').value=k.notion;
+    document.getElementById('tc-key-notiondb').value=k.notionDb;
+    updateStatus(k);
+    if(!allSet(k)){setupPanel.style.display='block';setupBtn.classList.add('tc-btn-active');setupBtn.textContent='HIDE SETUP';}
+  })();
+  ['tc-key-assemblyai','tc-key-anthropic','tc-key-notion','tc-key-notiondb'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',saveKeys);
+  });
+  setupBtn.addEventListener('click',function(){
+    var open=setupPanel.style.display!=='none';
+    setupPanel.style.display=open?'none':'block';
+    setupBtn.classList.toggle('tc-btn-active',!open);
+    setupBtn.textContent=open?'SETUP':'HIDE SETUP';
+  });
+
   function log(msg){
     logBox.style.display='block';
-    var d=document.createElement('div');d.className='log-line fresh';d.textContent=msg;
+    var d=document.createElement('div');d.className='tc-log-line tc-fresh';d.textContent=msg;
     logBox.appendChild(d);logBox.scrollTop=logBox.scrollHeight;
-    logBox.querySelectorAll('.fresh').forEach(function(l,i,a){if(i<a.length-1)l.classList.remove('fresh');});
+    logBox.querySelectorAll('.tc-fresh').forEach(function(l,i,a){if(i<a.length-1)l.classList.remove('tc-fresh');});
   }
   function setStage(s){
-    stage=s;progressTrack.style.display='flex';
-    var ord=['uploading','transcribing','summarising','posting','done'];
-    var idx=ord.indexOf(s);
-    ord.forEach(function(st,i){
-      var dot=document.getElementById('dot-'+st),lbl=document.getElementById('lbl-'+st);
+    stage=s;progressEl.style.display='flex';
+    var idx=ORD.indexOf(s);
+    ORD.forEach(function(st,i){
+      var dot=document.getElementById('tc-dot-'+st),lbl=document.getElementById('tc-lbl-'+st);
       if(!dot)return;
-      dot.className='dot';lbl.className='step-label';
-      if(i<idx){dot.classList.add('done');lbl.classList.add('done');}
-      else if(i===idx){dot.classList.add('now');lbl.classList.add('now');}
-      var line=document.getElementById('line-'+(i+1));
-      if(line)line.className='progress-line'+(i<idx?' done':'');
+      dot.className='tc-dot';lbl.className='tc-p-label';
+      if(i<idx){dot.classList.add('tc-done');lbl.classList.add('tc-done');}
+      else if(i===idx){dot.classList.add('tc-now');lbl.classList.add('tc-now');}
+      var line=document.getElementById('tc-line-'+(i+1));
+      if(line)line.className='tc-p-line'+(i<idx?' tc-done':'');
     });
-    document.querySelectorAll('.pipeline-step').forEach(function(el){
-      el.classList.toggle('active-step',el.getAttribute('data-stage')===s);
-    });
-    var labels={uploading:'Uploading…',transcribing:'Transcribing…',summarising:'Analysing via Claude…',posting:'Posting to Notion…',done:'Done ✓',error:'Error'};
-    document.getElementById('dropText').textContent=labels[s]||'Drop file here';
-    document.getElementById('dropSub').textContent=s==='done'?'Drop another to run again':'Processing…';
+    var dt=document.getElementById('tc-dropText'),ds=document.getElementById('tc-dropSub');
+    var msgs={uploading:'Uploading to AssemblyAI…',transcribing:'Transcribing + detecting speakers…',
+      summarising:'Analysing via Claude…',posting:'Posting to Notion Signal Inbox…'};
+    if(s==='done'){dt.textContent='Done \u2713';ds.textContent='Drop another to run again';}
+    else if(s==='error'){dt.textContent='Error \u2014 see log below';ds.textContent='Drop another to retry';}
+    else{dt.textContent=msgs[s]||'Processing\u2026';ds.textContent='';}
   }
   function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
 
   async function upload(file,apiKey){
-    log('Uploading file…');
+    log('Uploading file\u2026');
     var res=await fetch('https://api.assemblyai.com/v2/upload',{method:'POST',headers:{authorization:apiKey,'content-type':'application/octet-stream'},body:file});
     if(!res.ok)throw new Error('Upload failed: '+res.status);
-    var d=await res.json();log('Uploaded → '+d.upload_url.slice(0,48)+'…');return d.upload_url;
+    var d=await res.json();log('Uploaded \u2192 '+d.upload_url.slice(0,48)+'\u2026');return d.upload_url;
   }
   async function transcribe(url,apiKey){
-    log('Submitting transcription job…');
+    log('Submitting transcription job (speaker diarization on)\u2026');
     var res=await fetch('https://api.assemblyai.com/v2/transcript',{method:'POST',headers:{authorization:apiKey,'content-type':'application/json'},body:JSON.stringify({audio_url:url,speaker_labels:true})});
     if(!res.ok)throw new Error('Submit failed: '+res.status);
-    var {id}=await res.json();log('Job '+id+' — polling…');
+    var d=await res.json();log('Job '+d.id+' \u2014 polling\u2026');
     for(var i=0;i<120;i++){
       await sleep(3000);
-      var poll=await fetch('https://api.assemblyai.com/v2/transcript/'+id,{headers:{authorization:apiKey}});
+      var poll=await fetch('https://api.assemblyai.com/v2/transcript/'+d.id,{headers:{authorization:apiKey}});
       var data=await poll.json();
       if(data.status==='completed'){log('Complete: '+(data.words?.length??'?')+' words, '+(data.utterances?.length??'?')+' speakers');return data;}
       if(data.status==='error')throw new Error('AssemblyAI: '+data.error);
-      if(i%5===4)log('Still transcribing… ('+(i+1)*3+'s)');
+      if(i%5===4)log('Still transcribing\u2026 ('+(i+1)*3+'s)');
     }
-    throw new Error('Timed out');
+    throw new Error('Transcription timed out after 6 minutes');
   }
   function fmt(utterances){
     if(!utterances?.length)return'';
@@ -593,23 +874,26 @@
       return'['+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+'] Speaker '+u.speaker+': '+u.text;
     }).join('\n');
   }
-  async function analyse(transcript,filename){
-    log('Sending to Claude…');
-    var res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
-      model:'claude-sonnet-4-20250514',max_tokens:1000,
-      messages:[{role:'user',content:'You are an intelligence analyst for A(DAI) — A Digital Arts Institute. Analyze this transcript and return ONLY a JSON object (no markdown, no preamble) with: "summary" (2-3 paragraph field signal brief), "tags" (4-8 lowercase tags array), "signal_type" (one of: conversation/lecture/interview/meeting/field_recording/panel/other), "key_quotes" (2-3 significant verbatim quotes array).\n\nTranscript from "'+filename+'":\n\n'+transcript.slice(0,8000)}]
-    })});
+  async function analyse(transcript,filename,anthropicKey){
+    log('Sending to Claude\u2026');
+    var res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
+      headers:{'content-type':'application/json','x-api-key':anthropicKey,'anthropic-version':'2023-06-01'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-5',max_tokens:1000,
+        messages:[{role:'user',content:'You are an intelligence analyst for A(DAI) \u2014 A Digital Arts Institute. Analyze this transcript and return ONLY a JSON object (no markdown, no preamble) with: "summary" (2-3 paragraph field signal brief), "tags" (4-8 lowercase tags array), "signal_type" (one of: conversation/lecture/interview/meeting/field_recording/panel/other), "key_quotes" (2-3 significant verbatim quotes array).\n\nTranscript from "'+filename+'":\n\n'+transcript.slice(0,8000)}]
+      })});
     if(!res.ok)throw new Error('Claude error: '+res.status);
     var data=await res.json();
     var text=data.content.find(function(b){return b.type==='text';})?.text??'{}';
     var parsed=JSON.parse(text.replace(/```json|```/g,'').trim());
     log('Tags: '+parsed.tags?.join(', '));return parsed;
   }
-  async function postNotion(nKey,dbId,filename,formatted,analysis){
-    log('Creating Notion page…');
+  async function postNotion(nKey,dbId,filename,formatted,analysis,submittedBy){
+    log('Creating Notion page\u2026');
+    var quotes=(analysis.key_quotes||[]).join('\n\n');
     var blocks=[
       {object:'block',type:'heading_2',heading_2:{rich_text:[{type:'text',text:{content:'Summary'}}]}},
-      ...analysis.summary.split('\n\n').filter(Boolean).map(function(p){return{object:'block',type:'paragraph',paragraph:{rich_text:[{type:'text',text:{content:p}}]}};}),
+      ...(analysis.summary||'').split('\n\n').filter(Boolean).map(function(p){return{object:'block',type:'paragraph',paragraph:{rich_text:[{type:'text',text:{content:p}}]}};}),
       {object:'block',type:'heading_2',heading_2:{rich_text:[{type:'text',text:{content:'Key Quotes'}}]}},
       ...(analysis.key_quotes||[]).map(function(q){return{object:'block',type:'quote',quote:{rich_text:[{type:'text',text:{content:q}}]}};}),
       {object:'block',type:'heading_2',heading_2:{rich_text:[{type:'text',text:{content:'Full Transcript'}}]}},
@@ -617,45 +901,579 @@
     ];
     var rem=formatted.slice(1900);
     for(var i=0;i<rem.length;i+=1900)blocks.push({object:'block',type:'code',code:{rich_text:[{type:'text',text:{content:rem.slice(i,i+1900)}}],language:'plain text'}});
+    var now=new Date().toISOString().split('T')[0];
     var res=await fetch('https://api.notion.com/v1/pages',{method:'POST',
       headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
-      body:JSON.stringify({parent:{database_id:dbId.replace(/-/g,'')},
-        properties:{Name:{title:[{text:{content:filename}}]},Tags:{multi_select:analysis.tags.map(function(t){return{name:t};})},Type:{select:{name:analysis.signal_type}}},
-        children:blocks})
+      body:JSON.stringify({
+        parent:{database_id:dbId.replace(/-/g,'')},
+        properties:{
+          Name:{title:[{text:{content:filename}}]},
+          Tags:{multi_select:(analysis.tags||[]).map(function(t){return{name:t};})},
+          Type:{select:{name:analysis.signal_type||'other'}},
+          submitted_by:{select:{name:submittedBy}},
+          date_captured:{date:{start:now}},
+          protocol_stage:{select:{name:'SENSE'}},
+          status:{select:{name:'raw'}},
+          summary_ai:{rich_text:[{type:'text',text:{content:(analysis.summary||'').slice(0,2000)}}]},
+          signal_type:{select:{name:analysis.signal_type||'other'}},
+          key_quotes:{rich_text:[{type:'text',text:{content:quotes.slice(0,2000)}}]},
+          intelligence_tier:{select:{name:'primary'}},
+          signal_confidence:{select:{name:'verified'}}
+        },
+        children:blocks
+      })
     });
     if(!res.ok){var err=await res.text();throw new Error('Notion '+res.status+': '+err.slice(0,200));}
-    var page=await res.json();log('Page created → '+page.url);return page.url;
+    var page=await res.json();log('Page created \u2192 '+page.url);return page.url;
   }
 
   async function run(file){
-    var k=keys();
-    if(!k.assemblyai||!k.notion||!k.notionDb){
-      errorBox.style.display='block';errorBox.innerHTML='<p>Please fill all three API keys first.</p>';return;
+    var k=getKeys();
+    if(!allSet(k)){
+      errorBox.style.display='block';
+      errorBox.innerHTML='<p>Please enter all API keys in SETUP first.</p>';
+      setupPanel.style.display='block';setupBtn.classList.add('tc-btn-active');setupBtn.textContent='HIDE SETUP';
+      return;
     }
-    errorBox.style.display='none';resultBox.style.display='none';logBox.innerHTML='';
+    var submittedBy=document.getElementById('tc-submittedBy').value;
+    errorBox.style.display='none';resultBox.style.display='none';
+    logBox.style.display='none';logBox.innerHTML='';
     try{
       setStage('uploading');var uploadUrl=await upload(file,k.assemblyai);
       setStage('transcribing');var transcript=await transcribe(uploadUrl,k.assemblyai);
       var formatted=fmt(transcript.utterances)||transcript.text;
-      setStage('summarising');var analysis=await analyse(formatted,file.name);
-      setStage('posting');var pageUrl=await postNotion(k.notion,k.notionDb,file.name,formatted,analysis);
+      setStage('summarising');var analysis=await analyse(formatted,file.name,k.anthropic);
+      setStage('posting');var pageUrl=await postNotion(k.notion,k.notionDb,file.name,formatted,analysis,submittedBy);
       setStage('done');
       resultBox.style.display='block';
-      resultBox.innerHTML='<div class="result-label">Signal posted to Notion</div>'
-        +'<a href="'+pageUrl+'" target="_blank" class="result-link">→ Open in Notion</a>'
-        +'<div class="result-meta">Type: '+analysis.signal_type+' &nbsp;·&nbsp; Tags: '+analysis.tags?.join(', ')+'</div>'
-        +'<div class="result-summary">'+analysis.summary?.slice(0,320)+'…</div>';
+      resultBox.innerHTML='<div class="tc-result-label">Signal Posted</div>'
+        +'<a href="'+pageUrl+'" target="_blank">\u2192 Open in Notion</a>'
+        +'<div class="tc-result-meta">Type: <span style="color:#2A2420">'+analysis.signal_type+'</span>'
+        +' &nbsp;\u00b7&nbsp; Tags: <span style="color:#2A2420">'+(analysis.tags||[]).join(', ')+'</span></div>'
+        +'<div class="tc-result-summary">'+(analysis.summary||'').slice(0,300)+'\u2026</div>';
     }catch(e){
       log('ERROR: '+e.message);setStage('error');
       errorBox.style.display='block';errorBox.innerHTML='<p>'+e.message+'</p>';
     }
   }
 
-  dropZone.addEventListener('dragover',function(e){e.preventDefault();dropZone.classList.add('drag-over');});
-  dropZone.addEventListener('dragleave',function(){dropZone.classList.remove('drag-over');});
-  dropZone.addEventListener('drop',function(e){e.preventDefault();dropZone.classList.remove('drag-over');var f=e.dataTransfer.files[0];if(f)run(f);});
-  dropZone.addEventListener('click',function(){if(['idle','done','error'].includes(stage))fileInput.click();});
+  dropZone.addEventListener('dragover',function(e){e.preventDefault();if(!dropZone.classList.contains('tc-disabled'))dropZone.classList.add('tc-drag-over');});
+  dropZone.addEventListener('dragleave',function(){dropZone.classList.remove('tc-drag-over');});
+  dropZone.addEventListener('drop',function(e){e.preventDefault();dropZone.classList.remove('tc-drag-over');var f=e.dataTransfer.files[0];if(f)run(f);});
+  dropZone.addEventListener('click',function(){if(['idle','done','error'].includes(stage)&&!dropZone.classList.contains('tc-disabled'))fileInput.click();});
   fileInput.addEventListener('change',function(){if(fileInput.files[0])run(fileInput.files[0]);});
+})();
+
+
+// ── PROMPT MODULE ────────────────────────────────────────────────
+(function(){
+  var THREADS_DB = 'cc3dec36-47b0-4d93-b0b5-7899daca6018';
+  var SIGNALS_DB = 'e380fc07-d10f-4242-baef-ffbc58ed0e95';
+
+  var pmWorking = false;
+  var pmCurrentQ = '';
+  var pmThreadCtx = '';
+  var pmConvHistory = [];
+
+  function $p(id){ return document.getElementById(id); }
+
+  // ── Keys ────────────────────────────────────────────────────────
+  function pmLoadKeys(){
+    // Read from shared transcriber keys first, fall back to prompt-specific
+    try{
+      var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
+      var pm=JSON.parse(localStorage.getItem('adai_pm_keys')||'{}');
+      return{
+        notion:  pm.notion  || tc.notion  || '',
+        anthropic:pm.anthropic|| tc.anthropic|| ''
+      };
+    }catch(e){return{notion:'',anthropic:''};}
+  }
+  function pmSaveKeys(){
+    var k={
+      notion:($p('pm-key-notion')||{}).value||'',
+      anthropic:($p('pm-key-anthropic')||{}).value||''
+    };
+    k.notion=k.notion.trim();k.anthropic=k.anthropic.trim();
+    try{localStorage.setItem('adai_pm_keys',JSON.stringify(k));}catch(e){}
+    // Also write back to shared keys so transcriber can use them
+    try{
+      var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
+      if(k.notion)tc.notion=k.notion;
+      if(k.anthropic)tc.anthropic=k.anthropic;
+      localStorage.setItem('adai_tc_keys',JSON.stringify(tc));
+    }catch(e){}
+    pmUpdateKeyStatus(k);return k;
+  }
+  function pmUpdateKeyStatus(k){
+    var s=$p('pm-keys-status');if(!s)return;
+    if(k.notion&&k.anthropic){
+      s.textContent='Keys saved — stored in localStorage';s.style.color='var(--mint)';
+    }else{
+      s.textContent='Enter Notion and Anthropic keys to begin';s.style.color='var(--muted)';
+    }
+    var note=$p('pm-idle-note');
+    if(note)note.textContent=(k.notion&&k.anthropic)?'Keys ready. Press begin to surface a thread.':'Add API keys in SETUP to begin.';
+  }
+
+  // ── Three.js Particle Canvas ────────────────────────────────────
+  var pmRenderer=null,pmScene,pmCamera,pmPts,pmLines,pmClock;
+  var pmPulseState={active:false,t:0};
+  var PM_N=150;
+  var pmBasePos=new Float32Array(PM_N*3);
+  var pmPosArr=new Float32Array(PM_N*3);
+  var pmPhase=new Float32Array(PM_N*3);
+
+  function initPmCanvas(){
+    var canvas=$p('pm-canvas');if(!canvas||pmRenderer)return;
+    var wrap=$p('pm-canvas-wrap');
+    var W=wrap.clientWidth||580,H=180;
+    canvas.width=W;canvas.height=H;
+
+    pmScene=new THREE.Scene();
+    pmCamera=new THREE.OrthographicCamera(-W/2,W/2,H/2,-H/2,-100,100);
+    pmCamera.position.z=10;
+
+    pmRenderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});
+    pmRenderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    pmRenderer.setSize(W,H,false);
+    pmRenderer.setClearColor(0x000000,0);
+
+    for(var i=0;i<PM_N;i++){
+      var x=(Math.random()-.5)*W*.88;
+      var y=(Math.random()-.5)*H*.8;
+      var z=(Math.random()-.5)*20;
+      pmBasePos[i*3]=x;pmBasePos[i*3+1]=y;pmBasePos[i*3+2]=z;
+      pmPosArr[i*3]=x;pmPosArr[i*3+1]=y;pmPosArr[i*3+2]=z;
+      pmPhase[i*3]=Math.random()*Math.PI*2;
+      pmPhase[i*3+1]=Math.random()*Math.PI*2;
+      pmPhase[i*3+2]=Math.random()*Math.PI*2;
+    }
+
+    // Points
+    var ptGeo=new THREE.BufferGeometry();
+    ptGeo.setAttribute('position',new THREE.BufferAttribute(pmPosArr.slice(),3));
+    var colors=new Float32Array(PM_N*3);
+    for(var i=0;i<PM_N;i++){
+      var tt=i/PM_N;
+      colors[i*3]=.478+(.761-.478)*tt;
+      colors[i*3+1]=1.0+(.859-1.0)*tt;
+      colors[i*3+2]=.608+(.749-.608)*tt;
+    }
+    ptGeo.setAttribute('color',new THREE.BufferAttribute(colors,3));
+    var ptMat=new THREE.PointsMaterial({size:2.5,vertexColors:true,transparent:true,opacity:.7,sizeAttenuation:false});
+    pmPts=new THREE.Points(ptGeo,ptMat);
+    pmScene.add(pmPts);
+
+    // Lines
+    var MAX_LINES=300;
+    var lineArr=new Float32Array(MAX_LINES*6);
+    var lineGeo=new THREE.BufferGeometry();
+    lineGeo.setAttribute('position',new THREE.BufferAttribute(lineArr,3));
+    lineGeo.setDrawRange(0,0);
+    var lineMat=new THREE.LineBasicMaterial({color:0x7aff9c,transparent:true,opacity:.14});
+    pmLines=new THREE.LineSegments(lineGeo,lineMat);
+    pmScene.add(pmLines);
+
+    pmClock=new THREE.Clock();
+    (function pmTick(){
+      requestAnimationFrame(pmTick);
+      if(!pmRenderer)return;
+      pmUpdateParticles(pmClock.getElapsedTime());
+      pmRenderer.render(pmScene,pmCamera);
+    })();
+
+    window.addEventListener('resize',function(){
+      var nW=$p('pm-canvas-wrap').clientWidth||580;
+      if(Math.abs(nW-W)>4){
+        W=nW;canvas.width=W;canvas.height=H;
+        pmCamera.left=-W/2;pmCamera.right=W/2;pmCamera.updateProjectionMatrix();
+        pmRenderer.setSize(W,H,false);
+      }
+    });
+  }
+
+  function pmUpdateParticles(t){
+    var pos=pmPts.geometry.attributes.position.array;
+    var lpos=pmLines.geometry.attributes.position.array;
+    var lc=0,MAX_LP=300,THRESH=85;
+
+    if(pmPulseState.active){
+      pmPulseState.t+=.045;
+      if(pmPulseState.t>1)pmPulseState.active=false;
+    }
+    var pulse=pmPulseState.active?Math.pow(Math.max(0,1-pmPulseState.t),1.5)*28:0;
+
+    for(var i=0;i<PM_N;i++){
+      var bx=pmBasePos[i*3],by=pmBasePos[i*3+1],bz=pmBasePos[i*3+2];
+      var ox=Math.sin(t*.16+pmPhase[i*3])*14+Math.cos(t*.11+pmPhase[i*3+1])*8;
+      var oy=Math.cos(t*.19+pmPhase[i*3+1])*11+Math.sin(t*.13+pmPhase[i*3+2])*7;
+      var ang=(i/PM_N)*Math.PI*2;
+      pos[i*3]=bx+ox+Math.cos(ang)*pulse;
+      pos[i*3+1]=by+oy+Math.sin(ang)*pulse;
+      pos[i*3+2]=bz;
+    }
+
+    for(var i=0;i<PM_N&&lc<MAX_LP;i++){
+      for(var j=i+1;j<PM_N&&lc<MAX_LP;j++){
+        var dx=pos[i*3]-pos[j*3],dy=pos[i*3+1]-pos[j*3+1];
+        if(dx*dx+dy*dy<THRESH*THRESH){
+          var li=lc*6;
+          lpos[li]=pos[i*3];lpos[li+1]=pos[i*3+1];lpos[li+2]=pos[i*3+2];
+          lpos[li+3]=pos[j*3];lpos[li+4]=pos[j*3+1];lpos[li+5]=pos[j*3+2];
+          lc++;
+        }
+      }
+    }
+
+    pmPts.geometry.attributes.position.needsUpdate=true;
+    pmLines.geometry.attributes.position.needsUpdate=true;
+    pmLines.geometry.setDrawRange(0,lc*2);
+  }
+
+  function pmTriggerPulse(){pmPulseState.active=true;pmPulseState.t=0;}
+
+  // ── Notion API ──────────────────────────────────────────────────
+  async function pmFetchThreads(nKey){
+    var res=await fetch('/api/notion/v1/databases/'+THREADS_DB+'/query',{
+      method:'POST',
+      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
+      body:JSON.stringify({filter:{property:'status',select:{equals:'open'}},page_size:20})
+    });
+    if(!res.ok)throw new Error('Threads fetch failed ('+res.status+'). Check your Notion key.');
+    var d=await res.json();return d.results||[];
+  }
+
+  async function pmFetchSignals(nKey){
+    var res=await fetch('/api/notion/v1/databases/'+SIGNALS_DB+'/query',{
+      method:'POST',
+      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
+      body:JSON.stringify({page_size:6,sorts:[{timestamp:'last_edited_time',direction:'descending'}]})
+    });
+    if(!res.ok)return[];
+    var d=await res.json();return d.results||[];
+  }
+
+  function pmPageTitle(page){
+    try{
+      var p=page.properties.Name||page.properties.Title||page.properties.title;
+      if(p&&p.title&&p.title[0])return p.title[0].plain_text||'';
+    }catch(e){}return'';
+  }
+  function pmPageProp(page,name){
+    try{
+      var p=page.properties[name];
+      if(p&&p.rich_text&&p.rich_text[0])return p.rich_text[0].plain_text||'';
+      if(p&&p.select&&p.select.name)return p.select.name;
+    }catch(e){}return'';
+  }
+
+  // ── Claude API ──────────────────────────────────────────────────
+  async function pmAskClaude(aKey,system,user){
+    var res=await fetch('/api/anthropic/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':aKey,'anthropic-version':'2023-06-01'},
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:380,system:system,messages:[{role:'user',content:user}]})
+    });
+    if(!res.ok)throw new Error('Claude error '+res.status);
+    var d=await res.json();
+    return(d.content.find(function(b){return b.type==='text';})||{}).text||'';
+  }
+
+  // ── UI helpers ──────────────────────────────────────────────────
+  function pmSetStatus(txt,show){
+    var el=$p('pm-status'),t=$p('pm-status-text');
+    if(!el)return;el.style.display=show?'block':'none';
+    if(t)t.textContent=txt;
+  }
+  function pmShowError(msg){
+    var el=$p('pm-error');if(!el)return;
+    el.style.display=msg?'block':'none';el.textContent=msg||'';
+  }
+  function pmTypeQuestion(q){
+    pmCurrentQ=q;
+    var el=$p('pm-question');if(!el)return;
+    var i=0;el.textContent='';
+    (function type(){if(i<q.length){el.textContent=q.slice(0,++i);setTimeout(type,20+Math.random()*16);}})();
+    pmTriggerPulse();
+  }
+  function pmAppendHistory(q,a,refl){
+    pmConvHistory.push({q:q,a:a,refl:refl});
+    var hist=$p('pm-history');if(!hist)return;
+    var pair=document.createElement('div');pair.className='pm-hist-pair';
+    pair.innerHTML='<div class="pm-hist-q">'+q+'</div>'
+      +(refl?'<div class="pm-hist-refl">'+refl+'</div>':'')
+      +'<div class="pm-hist-a">'+a+'</div>';
+    hist.appendChild(pair);
+    var conv=$p('pm-conversation');if(conv)conv.scrollTop=conv.scrollHeight;
+  }
+
+  // ── Session ─────────────────────────────────────────────────────
+  async function pmBeginSession(){
+    var k=pmLoadKeys();
+    if(!k.notion||!k.anthropic){
+      var panel=$p('pm-setup-panel');if(panel)panel.style.display='block';
+      var btn=$p('pm-setup-toggle');if(btn){btn.classList.add('tc-btn-active');btn.textContent='HIDE SETUP';}
+      pmShowError('Add Notion and Anthropic keys in SETUP above.');return;
+    }
+    $p('pm-idle').style.display='none';pmShowError('');
+    pmSetStatus('Loading emerging threads…',true);pmWorking=true;
+
+    try{
+      var threads=await pmFetchThreads(k.notion);
+      var signals=await pmFetchSignals(k.notion);
+
+      if(!threads.length){
+        pmSetStatus('',false);
+        pmShowError('No open threads found. Check your Notion key and database.');
+        $p('pm-idle').style.display='flex';pmWorking=false;return;
+      }
+
+      // Build context
+      var thLines=threads.slice(0,8).map(function(t,i){return(i+1)+'. '+pmPageTitle(t);}).join('\n');
+      var sigLines=signals.slice(0,5).map(function(s){
+        var sm=pmPageProp(s,'summary_ai').slice(0,90);
+        return sm?'— '+pmPageTitle(s)+': '+sm:'';
+      }).filter(Boolean).join('\n');
+      pmThreadCtx='Open threads:\n'+thLines+(sigLines?'\n\nRecent signals:\n'+sigLines:'');
+
+      var firstThread=pmPageTitle(threads[0]);
+      var openQ=await pmAskClaude(k.anthropic,
+        'You are part of A(DAI), a collective intelligence system for the digital arts field. '+
+        'Your role is to open conversations — not close them. Surface what isn\'t being said. '+
+        'Generate a single evocative, open question (1-2 sentences) that invites honest reflection on a tension or blind spot. '+
+        'The question should feel alive, not academic. Return only the question — no preamble, no quotation marks.',
+        'Thread from the field: "'+firstThread+'"\n\n'+
+        'Knowledge base context:\n'+pmThreadCtx.slice(0,700)+'\n\n'+
+        'Craft a question that gets at what the field hasn\'t resolved yet.'
+      );
+
+      pmSetStatus('',false);
+      $p('pm-conversation').style.display='block';
+      pmTypeQuestion(openQ.trim());
+      var inp=$p('pm-input'),sub=$p('pm-submit');
+      if(inp)inp.disabled=false;if(sub)sub.disabled=false;
+      if(inp)inp.focus();
+    }catch(e){
+      pmSetStatus('',false);
+      pmShowError(e.message);
+      $p('pm-idle').style.display='flex';
+    }
+    pmWorking=false;
+  }
+
+  async function pmSend(){
+    if(pmWorking)return;
+    var inp=$p('pm-input');var answer=(inp&&inp.value||'').trim();
+    if(!answer)return;
+    var k=pmLoadKeys();
+    if(!k.anthropic){pmShowError('Anthropic key missing.');return;}
+    pmWorking=true;inp.disabled=true;$p('pm-submit').disabled=true;
+    pmSetStatus('Thinking…',true);pmShowError('');
+
+    try{
+      var histStr=pmConvHistory.map(function(h){return'Q: '+h.q+'\nA: '+h.a;}).join('\n\n');
+      var raw=await pmAskClaude(k.anthropic,
+        'You are embedded in A(DAI), a collective intelligence system for the digital arts field. '+
+        'Surface tensions, contradictions, and blind spots — never resolve them prematurely. '+
+        'Respond with exactly two parts separated by a blank line:\n'+
+        '1. One or two sentences of honest reflection on what the answer reveals, misses, or complicates.\n'+
+        '2. A single evocative follow-up question that opens new territory.\n'+
+        'Nothing else — no labels, no preamble.',
+        'Field context:\n'+pmThreadCtx.slice(0,500)+'\n\n'+
+        (histStr?'Prior exchange:\n'+histStr+'\n\n':'')+
+        'Current question: '+pmCurrentQ+'\nAnswer: '+answer
+      );
+
+      var parts=raw.trim().split(/\n{2,}/);
+      var nextQ=parts[parts.length-1].trim();
+      var refl=parts.length>1?parts.slice(0,-1).join(' ').trim():'';
+
+      pmAppendHistory(pmCurrentQ,answer,refl);
+      inp.value='';inp.disabled=false;$p('pm-submit').disabled=false;
+      pmSetStatus('',false);
+      pmTypeQuestion(nextQ);
+      inp.focus();
+    }catch(e){
+      pmSetStatus('',false);pmShowError(e.message);
+      inp.disabled=false;$p('pm-submit').disabled=false;
+    }
+    pmWorking=false;
+  }
+
+  // ── Bootstrap ───────────────────────────────────────────────────
+  (function(){
+    var k=pmLoadKeys();
+    var kn=$p('pm-key-notion'),ka=$p('pm-key-anthropic');
+    if(kn)kn.value=k.notion;if(ka)ka.value=k.anthropic;
+    pmUpdateKeyStatus(k);
+
+    // Setup toggle
+    var setupBtn=$p('pm-setup-toggle'),setupPanel=$p('pm-setup-panel');
+    if(setupBtn)setupBtn.addEventListener('click',function(){
+      var open=setupPanel.style.display!=='none';
+      setupPanel.style.display=open?'none':'block';
+      setupBtn.classList.toggle('tc-btn-active',!open);
+      setupBtn.textContent=open?'SETUP':'HIDE SETUP';
+    });
+    [kn,ka].forEach(function(inp){if(inp)inp.addEventListener('input',pmSaveKeys);});
+
+    // Auto-open setup if no keys
+    if((!k.notion||!k.anthropic)&&setupPanel){
+      setupPanel.style.display='block';
+      if(setupBtn){setupBtn.classList.add('tc-btn-active');setupBtn.textContent='HIDE SETUP';}
+    }
+
+    var startBtn=$p('pm-start');if(startBtn)startBtn.addEventListener('click',pmBeginSession);
+    var subBtn=$p('pm-submit');if(subBtn)subBtn.addEventListener('click',pmSend);
+    var inp=$p('pm-input');
+    if(inp)inp.addEventListener('keydown',function(e){
+      if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();pmSend();}
+    });
+  })();
+
+  // Exposed for lazy init from showView
+  window.pmInitCanvas=function(){ initPmCanvas(); };
+})();
+
+// -- CONSTELLATION -----------------------------------------------
+(function(){
+  var STAGES=[
+    {label:'Sense',      n:'01',active:true,
+     desc:'Observe and absorb what is emerging across practices, scenes, subcultures. Listen before naming.',
+     c:[0.48,1.0,0.61]},
+    {label:'Query',      n:'02',active:false,
+     desc:'Ask the field collective intelligence — surface connections, patterns, tensions.',
+     c:[0.52,0.69,0.88]},
+    {label:'Speculate',  n:'03',active:false,
+     desc:'Propose frameworks, name movements, imagine futures. Not consensus — navigable plurality.',
+     c:[0.76,0.86,0.75]},
+    {label:'React',      n:'04',active:false,
+     desc:'Respond, critique, debate, disagree. Plurality requires productive friction.',
+     c:[0.90,0.72,0.50]},
+    {label:'Collaborate',n:'05',active:false,
+     desc:'Build with practitioners across scenes. The institute assembles the way the culture assembles.',
+     c:[0.70,0.52,0.90]},
+    {label:'Experiment', n:'06',active:false,
+     desc:'Test through exhibitions, activations, publications, capital. Then sense again.',
+     c:[1.0,0.78,0.47]},
+  ];
+
+  // Fixed positions as % of viewport — arranged in a loose ring around centre
+  // Will be set properly on resize, defined as fractions of W/H
+  var POSITIONS=[
+    {fx:0.42,fy:0.22},  // Sense       top centre-left
+    {fx:0.68,fy:0.30},  // Query       top right
+    {fx:0.72,fy:0.58},  // Speculate   mid right
+    {fx:0.58,fy:0.76},  // React       bottom right
+    {fx:0.28,fy:0.72},  // Collaborate bottom left
+    {fx:0.22,fy:0.42},  // Experiment  mid left
+  ];
+
+  var cnv   = document.getElementById('constellation-canvas');
+  var ctx2  = cnv.getContext('2d');
+  var wrap  = document.getElementById('stage-nodes-wrap');
+  var infoEl= document.getElementById('stageInfo');
+  var verbEl= document.getElementById('stageVerb');
+  var descEl= document.getElementById('stageDesc');
+  var hereEl= document.getElementById('stageHere');
+  var nodeEls=[];
+  var act=0;
+
+  var cT={r1:0.48,g1:1.0,b1:0.61,r2:0.76,g2:0.86,b2:0.75,r3:0.52,g3:0.69,b3:0.88};
+  var cC={r1:0.48,g1:1.0,b1:0.61,r2:0.76,g2:0.86,b2:0.75,r3:0.52,g3:0.69,b3:0.88};
+  var ampT=11.0,ampC=5.5,denT=2.2,denC=2.2;
+
+  function lp(a,b,t){return a+(b-a)*t;}
+
+  // Build DOM nodes
+  STAGES.forEach(function(s,i){
+    var el=document.createElement('div');
+    el.className='stage-node'+(i===0?' active':'');
+    el.innerHTML='<div class="stage-node-num">'+s.n+'</div>'
+      +'<div class="stage-node-ring"><div class="stage-node-dot"></div></div>'
+      +'<div class="stage-node-label">'+s.label+'</div>';
+    el.addEventListener('mouseenter',function(){showInfo(i);});
+    el.addEventListener('mouseleave',function(){showInfo(act);});
+    el.addEventListener('click',function(){
+      if(i===0){window.open('graph.html','_blank');return;}
+      act=i;setActive(i);showInfo(i);
+    });
+    wrap.appendChild(el);
+    nodeEls.push(el);
+  });
+
+  function setActive(i){
+    nodeEls.forEach(function(el,j){
+      el.classList.toggle('active',j===i);
+    });
+  }
+
+  function positionNodes(){
+    var W=window.innerWidth,H=window.innerHeight;
+    POSITIONS.forEach(function(p,i){
+      nodeEls[i].style.left=(p.fx*W)+'px';
+      nodeEls[i].style.top=(p.fy*H)+'px';
+    });
+  }
+
+  function showInfo(i){
+    var s=STAGES[i];
+    verbEl.textContent=s.label; descEl.textContent=s.desc;
+    hereEl.style.opacity=s.active?'1':'0';
+    infoEl.classList.add('show');
+    var c=s.c;
+    cT.r1=c[0];cT.g1=c[1];cT.b1=c[2];
+    cT.r2=lp(c[0],0.76,0.45);cT.g2=lp(c[1],0.86,0.45);cT.b2=lp(c[2],0.75,0.45);
+    cT.r3=lp(0.52,c[0],0.35);cT.g3=lp(0.69,c[1],0.3);cT.b3=lp(0.88,c[2],0.35);
+    ampT=11.0; denT=2.2+(i/5)*3.2;
+  }
+
+  // Draw connecting lines on canvas between node positions
+  function drawLines(){
+    var W=cnv.width,H=cnv.height;
+    ctx2.clearRect(0,0,W,H);
+    var pts=POSITIONS.map(function(p){return {x:p.fx*W,y:p.fy*H};});
+    for(var i=0;i<pts.length;i++){
+      for(var j=i+1;j<pts.length;j++){
+        var a=pts[i],b=pts[j];
+        var dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d>W*0.52)continue;
+        var hi=(i===act||j===act);
+        ctx2.beginPath();ctx2.moveTo(a.x,a.y);ctx2.lineTo(b.x,b.y);
+        ctx2.strokeStyle=hi?'rgba(122,255,156,0.18)':'rgba(160,160,160,0.07)';
+        ctx2.lineWidth=hi?0.9:0.5;ctx2.stroke();
+      }
+    }
+  }
+
+  function tick(){
+    requestAnimationFrame(tick);
+    if(!document.getElementById('view-process').classList.contains('active'))return;
+    var sp=0.04;
+    cC.r1=lp(cC.r1,cT.r1,sp);cC.g1=lp(cC.g1,cT.g1,sp);cC.b1=lp(cC.b1,cT.b1,sp);
+    cC.r2=lp(cC.r2,cT.r2,sp);cC.g2=lp(cC.g2,cT.g2,sp);cC.b2=lp(cC.b2,cT.b2,sp);
+    cC.r3=lp(cC.r3,cT.r3,sp);cC.g3=lp(cC.g3,cT.g3,sp);cC.b3=lp(cC.b3,cT.b3,sp);
+    ampC=lp(ampC,ampT,0.045); denC=lp(denC,denT,0.04);
+    if(window._sphereUniforms){
+      var U=window._sphereUniforms;
+      U.uColor1.value.setRGB(cC.r1,cC.g1,cC.b1);
+      U.uColor2.value.setRGB(cC.r2,cC.g2,cC.b2);
+      U.uColor3.value.setRGB(cC.r3,cC.g3,cC.b3);
+      U.uAmplitude.value=ampC;
+      U.uDensity.value=denC;
+    }
+    drawLines();
+  }
+
+  function resize(){
+    cnv.width=window.innerWidth;cnv.height=window.innerHeight;
+    positionNodes();
+  }
+  window.addEventListener('resize',resize);
+  resize();
+  showInfo(0);
+  tick();
 })();
 
 // ── TYPEWRITER ───────────────────────────────────────────────────
