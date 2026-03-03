@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A(DAI) — a digital arts institute</title>
+  <meta name="description" content="Practice-led infrastructure for the art of now. A practice-led infrastructure project built with conversational generative interfaces. Open source. Not-for-profit. Forkable.">
+  <meta property="og:title" content="A(DAI) — a digital arts institute">
+  <meta property="og:description" content="Practice-led infrastructure for the art of now.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A(DAI) — a digital arts institute">
+  <meta name="twitter:description" content="Practice-led infrastructure for the art of now.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23C8FF00'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      background: #0A0A0A;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .provocation {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      color: #666;
+      min-height: 3.5rem;
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.1s forwards;
+    }
+
+    .cursor {
+      opacity: 0.6;
+      animation: blink 1s step-end infinite;
+      color: #C8FF00;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: #E8E8E8;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.4s forwards;
+    }
+
+    .title .paren { color: #444; font-weight: 400; }
+
+    .subtitle {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-style: italic;
+      color: #555;
+      margin-top: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.6s forwards;
+    }
+
+    .accent-bar {
+      width: 50px;
+      height: 3px;
+      background: #C8FF00;
+      margin: 2rem 0;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.8s forwards;
+    }
+
+    .description {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 520px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.9s forwards;
+    }
+
+    .principles {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.0s forwards;
+    }
+
+    .principles span {
+      font-size: 0.72rem;
+      color: #444;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 0;
+      border-top: 1px solid #1E1E1E;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #C8FF00;
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.15s forwards;
+    }
+
+    .handles {
+      font-size: 0.78rem;
+      color: #333;
+      margin-top: 2.5rem;
+      letter-spacing: 0.03em;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 1.3s forwards;
+    }
+
+    .handles a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .handles a:hover { color: #C8FF00; }
+
+    @media (max-width: 600px) {
+      .content { padding: 1.5rem; }
+      .principles { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="field"></canvas>
+
+<div class="content">
+  <div class="provocation" id="provocation"><span class="cursor">|</span></div>
+  <h1 class="title">A<span class="paren">(</span>DAI<span class="paren">)</span></h1>
+  <p class="subtitle">a digital arts institute</p>
+  <div class="accent-bar"></div>
+  <p class="description">A practice-led infrastructure project built with conversational generative interfaces. Consolidating collective intelligence from artists to build the narrative infrastructure the emergent digital arts need.</p>
+  <div class="principles">
+    <span>Not 'the' — 'a'</span>
+    <span>System not startup</span>
+    <span>Protocol not institution</span>
+    <span>Forkable. Recomposable. Open.</span>
+  </div>
+  <p class="tagline">The digital arts, finding its shared language.</p>
+  <p class="handles">
+    <a href="https://x.com/jamie247" target="_blank">@jamie247</a> · 
+    <a href="https://x.com/Pixel0Symphony" target="_blank">@Pixel0Symphony</a> · 
+    <a href="https://x.com/aiio" target="_blank">@aiio</a>
+  </p>
+</div>
+
+<script>
+(function() {
+  var canvas = document.getElementById('field');
+  var ctx = canvas.getContext('2d');
+  var mouse = { x: 0, y: 0 };
+  var time = 0;
+  var particles = [];
+
+  function resize() {
+    canvas.width = window.innerWidth * 2;
+    canvas.height = window.innerHeight * 2;
+    ctx.scale(2, 2);
+  }
+
+  function init() {
+    resize();
+    var w = window.innerWidth, h = window.innerHeight;
+    particles = [];
+    for (var i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25,
+        size: Math.random() * 1.5 + 0.5, phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function draw() {
+    time += 0.006;
+    var w = window.innerWidth, h = window.innerHeight;
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.x += p.vx + Math.sin(time + p.phase) * 0.12;
+      p.y += p.vy + Math.cos(time * 0.7 + p.phase) * 0.08;
+      var dx = mouse.x - p.x, dy = mouse.y - p.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 140 && dist > 0) { p.x -= (dx / dist) * 0.4; p.y -= (dy / dist) * 0.4; }
+      if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
+      if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
+      for (var j = i + 1; j < particles.length; j++) {
+        var p2 = particles[j];
+        var d = Math.sqrt((p.x - p2.x) * (p.x - p2.x) + (p.y - p2.y) * (p.y - p2.y));
+        if (d < 130) {
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y);
+          ctx.strokeStyle = 'rgba(200,255,0,' + ((1 - d / 130) * 0.12) + ')';
+          ctx.lineWidth = 0.5; ctx.stroke();
+        }
+      }
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(200,255,0,' + (0.25 + Math.sin(time * 2 + p.phase) * 0.12) + ')';
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', function() { resize(); });
+  document.addEventListener('mousemove', function(e) { mouse.x = e.clientX; mouse.y = e.clientY; });
+  init(); draw();
+})();
+
+(function() {
+  var questions = [
+    "What is digital art?",
+    "What would an institute look like if it worked the way the art itself works?",
+    "Can AI enable cultural plurality rather than collapse it?",
+    "Who gets to define the art of now?",
+    "What if narrative came before market?",
+    "Networked does not mean homogeneous. Digital does not mean placeless.",
+    "What would happen if artists were the authority?",
+    "What would open-source curation look like?",
+    "Can infrastructure be plural?"
+  ];
+  var el = document.getElementById('provocation');
+  var qi = 0, ci = 0, deleting = false, paused = false;
+
+  function tick() {
+    var current = questions[qi];
+    if (paused) { setTimeout(function() { paused = false; deleting = true; tick(); }, 3500); return; }
+    if (!deleting && ci < current.length) {
+      ci++; el.innerHTML = current.slice(0, ci) + '<span class="cursor">|</span>';
+      setTimeout(tick, 45 + Math.random() * 25);
+    } else if (!deleting && ci === current.length) { paused = true; tick(); }
+    else if (deleting && ci > 0) {
+      ci--; el.innerHTML = current.slice(0, ci) + '<span class="cursor">|</span>';
+      setTimeout(tick, 18);
+    } else if (deleting && ci === 0) { deleting = false; qi = (qi + 1) % questions.length; setTimeout(tick, 200); }
+  }
+  setTimeout(tick, 800);
+})();
+</script>
+</body>
+</html>
