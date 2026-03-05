@@ -293,10 +293,6 @@
     </div>
     <div class="pm-setup-panel" id="pm-setup-panel" style="display:none">
       <div>
-        <div class="pm-field-label">API Token</div>
-        <input type="password" class="pm-field-input" id="pm-key-notion" placeholder="ntn_…">
-      </div>
-      <div>
         <div class="pm-field-label">Anthropic Key</div>
         <input type="password" class="pm-field-input" id="pm-key-anthropic" placeholder="sk-ant-api03-…">
       </div>
@@ -1120,8 +1116,6 @@
 <script>
 // ── PROMPT ENGINE ────────────────────────────────────────────────
 (function(){
-  var THREADS_DB = 'cc3dec36-47b0-4d93-b0b5-7899daca6018';
-  var SIGNALS_DB = 'e380fc07-d10f-4242-baef-ffbc58ed0e95';
   var pmWorking = false, pmCurrentQ = '', pmThreadCtx = '', pmConvHistory = [];
 
   function $p(id){ return document.getElementById(id); }
@@ -1131,29 +1125,26 @@
     try{
       var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
       var pm=JSON.parse(localStorage.getItem('adai_pm_keys')||'{}');
-      return{notion:pm.notion||tc.notion||'',anthropic:pm.anthropic||tc.anthropic||''};
-    }catch(e){return{notion:'',anthropic:''};}
+      return{anthropic:pm.anthropic||tc.anthropic||''};
+    }catch(e){return{anthropic:''};}
   }
   function pmSaveKeys(){
-    var k={
-      notion:($p('pm-key-notion')||{}).value||'',
-      anthropic:($p('pm-key-anthropic')||{}).value||''
-    };
-    k.notion=k.notion.trim();k.anthropic=k.anthropic.trim();
+    var k={anthropic:($p('pm-key-anthropic')||{}).value||''};
+    k.anthropic=k.anthropic.trim();
     try{localStorage.setItem('adai_pm_keys',JSON.stringify(k));}catch(e){}
     try{
       var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
-      if(k.notion)tc.notion=k.notion;if(k.anthropic)tc.anthropic=k.anthropic;
+      if(k.anthropic)tc.anthropic=k.anthropic;
       localStorage.setItem('adai_tc_keys',JSON.stringify(tc));
     }catch(e){}
     pmUpdateKeyStatus(k);return k;
   }
   function pmUpdateKeyStatus(k){
     var s=$p('pm-keys-status');if(!s)return;
-    if(k.notion&&k.anthropic){s.textContent='keys saved — stored in localStorage';s.style.color='var(--mint)';}
-    else{s.textContent='enter api keys to begin';s.style.color='var(--muted)';}
+    if(k.anthropic){s.textContent='key saved — stored in localStorage';s.style.color='var(--mint)';}
+    else{s.textContent='enter anthropic key to begin';s.style.color='var(--muted)';}
     var note=$p('pm-idle-note');
-    if(note)note.textContent=(k.notion&&k.anthropic)?'keys ready. press begin to surface a thread.':'add api keys in setup to begin.';
+    if(note)note.textContent=k.anthropic?'key ready. press begin to surface a thread.':'add anthropic key in setup to begin.';
   }
 
   // ── Three.js Particle Canvas ──────────────────────────────────
@@ -1233,36 +1224,25 @@
 
   function pmTriggerPulse(){pmPulseState.active=true;pmPulseState.t=0;}
 
-  // ── Signal API ────────────────────────────────────────────────
-  async function pmFetchThreads(nKey){
-    var res=await fetch('/api/notion/v1/databases/'+THREADS_DB+'/query',{
-      method:'POST',
-      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
-      body:JSON.stringify({filter:{property:'status',select:{equals:'open'}},page_size:20})
-    });
-    if(!res.ok)throw new Error('Threads fetch failed ('+res.status+'). Check your API key.');
-    var d=await res.json();return d.results||[];
-  }
-  async function pmFetchSignals(nKey){
-    var res=await fetch('/api/notion/v1/databases/'+SIGNALS_DB+'/query',{
-      method:'POST',
-      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
-      body:JSON.stringify({page_size:6,sorts:[{timestamp:'last_edited_time',direction:'descending'}]})
-    });
-    if(!res.ok)return[];var d=await res.json();return d.results||[];
-  }
-  function pmPageTitle(page){
-    try{var p=page.properties.Name||page.properties.Title||page.properties.title;if(p&&p.title&&p.title[0])return p.title[0].plain_text||'';}catch(e){}return'';
-  }
-  function pmPageProp(page,name){
-    try{var p=page.properties[name];if(p&&p.rich_text&&p.rich_text[0])return p.rich_text[0].plain_text||'';if(p&&p.select&&p.select.name)return p.select.name;}catch(e){}return'';
+  // ── Field context from graph-data.json ───────────────────────
+  function pmGetFieldContext(){
+    var d=window.FI&&window.FI.data;if(!d)return'No field data loaded yet.';
+    var threads=d.threads||[];var concepts=d.concepts||[];
+    var thLines=threads.slice(0,8).map(function(t,i){return(i+1)+'. '+(t.title||t.name);}).join('\n');
+    var topConcepts=concepts.slice().sort(function(a,b){return(b.signal_count||0)-(a.signal_count||0);}).slice(0,12);
+    var cLines=topConcepts.map(function(c){return'— '+c.name+' ('+c.signal_count+' signals)';}).join('\n');
+    var ctx='';
+    if(thLines)ctx+='Active threads:\n'+thLines+'\n\n';
+    if(cLines)ctx+='Top concepts:\n'+cLines;
+    if(!ctx)ctx='Field contains '+d.meta.total_signals+' signals, '+d.meta.total_nodes+' nodes.';
+    return ctx;
   }
 
-  // ── Claude API ────────────────────────────────────────────────
+  // ── Claude API (direct browser access) ─────────────────────
   async function pmAskClaude(aKey,system,user){
-    var res=await fetch('/api/anthropic/v1/messages',{
+    var res=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
-      headers:{'content-type':'application/json','x-api-key':aKey,'anthropic-version':'2023-06-01'},
+      headers:{'content-type':'application/json','x-api-key':aKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:380,system:system,messages:[{role:'user',content:user}]})
     });
     if(!res.ok)throw new Error('Claude error '+res.status);
@@ -1293,20 +1273,15 @@
   async function pmBeginSession(){
     if(pmWorking)return;
     var k=pmLoadKeys();
-    if(!k.notion||!k.anthropic){pmShowError('Add API keys in setup first.');return;}
+    if(!k.anthropic){pmShowError('Add Anthropic key in setup first.');return;}
     $p('pm-idle').style.display='none';pmShowError('');
-    pmSetStatus('loading emerging threads…',true);pmWorking=true;
+    pmSetStatus('reading field intelligence…',true);pmWorking=true;
     try{
-      var threads=await pmFetchThreads(k.notion);
-      var signals=await pmFetchSignals(k.notion);
-      if(!threads.length){pmSetStatus('',false);pmShowError('No open threads found. Check your API keys and database.');$p('pm-idle').style.display='flex';pmWorking=false;return;}
-      var thLines=threads.slice(0,8).map(function(t,i){return(i+1)+'. '+pmPageTitle(t);}).join('\n');
-      var sigLines=signals.slice(0,5).map(function(s){var sm=pmPageProp(s,'summary_ai').slice(0,90);return sm?'— '+pmPageTitle(s)+': '+sm:'';}).filter(Boolean).join('\n');
-      pmThreadCtx='Open threads:\n'+thLines+(sigLines?'\n\nRecent signals:\n'+sigLines:'');
-      var firstThread=pmPageTitle(threads[0]);
+      pmThreadCtx=pmGetFieldContext();
+      if(!pmThreadCtx||pmThreadCtx==='No field data loaded yet.'){pmSetStatus('',false);pmShowError('Field data not loaded yet. Wait for graph-data.json to load.');$p('pm-idle').style.display='flex';pmWorking=false;return;}
       var openQ=await pmAskClaude(k.anthropic,
         'You are part of A(DAI), a collective intelligence system for the digital arts field. Your role is to open conversations — not close them. Surface what isn\'t being said. Generate a single evocative, open question (1-2 sentences) that invites honest reflection on a tension or blind spot. The question should feel alive, not academic. Return only the question — no preamble, no quotation marks.',
-        'Thread from the field: "'+firstThread+'"\n\nKnowledge base context:\n'+pmThreadCtx.slice(0,700)+'\n\nCraft a question that gets at what the field hasn\'t resolved yet.'
+        'Field intelligence context:\n'+pmThreadCtx.slice(0,700)+'\n\nCraft a question that gets at what the field hasn\'t resolved yet.'
       );
       pmSetStatus('',false);$p('pm-conversation').style.display='block';
       pmTypeQuestion(openQ.trim());
@@ -1338,8 +1313,8 @@
 
   // ── Bootstrap ─────────────────────────────────────────────────
   var k=pmLoadKeys();
-  var kn=$p('pm-key-notion'),ka=$p('pm-key-anthropic');
-  if(kn)kn.value=k.notion;if(ka)ka.value=k.anthropic;
+  var ka=$p('pm-key-anthropic');
+  if(ka)ka.value=k.anthropic;
   pmUpdateKeyStatus(k);
 
   var setupBtn=$p('pm-setup-toggle'),setupPanel=$p('pm-setup-panel');
@@ -1349,8 +1324,8 @@
     setupBtn.classList.toggle('active',!open);
     setupBtn.textContent=open?'setup':'hide setup';
   });
-  [kn,ka].forEach(function(inp){if(inp)inp.addEventListener('input',pmSaveKeys);});
-  if((!k.notion||!k.anthropic)&&setupPanel){setupPanel.style.display='block';if(setupBtn){setupBtn.classList.add('active');setupBtn.textContent='hide setup';}}
+  if(ka)ka.addEventListener('input',pmSaveKeys);
+  if(!k.anthropic&&setupPanel){setupPanel.style.display='block';if(setupBtn){setupBtn.classList.add('active');setupBtn.textContent='hide setup';}}
 
   var startBtn=$p('pm-start');if(startBtn)startBtn.addEventListener('click',pmBeginSession);
   var subBtn=$p('pm-submit');if(subBtn)subBtn.addEventListener('click',pmSend);
