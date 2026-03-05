@@ -377,7 +377,7 @@
 
   fetch('graph-data.json').then(function(r){return r.json();}).then(function(raw){
     // Adapt spec format (nodes/edges/meta) to page format (typed arrays)
-    var data={signals:[],concepts:[],practitioners:[],scenes:[],threads:[],meta:raw.meta||{}};
+    var data={signals:[],concepts:[],practitioners:[],scenes:[],threads:[],co_occurrences:[],meta:raw.meta||{}};
     var typeMap={'Concept':'concept','Practitioner':'practitioner','Scene':'scene','Thread':'thread','Signal':'signal'};
     (raw.nodes||[]).forEach(function(n){
       var type=typeMap[n.type]||(n.type||'').toLowerCase();
@@ -386,6 +386,13 @@
       else if(type==='practitioner') data.practitioners.push(entry);
       else if(type==='scene') data.scenes.push(entry);
       else if(type==='thread'){entry.title=n.label||n.id;data.threads.push(entry);}
+    });
+    // Build ID→name map for edge resolution
+    var idToName={};
+    (raw.nodes||[]).forEach(function(n){idToName[n.id]=(n.label||n.id).toLowerCase();});
+    // Convert edges to co_occurrences format (using names, not IDs)
+    (raw.edges||[]).forEach(function(e){
+      data.co_occurrences.push({source:idToName[e.source]||e.source,target:idToName[e.target]||e.target,weight:e.weight||1});
     });
     // Build meta counts from adapted data
     data.meta.signal_count=data.meta.total_signals||0;
