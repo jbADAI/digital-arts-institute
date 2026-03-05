@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prompt and Sense — A(DAI)</title>
+  <title>query — A(DAI)</title>
   <meta name="description" content="Explore the A(DAI) knowledge graph. Search signals, concepts, practitioners, and threads from the digital arts field.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
   <style>
     :root {
       --bg:#FFFFFF;--ink:#1A1A1A;--mint:#7aff9c;--sage:#c2dbbf;--sky:#85b0e1;
-      --muted:#444444;--faint:#DDDDDD;--rule:rgba(0,0,0,0.06);
+      --muted:#333333;--faint:#CCCCCC;--rule:rgba(0,0,0,0.08);
     }
     *{margin:0;padding:0;box-sizing:border-box;}
     ::selection{background:var(--mint);color:#0C0F0E;}
@@ -30,98 +30,113 @@
     .brand-mark{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.4rem,3vw,2rem);
       font-weight:400;line-height:1;letter-spacing:-0.03em;color:var(--ink);}
     .brand-mark .paren{color:var(--mint);font-style:italic;}
-    .breadcrumb{font-family:'Syne Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;
+    .breadcrumb{font-family:'Syne Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;
       color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
     .breadcrumb .sep{color:var(--mint);}
-    .nav-back{font-family:'Syne',sans-serif;font-size:0.62rem;font-weight:500;letter-spacing:0.18em;
+    .nav-back{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.18em;
       color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.25s;}
     .nav-back:hover{color:var(--mint);}
 
     /* MAIN */
     .main{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:2rem 3.2rem 4rem;}
 
-    /* HEADER */
-    .page-header{margin-bottom:2.5rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;}
-    .accent-line{width:32px;height:2px;background:var(--mint);margin-bottom:1.2rem;}
-    .page-title{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,4vw,3rem);
-      font-weight:400;letter-spacing:-0.02em;color:var(--ink);margin-bottom:0.6rem;}
-    .page-sub{font-family:'Syne',sans-serif;font-size:0.72rem;color:var(--muted);line-height:1.9;}
+    /* SENSE HEADER (terminal style) */
+    .sense-header{margin-bottom:2rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.1s forwards;}
+    .sense-stats-line{font-family:'Syne Mono',monospace;font-size:0.75rem;letter-spacing:0.06em;
+      color:var(--muted);line-height:1.8;margin-bottom:0.35rem;}
+    .sense-stats-line .arr{color:var(--mint);}
+    .sense-stats-line .key{color:#777777;}
+    .sense-endpoint{font-family:'Syne Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;color:#777777;}
+    .sense-endpoint a{color:#777777;text-decoration:none;border-bottom:1px solid var(--faint);transition:color 0.2s;}
+    .sense-endpoint a:hover{color:var(--mint);border-bottom-color:var(--mint);}
+    .sense-endpoint .method{color:var(--mint);}
 
-    /* STATS */
-    .stats-row{display:flex;flex-wrap:wrap;gap:1px;background:var(--faint);margin-bottom:2.5rem;
-      opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.2s forwards;}
-    .stat{background:var(--bg);flex:1;min-width:120px;padding:1.2rem 1rem;text-align:center;}
-    .stat-num{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3vw,2.2rem);
-      font-weight:400;color:var(--ink);line-height:1;}
-    .stat-label{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;
-      color:var(--muted);text-transform:uppercase;margin-top:0.4rem;}
-
-    /* SEARCH */
-    .search-section{margin-bottom:2rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;}
-    .search-box{display:flex;align-items:center;border:1px solid var(--faint);background:white;
+    /* SEARCH — terminal prompt style */
+    .search-section{margin-bottom:1.5rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.2s forwards;}
+    .search-box{display:flex;align-items:center;background:white;border:none;border-bottom:1px solid var(--faint);
       transition:border-color 0.2s;}
-    .search-box:focus-within{border-color:var(--mint);}
-    .search-prefix{font-family:'Syne Mono',monospace;font-size:0.8rem;color:var(--mint);
-      padding:0 0 0 1rem;line-height:1;user-select:none;}
-    .search-input{flex:1;border:none;outline:none;padding:0.8rem 1rem;font-family:'Syne Mono',monospace;
-      font-size:0.72rem;color:var(--ink);background:transparent;letter-spacing:0.04em;}
-    .search-input::placeholder{color:#BBBBBB;}
-    .filter-row{display:flex;gap:0.4rem;margin-top:0.8rem;flex-wrap:wrap;}
-    .filter-chip{font-family:'Syne Mono',monospace;font-size:0.54rem;letter-spacing:0.12em;
-      color:var(--muted);text-transform:uppercase;border:1px solid var(--faint);background:var(--bg);
+    .search-box:focus-within{border-bottom-color:var(--mint);}
+    .search-prefix{font-family:'Syne Mono',monospace;font-size:1rem;color:var(--mint);
+      padding:0;line-height:1;user-select:none;flex-shrink:0;}
+    .search-input{flex:1;border:none;outline:none;padding:0.7rem 0 0.7rem 0.6rem;
+      font-family:'Syne Mono',monospace;font-size:0.95rem;color:var(--ink);background:transparent;letter-spacing:0.04em;}
+    .search-input::placeholder{color:#999999;}
+    .filter-row{display:flex;gap:0.3rem;margin-top:0.65rem;flex-wrap:wrap;}
+    .filter-chip{font-family:'Syne Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;
+      color:#777777;text-transform:lowercase;border:1px solid var(--faint);background:transparent;
       padding:0.3rem 0.65rem;cursor:pointer;transition:all 0.2s;}
-    .filter-chip:hover{border-color:var(--mint);color:var(--mint);}
-    .filter-chip.active{background:var(--mint);color:#0C0F0E;border-color:var(--mint);}
+    .filter-chip:hover{border-color:var(--muted);color:var(--muted);}
+    .filter-chip.active{border-color:var(--ink);color:var(--ink);}
+
+    /* SKILLS MANIFEST */
+    .skills-manifest{margin:1.5rem 0 2rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.35s forwards;}
+    .skills-label{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.24em;
+      color:#777777;text-transform:uppercase;margin-bottom:0.7rem;}
+    .skill-row{display:flex;align-items:baseline;gap:0.8rem;padding:0.4rem 0;
+      border-top:1px solid var(--rule);}
+    .skill-row:last-child{border-bottom:1px solid var(--rule);}
+    .skill-path{font-family:'Syne Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;
+      color:var(--ink);text-decoration:none;min-width:110px;display:flex;align-items:center;gap:0.35rem;
+      transition:color 0.2s;}
+    .skill-path:hover{color:var(--mint);}
+    .skill-path .arr{color:var(--mint);}
+    .skill-desc{font-family:'Syne Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;
+      color:#777777;flex:1;}
+    .skill-arrow{font-family:'Syne Mono',monospace;font-size:0.65rem;color:#999999;text-decoration:none;
+      transition:color 0.2s;}
+    .skill-arrow:hover{color:var(--mint);}
+    .skill-soon{font-family:'Syne Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;
+      color:#AAAAAA;text-transform:uppercase;}
 
     /* RESULTS */
     .results{opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;}
     .result-section{margin-bottom:2rem;}
-    .section-label{font-family:'Syne Mono',monospace;font-size:0.58rem;letter-spacing:0.22em;
+    .section-label{font-family:'Syne Mono',monospace;font-size:0.72rem;letter-spacing:0.22em;
       color:var(--mint);text-transform:uppercase;margin-bottom:0.85rem;display:flex;
       align-items:center;gap:0.7rem;}
     .section-label::before{content:'';display:block;width:24px;height:1px;background:var(--mint);}
-    .section-count{color:var(--muted);font-size:0.52rem;}
+    .section-count{color:var(--muted);font-size:0.65rem;}
 
     /* SIGNAL CARDS */
     .signal-card{padding:1.2rem 1.4rem;border:1px solid var(--rule);margin-bottom:-1px;
       cursor:pointer;transition:background 0.2s,border-color 0.2s;position:relative;}
     .signal-card:hover{background:#FAFAFA;}
     .signal-card.quality-high{border-left:3px solid var(--mint);}
-    .signal-card.quality-low{opacity:0.6;}
-    .signal-date{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;
-      color:#AAAAAA;text-transform:uppercase;margin-bottom:0.3rem;}
-    .signal-title{font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;
+    .signal-card.quality-low{opacity:0.8;}
+    .signal-date{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;
+      color:#777777;text-transform:uppercase;margin-bottom:0.3rem;}
+    .signal-title{font-family:'Instrument Serif',Georgia,serif;font-size:1.15rem;font-weight:400;
       color:var(--ink);margin-bottom:0.4rem;letter-spacing:-0.01em;}
-    .signal-excerpt{font-family:'Syne',sans-serif;font-size:0.65rem;color:var(--muted);line-height:1.8;
+    .signal-excerpt{font-family:'Syne',sans-serif;font-size:0.78rem;color:var(--muted);line-height:1.8;
       margin-bottom:0.5rem;}
     .signal-meta{display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;}
-    .chip{font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;
-      padding:0.2rem 0.45rem;text-transform:uppercase;border:1px solid var(--faint);color:var(--muted);}
+    .chip{font-family:'Syne Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;
+      padding:0.25rem 0.5rem;text-transform:uppercase;border:1px solid var(--faint);color:var(--muted);}
     .chip-quality{border-color:var(--mint);color:var(--mint);}
     .chip-scene{border-color:var(--sage);color:#6a8a66;}
 
     /* CONCEPT TAGS */
     .concept-flow{display:flex;flex-wrap:wrap;gap:0.4rem;}
-    .concept-tag{font-family:'Syne Mono',monospace;font-size:0.56rem;letter-spacing:0.1em;
-      color:var(--muted);border:1px solid var(--faint);padding:0.28rem 0.55rem;text-transform:uppercase;
+    .concept-tag{font-family:'Syne Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;
+      color:var(--muted);border:1px solid var(--faint);padding:0.3rem 0.6rem;text-transform:uppercase;
       cursor:pointer;transition:all 0.2s;}
     .concept-tag:hover{border-color:var(--mint);color:var(--mint);}
-    .concept-tag .count{color:#AAAAAA;margin-left:0.3rem;}
+    .concept-tag .count{color:#777777;margin-left:0.3rem;}
 
     /* PRACTITIONER LIST */
     .pract-item{padding:0.5rem 0;border-bottom:1px solid var(--rule);cursor:pointer;
       display:flex;justify-content:space-between;align-items:center;transition:color 0.2s;}
     .pract-item:hover{color:var(--mint);}
-    .pract-name{font-family:'Syne',sans-serif;font-size:0.7rem;color:var(--ink);}
-    .pract-count{font-family:'Syne Mono',monospace;font-size:0.54rem;color:#AAAAAA;}
+    .pract-name{font-family:'Syne',sans-serif;font-size:0.82rem;color:var(--ink);}
+    .pract-count{font-family:'Syne Mono',monospace;font-size:0.68rem;color:#777777;}
     .pract-item:hover .pract-name{color:var(--mint);}
 
     /* THREAD LIST */
     .thread-item{padding:0.7rem 0;border-bottom:1px solid var(--rule);cursor:pointer;transition:color 0.2s;}
     .thread-item:hover .thread-q{color:var(--mint);}
-    .thread-q{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:0.85rem;
+    .thread-q{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:0.95rem;
       color:var(--muted);line-height:1.6;}
-    .thread-meta{font-family:'Syne Mono',monospace;font-size:0.5rem;color:#AAAAAA;margin-top:0.25rem;}
+    .thread-meta{font-family:'Syne Mono',monospace;font-size:0.65rem;color:#777777;margin-top:0.25rem;}
 
     /* DETAIL PANEL */
     .detail{display:none;border:1px solid var(--rule);padding:2rem;margin-bottom:2rem;
@@ -130,15 +145,15 @@
     .detail-close{float:right;font-family:'Syne Mono',monospace;font-size:0.7rem;color:var(--muted);
       cursor:pointer;border:none;background:none;padding:0.3rem;}
     .detail-close:hover{color:var(--mint);}
-    .detail-type{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;
+    .detail-type{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;
       color:var(--mint);text-transform:uppercase;margin-bottom:0.6rem;}
     .detail-title{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.3rem,3vw,1.8rem);
       font-weight:400;color:var(--ink);margin-bottom:0.6rem;letter-spacing:-0.01em;}
     .detail-meta{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;}
     .detail-divider{width:100%;height:1px;background:var(--rule);margin:1.2rem 0;}
-    .detail-section-label{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;
+    .detail-section-label{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;
       color:var(--muted);text-transform:uppercase;margin-bottom:0.5rem;margin-top:1rem;}
-    .detail-text{font-family:'Syne',sans-serif;font-size:0.72rem;color:var(--muted);line-height:2.0;
+    .detail-text{font-family:'Syne',sans-serif;font-size:0.85rem;color:var(--muted);line-height:2.0;
       margin-bottom:0.8rem;}
     .detail-italic{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:0.88rem;
       color:var(--muted);line-height:1.7;margin-bottom:0.8rem;}
@@ -146,26 +161,80 @@
 
     /* MINI GRAPH */
     .mini-graph-container{margin-top:1.5rem;position:relative;}
-    .mini-graph-label{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.2em;
+    .mini-graph-label{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;
       color:var(--muted);text-transform:uppercase;margin-bottom:0.5rem;}
     #miniGraph{width:100%;height:300px;border:1px solid var(--rule);background:#FAFAFA;cursor:default;}
 
     /* FOOTER */
     .footer{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--rule);
       display:flex;justify-content:space-between;align-items:center;}
-    .footer-brand{font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#AAAAAA;}
+    .footer-brand{font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#777777;}
     .footer-brand .paren{color:var(--mint);font-style:italic;}
-    .footer-link{font-family:'Syne Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;
+    .footer-link{font-family:'Syne Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;
       color:var(--muted);text-decoration:none;text-transform:uppercase;}
     .footer-link:hover{color:var(--mint);}
-    .footer-ts{font-family:'Syne Mono',monospace;font-size:0.5rem;color:#CCCCCC;margin-top:0.5rem;}
+    .footer-ts{font-family:'Syne Mono',monospace;font-size:0.65rem;color:#999999;margin-top:0.5rem;}
 
     /* LOADING */
     .loading{text-align:center;padding:4rem 0;}
-    .loading-text{font-family:'Syne Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;
+    .loading-text{font-family:'Syne Mono',monospace;font-size:0.75rem;letter-spacing:0.14em;
       color:var(--muted);text-transform:uppercase;}
     .loading-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--mint);
       margin-left:0.4rem;animation:pulse 1.2s ease-in-out infinite;}
+
+    /* PROMPT ENGINE */
+    .pm-section{margin-bottom:2rem;opacity:0;animation:arrive 1s cubic-bezier(0.16,1,0.3,1) 0.15s forwards;}
+    .pm-label{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.24em;
+      color:#777777;text-transform:uppercase;margin-bottom:0.6rem;}
+    .pm-canvas-wrap{position:relative;width:100%;height:140px;margin:0.6rem 0 0.8rem;overflow:hidden;background:rgba(0,0,0,.008);}
+    .pm-canvas-wrap canvas{display:block;}
+    .pm-setup-row{display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;}
+    .pm-setup-toggle{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;
+      color:#999999;background:none;border:1px solid var(--faint);padding:0.3rem 0.65rem;
+      cursor:pointer;text-transform:uppercase;transition:all 0.2s;}
+    .pm-setup-toggle:hover{border-color:var(--muted);color:var(--muted);}
+    .pm-setup-toggle.active{border-color:var(--mint);color:var(--mint);}
+    .pm-setup-panel{background:#FAFAFA;border:1px solid var(--faint);padding:0.8rem 1rem;
+      margin-bottom:0.8rem;display:flex;flex-direction:column;gap:0.5rem;}
+    .pm-field-label{font-family:'Syne Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;
+      color:var(--muted);text-transform:uppercase;}
+    .pm-field-input{font-family:'Syne Mono',monospace;font-size:0.75rem;color:var(--ink);
+      border:none;border-bottom:1px solid var(--faint);outline:none;padding:0.3rem 0;
+      background:transparent;width:100%;transition:border-color 0.2s;}
+    .pm-field-input:focus{border-bottom-color:var(--mint);}
+    .pm-keys-status{font-family:'Syne Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;margin-top:0.2rem;}
+    .pm-status-text{font-family:'Syne Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;
+      color:var(--muted);text-transform:uppercase;animation:pulse 1.4s ease-in-out infinite;}
+    .pm-conversation{width:100%;}
+    .pm-history{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.2rem;}
+    .pm-hist-pair{display:flex;flex-direction:column;gap:0.35rem;opacity:0.6;transition:opacity 0.4s;}
+    .pm-hist-pair:hover{opacity:0.85;}
+    .pm-hist-q{font-family:'Instrument Serif',Georgia,serif;font-size:0.88rem;font-style:italic;
+      color:var(--ink);line-height:1.5;}
+    .pm-hist-refl{font-family:'Syne',sans-serif;font-size:0.78rem;color:var(--sky);line-height:1.85;
+      padding-left:1rem;border-left:1.5px solid var(--sky);font-style:italic;}
+    .pm-hist-a{font-family:'Syne',sans-serif;font-size:0.78rem;color:var(--muted);line-height:1.9;
+      padding-left:1rem;border-left:1.5px solid var(--sage);}
+    .pm-question-wrap{display:flex;gap:0.6rem;align-items:flex-start;margin-bottom:0.6rem;}
+    .pm-q-dash{font-family:'Syne Mono',monospace;font-size:0.65rem;color:var(--mint);margin-top:0.18em;flex-shrink:0;}
+    .pm-question{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(0.95rem,2vw,1.2rem);
+      font-style:italic;color:var(--ink);line-height:1.55;margin:0;min-height:1.6em;}
+    .pm-answer-area{display:flex;flex-direction:column;gap:0.5rem;padding-left:1.4rem;}
+    .pm-input{width:100%;font-family:'Syne',sans-serif;font-size:0.85rem;color:var(--ink);
+      background:transparent;border:none;border-bottom:1px solid var(--faint);outline:none;
+      resize:none;padding:0.35rem 0;line-height:1.9;transition:border-color 0.3s;}
+    .pm-input:focus{border-bottom-color:var(--mint);}
+    .pm-input::placeholder{color:var(--faint);}
+    .pm-btn{font-family:'Syne Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;
+      color:var(--muted);background:none;border:1px solid var(--faint);padding:0.4rem 0.9rem;
+      cursor:pointer;text-transform:uppercase;transition:all 0.2s;align-self:flex-end;}
+    .pm-btn:hover{border-color:var(--mint);color:var(--mint);}
+    .pm-btn:disabled{opacity:0.3;cursor:default;}
+    .pm-idle{display:flex;flex-direction:column;gap:0.5rem;padding:0.5rem 0;}
+    .pm-idle-note{font-family:'Syne Mono',monospace;font-size:0.68rem;color:#999999;letter-spacing:0.08em;}
+    .pm-error{font-family:'Syne Mono',monospace;font-size:0.72rem;color:#bb4444;line-height:1.8;
+      padding:0.6rem 0.8rem;background:rgba(200,0,0,.03);border:1px solid rgba(200,0,0,.08);}
+    .pm-rule{width:100%;height:1px;background:var(--rule);margin:1.5rem 0;}
 
     @keyframes arrive{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
@@ -188,42 +257,90 @@
 <div class="nav-bar">
   <a href="adai-v18.html" class="brand">
     <div class="brand-mark">A<span class="paren">(</span>DAI<span class="paren">)</span></div>
-    <div class="breadcrumb"><span class="sep">/</span><span>Prompt and Sense</span></div>
+    <div class="breadcrumb"><span class="sep">/</span><span>query</span></div>
   </a>
-  <a href="adai-v18.html" class="nav-back">Back to A(DAI)</a>
+  <a href="graph.html" class="nav-back">/graph ↗</a>
 </div>
 
 <!-- MAIN -->
 <div class="main">
 
-  <!-- HEADER -->
-  <div class="page-header">
-    <div class="accent-line"></div>
-    <h1 class="page-title">Prompt and Sense</h1>
-    <p class="page-sub">Query the A(DAI) intelligence layer — ask about signals, concepts, practitioners, and threads in natural language. The system understands meaning, not just keywords.</p>
+  <!-- HEADER (terminal style) -->
+  <div class="sense-header">
+    <div class="sense-stats-line">
+      <span class="arr">→</span>
+      <span class="key">{</span>
+      signals: <span id="stat-signals">—</span>,
+      concepts: <span id="stat-concepts">—</span>,
+      practitioners: <span id="stat-practitioners">—</span>,
+      scenes: <span id="stat-scenes">—</span>,
+      threads: <span id="stat-threads">—</span>
+      <span class="key">}</span>
+    </div>
+    <div class="sense-endpoint">
+      <span class="method">GET</span>
+      <a href="graph-data.json" target="_blank">/graph-data.json</a>
+      <span style="margin-left:1rem;color:#DDDDDD;">174.8 KB</span>
+      <span style="margin-left:1rem;">updated 2026-03-04</span>
+    </div>
   </div>
 
-  <!-- STATS -->
-  <div class="stats-row" id="statsRow">
-    <div class="stat"><div class="stat-num" id="stat-signals">—</div><div class="stat-label">Signals</div></div>
-    <div class="stat"><div class="stat-num" id="stat-concepts">—</div><div class="stat-label">Concepts</div></div>
-    <div class="stat"><div class="stat-num" id="stat-practitioners">—</div><div class="stat-label">Practitioners</div></div>
-    <div class="stat"><div class="stat-num" id="stat-scenes">—</div><div class="stat-label">Scenes</div></div>
-    <div class="stat"><div class="stat-num" id="stat-threads">—</div><div class="stat-label">Threads</div></div>
+  <!-- QUERY ENGINE -->
+  <div class="pm-section">
+    <div class="pm-label">query engine</div>
+    <div class="pm-setup-row">
+      <button class="pm-setup-toggle" id="pm-setup-toggle">setup</button>
+    </div>
+    <div class="pm-setup-panel" id="pm-setup-panel" style="display:none">
+      <div>
+        <div class="pm-field-label">API Token</div>
+        <input type="password" class="pm-field-input" id="pm-key-notion" placeholder="ntn_…">
+      </div>
+      <div>
+        <div class="pm-field-label">Anthropic Key</div>
+        <input type="password" class="pm-field-input" id="pm-key-anthropic" placeholder="sk-ant-api03-…">
+      </div>
+      <div class="pm-keys-status" id="pm-keys-status"></div>
+    </div>
+    <div class="pm-canvas-wrap" id="pm-canvas-wrap">
+      <canvas id="pm-canvas"></canvas>
+    </div>
+    <div id="pm-status" style="display:none">
+      <span class="pm-status-text" id="pm-status-text">loading threads…</span>
+    </div>
+    <div class="pm-conversation" id="pm-conversation" style="display:none">
+      <div class="pm-history" id="pm-history"></div>
+      <div>
+        <div class="pm-question-wrap">
+          <span class="pm-q-dash">—</span>
+          <p class="pm-question" id="pm-question"></p>
+        </div>
+        <div class="pm-answer-area">
+          <textarea class="pm-input" id="pm-input" placeholder="what do you think?" rows="2" disabled></textarea>
+          <button class="pm-btn" id="pm-submit" disabled>send →</button>
+        </div>
+      </div>
+    </div>
+    <div class="pm-idle" id="pm-idle">
+      <button class="pm-btn" id="pm-start">begin session →</button>
+      <p class="pm-idle-note" id="pm-idle-note"></p>
+    </div>
+    <div class="pm-error" id="pm-error" style="display:none"></div>
+    <div class="pm-rule"></div>
   </div>
 
   <!-- SEARCH -->
   <div class="search-section">
     <div class="search-box">
-      <div class="search-prefix">&#x203A;</div>
-      <input type="text" class="search-input" id="searchInput" placeholder="Ask anything — e.g. 'institutions taking over art'..." autocomplete="off">
+      <div class="search-prefix">&gt;</div>
+      <input type="text" class="search-input" id="searchInput" placeholder="query the field..." autocomplete="off">
     </div>
     <div class="filter-row" id="filterRow">
-      <button class="filter-chip active" data-type="all">All</button>
-      <button class="filter-chip" data-type="signal">Signals</button>
-      <button class="filter-chip" data-type="concept">Concepts</button>
-      <button class="filter-chip" data-type="practitioner">Practitioners</button>
-      <button class="filter-chip" data-type="thread">Threads</button>
+      <button class="filter-chip active" data-type="all">[all]</button>
+      <button class="filter-chip" data-type="signal">[signals]</button>
+      <button class="filter-chip" data-type="concept">[concepts]</button>
+      <button class="filter-chip" data-type="practitioner">[practitioners]</button>
+      <button class="filter-chip" data-type="thread">[threads]</button>
     </div>
   </div>
 
@@ -233,7 +350,7 @@
   <!-- RESULTS -->
   <div class="results" id="resultsArea">
     <div class="loading" id="loadingMsg">
-      <span class="loading-text">Loading intelligence layer</span><span class="loading-dot"></span>
+      <span class="loading-text">querying field</span><span class="loading-dot"></span>
     </div>
   </div>
 
@@ -243,7 +360,10 @@
       <div class="footer-brand">A<span class="paren">(</span>DAI<span class="paren">)</span></div>
       <div class="footer-ts" id="footerTs"></div>
     </div>
-    <a href="adai-v18.html" class="footer-link">Back to main site</a>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="graph.html" class="footer-link">/graph</a>
+      <a href="adai-v18.html" class="footer-link">↗ home</a>
+    </div>
   </div>
 
 </div>
@@ -255,12 +375,30 @@
 
   window.FI={data:null,index:null,corpus:null,ready:false,onReady:[]};
 
-  fetch('adai-graph-data.json').then(function(r){return r.json();}).then(function(data){
+  fetch('graph-data.json').then(function(r){return r.json();}).then(function(raw){
+    // Adapt spec format (nodes/edges/meta) to page format (typed arrays)
+    var data={signals:[],concepts:[],practitioners:[],scenes:[],threads:[],meta:raw.meta||{}};
+    var typeMap={'Concept':'concept','Practitioner':'practitioner','Scene':'scene','Thread':'thread','Signal':'signal'};
+    (raw.nodes||[]).forEach(function(n){
+      var type=typeMap[n.type]||(n.type||'').toLowerCase();
+      var entry={name:n.label||n.id,id:n.id,signal_count:n.signal_count||0,mention_count:n.signal_count||0,signals:n.signals||[]};
+      if(type==='concept') data.concepts.push(entry);
+      else if(type==='practitioner') data.practitioners.push(entry);
+      else if(type==='scene') data.scenes.push(entry);
+      else if(type==='thread'){entry.title=n.label||n.id;data.threads.push(entry);}
+    });
+    // Build meta counts from adapted data
+    data.meta.signal_count=data.meta.total_signals||0;
+    data.meta.concept_count=data.concepts.length;
+    data.meta.practitioner_count=data.practitioners.length;
+    data.meta.scene_count=data.scenes.length;
+    data.meta.thread_count=data.threads.length;
+    data.meta.exported_at=data.meta.generated_at||new Date().toISOString();
+
     DATA=data;
     window.FI.data=data;
 
     // Build indexes
-    data.signals.forEach(function(s){INDEX.signals[s.id]=s;});
     data.concepts.forEach(function(c){INDEX.concepts[c.name.toLowerCase()]=c;});
     data.practitioners.forEach(function(p){INDEX.practitioners[p.name.toLowerCase()]=p;});
     data.scenes.forEach(function(s){INDEX.scenes[s.name.toLowerCase()]=s;});
@@ -268,11 +406,6 @@
     window.FI.index=INDEX;
 
     // Build search corpus
-    data.signals.forEach(function(s){
-      CORPUS.push({type:'signal',id:s.id,primary:s.title,
-        text:(s.title+' '+s.summary+' '+(s.concepts||[]).join(' ')+' '+(s.practitioners||[]).join(' ')+' '+(s.scenes||[]).join(' ')+' '+s.thread).toLowerCase(),
-        obj:s});
-    });
     data.concepts.forEach(function(c){
       CORPUS.push({type:'concept',id:c.name,primary:c.name,
         text:c.name.toLowerCase(),obj:c});
@@ -972,6 +1105,252 @@
       draw(-1);
     };
   };
+})();
+</script>
+
+<!-- PROMPT ENGINE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ── PROMPT ENGINE ────────────────────────────────────────────────
+(function(){
+  var THREADS_DB = 'cc3dec36-47b0-4d93-b0b5-7899daca6018';
+  var SIGNALS_DB = 'e380fc07-d10f-4242-baef-ffbc58ed0e95';
+  var pmWorking = false, pmCurrentQ = '', pmThreadCtx = '', pmConvHistory = [];
+
+  function $p(id){ return document.getElementById(id); }
+
+  // ── Keys ──────────────────────────────────────────────────────
+  function pmLoadKeys(){
+    try{
+      var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
+      var pm=JSON.parse(localStorage.getItem('adai_pm_keys')||'{}');
+      return{notion:pm.notion||tc.notion||'',anthropic:pm.anthropic||tc.anthropic||''};
+    }catch(e){return{notion:'',anthropic:''};}
+  }
+  function pmSaveKeys(){
+    var k={
+      notion:($p('pm-key-notion')||{}).value||'',
+      anthropic:($p('pm-key-anthropic')||{}).value||''
+    };
+    k.notion=k.notion.trim();k.anthropic=k.anthropic.trim();
+    try{localStorage.setItem('adai_pm_keys',JSON.stringify(k));}catch(e){}
+    try{
+      var tc=JSON.parse(localStorage.getItem('adai_tc_keys')||'{}');
+      if(k.notion)tc.notion=k.notion;if(k.anthropic)tc.anthropic=k.anthropic;
+      localStorage.setItem('adai_tc_keys',JSON.stringify(tc));
+    }catch(e){}
+    pmUpdateKeyStatus(k);return k;
+  }
+  function pmUpdateKeyStatus(k){
+    var s=$p('pm-keys-status');if(!s)return;
+    if(k.notion&&k.anthropic){s.textContent='keys saved — stored in localStorage';s.style.color='var(--mint)';}
+    else{s.textContent='enter api keys to begin';s.style.color='var(--muted)';}
+    var note=$p('pm-idle-note');
+    if(note)note.textContent=(k.notion&&k.anthropic)?'keys ready. press begin to surface a thread.':'add api keys in setup to begin.';
+  }
+
+  // ── Three.js Particle Canvas ──────────────────────────────────
+  var pmRenderer=null,pmScene,pmCamera,pmPts,pmLines,pmClock;
+  var pmPulseState={active:false,t:0};
+  var PM_N=120;
+  var pmBasePos=new Float32Array(PM_N*3),pmPosArr=new Float32Array(PM_N*3),pmPhase=new Float32Array(PM_N*3);
+
+  function initPmCanvas(){
+    var canvas=$p('pm-canvas');if(!canvas||pmRenderer)return;
+    var wrap=$p('pm-canvas-wrap');
+    var W=wrap.clientWidth||580,H=140;
+    canvas.width=W;canvas.height=H;
+
+    pmScene=new THREE.Scene();
+    pmCamera=new THREE.OrthographicCamera(-W/2,W/2,H/2,-H/2,-100,100);
+    pmCamera.position.z=10;
+    pmRenderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});
+    pmRenderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+    pmRenderer.setSize(W,H,false);pmRenderer.setClearColor(0x000000,0);
+
+    for(var i=0;i<PM_N;i++){
+      var x=(Math.random()-.5)*W*.88,y=(Math.random()-.5)*H*.8,z=(Math.random()-.5)*20;
+      pmBasePos[i*3]=x;pmBasePos[i*3+1]=y;pmBasePos[i*3+2]=z;
+      pmPosArr[i*3]=x;pmPosArr[i*3+1]=y;pmPosArr[i*3+2]=z;
+      pmPhase[i*3]=Math.random()*Math.PI*2;pmPhase[i*3+1]=Math.random()*Math.PI*2;pmPhase[i*3+2]=Math.random()*Math.PI*2;
+    }
+
+    var ptGeo=new THREE.BufferGeometry();
+    ptGeo.setAttribute('position',new THREE.BufferAttribute(pmPosArr.slice(),3));
+    var colors=new Float32Array(PM_N*3);
+    for(var i=0;i<PM_N;i++){
+      var tt=i/PM_N;
+      colors[i*3]=.478+(.761-.478)*tt;colors[i*3+1]=1.0+(.859-1.0)*tt;colors[i*3+2]=.608+(.749-.608)*tt;
+    }
+    ptGeo.setAttribute('color',new THREE.BufferAttribute(colors,3));
+    pmPts=new THREE.Points(ptGeo,new THREE.PointsMaterial({size:2,vertexColors:true,transparent:true,opacity:.6,sizeAttenuation:false}));
+    pmScene.add(pmPts);
+
+    var MAX_LINES=250;var lineArr=new Float32Array(MAX_LINES*6);
+    var lineGeo=new THREE.BufferGeometry();lineGeo.setAttribute('position',new THREE.BufferAttribute(lineArr,3));lineGeo.setDrawRange(0,0);
+    pmLines=new THREE.LineSegments(lineGeo,new THREE.LineBasicMaterial({color:0x7aff9c,transparent:true,opacity:.12}));
+    pmScene.add(pmLines);
+
+    pmClock=new THREE.Clock();
+    (function anim(){requestAnimationFrame(anim);pmUpdateParticles(pmClock.getElapsedTime());pmRenderer.render(pmScene,pmCamera);})();
+
+    window.addEventListener('resize',function(){
+      var nW=wrap.clientWidth;
+      if(Math.abs(nW-W)>4){W=nW;canvas.width=W;canvas.height=H;pmCamera.left=-W/2;pmCamera.right=W/2;pmCamera.updateProjectionMatrix();pmRenderer.setSize(W,H,false);}
+    });
+  }
+
+  function pmUpdateParticles(t){
+    var pos=pmPts.geometry.attributes.position.array;
+    var lpos=pmLines.geometry.attributes.position.array;
+    var lc=0,MAX_LP=250,THRESH=75;
+    if(pmPulseState.active){pmPulseState.t+=.045;if(pmPulseState.t>1)pmPulseState.active=false;}
+    var pulse=pmPulseState.active?Math.pow(Math.max(0,1-pmPulseState.t),1.5)*24:0;
+    for(var i=0;i<PM_N;i++){
+      var bx=pmBasePos[i*3],by=pmBasePos[i*3+1],bz=pmBasePos[i*3+2];
+      var ox=Math.sin(t*.16+pmPhase[i*3])*12+Math.cos(t*.11+pmPhase[i*3+1])*7;
+      var oy=Math.cos(t*.19+pmPhase[i*3+1])*9+Math.sin(t*.13+pmPhase[i*3+2])*6;
+      var ang=(i/PM_N)*Math.PI*2;
+      pos[i*3]=bx+ox+Math.cos(ang)*pulse;pos[i*3+1]=by+oy+Math.sin(ang)*pulse;pos[i*3+2]=bz;
+    }
+    for(var i=0;i<PM_N&&lc<MAX_LP;i++){
+      for(var j=i+1;j<PM_N&&lc<MAX_LP;j++){
+        var dx=pos[i*3]-pos[j*3],dy=pos[i*3+1]-pos[j*3+1];
+        if(dx*dx+dy*dy<THRESH*THRESH){var li=lc*6;lpos[li]=pos[i*3];lpos[li+1]=pos[i*3+1];lpos[li+2]=pos[i*3+2];lpos[li+3]=pos[j*3];lpos[li+4]=pos[j*3+1];lpos[li+5]=pos[j*3+2];lc++;}
+      }
+    }
+    pmPts.geometry.attributes.position.needsUpdate=true;
+    pmLines.geometry.attributes.position.needsUpdate=true;
+    pmLines.geometry.setDrawRange(0,lc*2);
+  }
+
+  function pmTriggerPulse(){pmPulseState.active=true;pmPulseState.t=0;}
+
+  // ── Signal API ────────────────────────────────────────────────
+  async function pmFetchThreads(nKey){
+    var res=await fetch('/api/notion/v1/databases/'+THREADS_DB+'/query',{
+      method:'POST',
+      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
+      body:JSON.stringify({filter:{property:'status',select:{equals:'open'}},page_size:20})
+    });
+    if(!res.ok)throw new Error('Threads fetch failed ('+res.status+'). Check your API key.');
+    var d=await res.json();return d.results||[];
+  }
+  async function pmFetchSignals(nKey){
+    var res=await fetch('/api/notion/v1/databases/'+SIGNALS_DB+'/query',{
+      method:'POST',
+      headers:{authorization:'Bearer '+nKey,'notion-version':'2022-06-28','content-type':'application/json'},
+      body:JSON.stringify({page_size:6,sorts:[{timestamp:'last_edited_time',direction:'descending'}]})
+    });
+    if(!res.ok)return[];var d=await res.json();return d.results||[];
+  }
+  function pmPageTitle(page){
+    try{var p=page.properties.Name||page.properties.Title||page.properties.title;if(p&&p.title&&p.title[0])return p.title[0].plain_text||'';}catch(e){}return'';
+  }
+  function pmPageProp(page,name){
+    try{var p=page.properties[name];if(p&&p.rich_text&&p.rich_text[0])return p.rich_text[0].plain_text||'';if(p&&p.select&&p.select.name)return p.select.name;}catch(e){}return'';
+  }
+
+  // ── Claude API ────────────────────────────────────────────────
+  async function pmAskClaude(aKey,system,user){
+    var res=await fetch('/api/anthropic/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':aKey,'anthropic-version':'2023-06-01'},
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:380,system:system,messages:[{role:'user',content:user}]})
+    });
+    if(!res.ok)throw new Error('Claude error '+res.status);
+    var d=await res.json();return(d.content.find(function(b){return b.type==='text';})||{}).text||'';
+  }
+
+  // ── UI helpers ────────────────────────────────────────────────
+  function pmSetStatus(txt,show){
+    var el=$p('pm-status'),t=$p('pm-status-text');if(!el)return;
+    el.style.display=show?'block':'none';if(t)t.textContent=txt;
+  }
+  function pmShowError(msg){var el=$p('pm-error');if(!el)return;el.style.display=msg?'block':'none';el.textContent=msg||'';}
+  function pmTypeQuestion(q){
+    pmCurrentQ=q;var el=$p('pm-question');if(!el)return;
+    var i=0;el.textContent='';
+    (function type(){if(i<q.length){el.textContent=q.slice(0,++i);setTimeout(type,20+Math.random()*16);}})();
+    pmTriggerPulse();
+  }
+  function pmAppendHistory(q,a,refl){
+    pmConvHistory.push({q:q,a:a,refl:refl});
+    var hist=$p('pm-history');if(!hist)return;
+    var pair=document.createElement('div');pair.className='pm-hist-pair';
+    pair.innerHTML='<div class="pm-hist-q">'+q+'</div>'+(refl?'<div class="pm-hist-refl">'+refl+'</div>':'')+'<div class="pm-hist-a">'+a+'</div>';
+    hist.appendChild(pair);
+  }
+
+  // ── Session logic ─────────────────────────────────────────────
+  async function pmBeginSession(){
+    if(pmWorking)return;
+    var k=pmLoadKeys();
+    if(!k.notion||!k.anthropic){pmShowError('Add API keys in setup first.');return;}
+    $p('pm-idle').style.display='none';pmShowError('');
+    pmSetStatus('loading emerging threads…',true);pmWorking=true;
+    try{
+      var threads=await pmFetchThreads(k.notion);
+      var signals=await pmFetchSignals(k.notion);
+      if(!threads.length){pmSetStatus('',false);pmShowError('No open threads found. Check your API keys and database.');$p('pm-idle').style.display='flex';pmWorking=false;return;}
+      var thLines=threads.slice(0,8).map(function(t,i){return(i+1)+'. '+pmPageTitle(t);}).join('\n');
+      var sigLines=signals.slice(0,5).map(function(s){var sm=pmPageProp(s,'summary_ai').slice(0,90);return sm?'— '+pmPageTitle(s)+': '+sm:'';}).filter(Boolean).join('\n');
+      pmThreadCtx='Open threads:\n'+thLines+(sigLines?'\n\nRecent signals:\n'+sigLines:'');
+      var firstThread=pmPageTitle(threads[0]);
+      var openQ=await pmAskClaude(k.anthropic,
+        'You are part of A(DAI), a collective intelligence system for the digital arts field. Your role is to open conversations — not close them. Surface what isn\'t being said. Generate a single evocative, open question (1-2 sentences) that invites honest reflection on a tension or blind spot. The question should feel alive, not academic. Return only the question — no preamble, no quotation marks.',
+        'Thread from the field: "'+firstThread+'"\n\nKnowledge base context:\n'+pmThreadCtx.slice(0,700)+'\n\nCraft a question that gets at what the field hasn\'t resolved yet.'
+      );
+      pmSetStatus('',false);$p('pm-conversation').style.display='block';
+      pmTypeQuestion(openQ.trim());
+      var inp=$p('pm-input'),sub=$p('pm-submit');
+      if(inp)inp.disabled=false;if(sub)sub.disabled=false;if(inp)inp.focus();
+    }catch(e){pmSetStatus('',false);pmShowError(e.message);$p('pm-idle').style.display='flex';}
+    pmWorking=false;
+  }
+
+  async function pmSend(){
+    if(pmWorking)return;
+    var inp=$p('pm-input');var answer=(inp&&inp.value||'').trim();if(!answer)return;
+    var k=pmLoadKeys();if(!k.anthropic){pmShowError('Anthropic key missing.');return;}
+    pmWorking=true;inp.disabled=true;$p('pm-submit').disabled=true;
+    pmSetStatus('thinking…',true);pmShowError('');
+    try{
+      var histStr=pmConvHistory.map(function(h){return'Q: '+h.q+'\nA: '+h.a;}).join('\n\n');
+      var raw=await pmAskClaude(k.anthropic,
+        'You are embedded in A(DAI), a collective intelligence system for the digital arts field. Surface tensions, contradictions, and blind spots — never resolve them prematurely. Respond with exactly two parts separated by a blank line:\n1. One or two sentences of honest reflection on what the answer reveals, misses, or complicates.\n2. A single evocative follow-up question that opens new territory.\nNothing else — no labels, no preamble.',
+        'Field context:\n'+pmThreadCtx.slice(0,500)+'\n\n'+(histStr?'Prior exchange:\n'+histStr+'\n\n':'')+'Current question: '+pmCurrentQ+'\nAnswer: '+answer
+      );
+      var parts=raw.trim().split(/\n{2,}/);var nextQ=parts[parts.length-1].trim();var refl=parts.length>1?parts.slice(0,-1).join(' ').trim():'';
+      pmAppendHistory(pmCurrentQ,answer,refl);
+      inp.value='';inp.disabled=false;$p('pm-submit').disabled=false;
+      pmSetStatus('',false);pmTypeQuestion(nextQ);inp.focus();
+    }catch(e){pmSetStatus('',false);pmShowError(e.message);inp.disabled=false;$p('pm-submit').disabled=false;}
+    pmWorking=false;
+  }
+
+  // ── Bootstrap ─────────────────────────────────────────────────
+  var k=pmLoadKeys();
+  var kn=$p('pm-key-notion'),ka=$p('pm-key-anthropic');
+  if(kn)kn.value=k.notion;if(ka)ka.value=k.anthropic;
+  pmUpdateKeyStatus(k);
+
+  var setupBtn=$p('pm-setup-toggle'),setupPanel=$p('pm-setup-panel');
+  if(setupBtn)setupBtn.addEventListener('click',function(){
+    var open=setupPanel.style.display!=='none';
+    setupPanel.style.display=open?'none':'block';
+    setupBtn.classList.toggle('active',!open);
+    setupBtn.textContent=open?'setup':'hide setup';
+  });
+  [kn,ka].forEach(function(inp){if(inp)inp.addEventListener('input',pmSaveKeys);});
+  if((!k.notion||!k.anthropic)&&setupPanel){setupPanel.style.display='block';if(setupBtn){setupBtn.classList.add('active');setupBtn.textContent='hide setup';}}
+
+  var startBtn=$p('pm-start');if(startBtn)startBtn.addEventListener('click',pmBeginSession);
+  var subBtn=$p('pm-submit');if(subBtn)subBtn.addEventListener('click',pmSend);
+  var inp=$p('pm-input');
+  if(inp)inp.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();pmSend();}});
+
+  initPmCanvas();
 })();
 </script>
 </body>

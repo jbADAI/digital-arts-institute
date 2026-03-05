@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge Graph — A(DAI)</title>
+  <title>graph — A(DAI)</title>
   <meta name="description" content="The A(DAI) knowledge graph — a living map of concepts, practitioners, and threads across the digital arts field.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,20 +39,66 @@
       color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.25s;}
     .nav-back:hover{color:var(--mint);}
 
-    /* STATS BAR */
-    .stats-bar{position:fixed;bottom:0;left:0;right:0;z-index:30;padding:1.2rem 3.2rem;
+    /* FILTER BAR */
+    .stats-bar{position:fixed;bottom:0;left:0;right:0;z-index:30;padding:0.9rem 3.2rem;
       display:flex;justify-content:space-between;align-items:center;
-      background:rgba(255,255,255,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-      border-top:1px solid var(--rule);pointer-events:all;}
-    .stats-left{display:flex;gap:2rem;align-items:center;}
-    .stat-item{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.14em;
-      color:var(--muted);text-transform:uppercase;}
-    .stat-num{font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;font-weight:400;
-      color:var(--ink);margin-right:0.3rem;}
-    .stats-right{display:flex;gap:1rem;align-items:center;}
-    .legend-item{display:flex;align-items:center;gap:0.35rem;font-family:'Syne Mono',monospace;
-      font-size:0.5rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;}
-    .legend-dot{width:8px;height:8px;border-radius:50%;}
+      background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+      border-top:1px solid var(--rule);pointer-events:all;gap:1rem;}
+    .filter-chips{display:flex;gap:0.4rem;align-items:center;flex-wrap:wrap;}
+    .fchip{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;
+      color:var(--muted);text-transform:uppercase;border:1px solid var(--faint);background:var(--bg);
+      padding:0.25rem 0.6rem;cursor:pointer;transition:all 0.2s;user-select:none;}
+    .fchip:hover{border-color:var(--muted);}
+    .fchip.active{border-color:var(--ink);color:var(--ink);}
+    .fchip.fc-all.active{border-color:var(--mint);color:var(--mint);}
+    .fchip.fc-concept.active{background:rgba(122,255,156,0.12);border-color:#7aff9c;color:var(--ink);}
+    .fchip.fc-practitioner.active{background:rgba(133,176,225,0.12);border-color:#85b0e1;color:var(--ink);}
+    .fchip.fc-scene.active{background:rgba(194,219,191,0.12);border-color:#c2dbbf;color:var(--ink);}
+    .fchip.fc-thread.active{background:rgba(68,68,68,0.08);border-color:#888;color:var(--ink);}
+    .filter-counts{font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.1em;
+      color:#AAAAAA;white-space:nowrap;}
+
+    /* DETAIL PANEL */
+    .detail-panel{position:fixed;top:0;right:0;bottom:0;z-index:40;width:300px;
+      background:#fff;border-left:1px solid var(--rule);
+      transform:translateX(100%);transition:transform 0.45s cubic-bezier(0.16,1,0.3,1);
+      display:flex;flex-direction:column;overflow:hidden;pointer-events:all;}
+    .detail-panel.open{transform:translateX(0);}
+    .dp-header{display:flex;justify-content:space-between;align-items:flex-start;
+      padding:1.4rem 1.4rem 0.6rem;border-bottom:1px solid var(--rule);flex-shrink:0;}
+    .dp-type{font-family:'Syne Mono',monospace;font-size:0.48rem;letter-spacing:0.22em;
+      color:var(--mint);text-transform:uppercase;}
+    .dp-close{background:none;border:none;font-family:'Syne Mono',monospace;font-size:0.9rem;
+      color:#CCCCCC;cursor:pointer;padding:0;line-height:1;transition:color 0.2s;}
+    .dp-close:hover{color:var(--ink);}
+    .dp-body{flex:1;overflow-y:auto;padding:1rem 1.4rem 0;}
+    .dp-name{font-family:'Instrument Serif',Georgia,serif;font-size:1.5rem;font-weight:400;
+      letter-spacing:-0.01em;color:var(--ink);line-height:1.2;margin-bottom:0.35rem;}
+    .dp-count{font-family:'Syne Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;
+      color:var(--muted);text-transform:uppercase;margin-bottom:1rem;}
+    .dp-section{margin-bottom:1.2rem;}
+    .dp-section-label{font-family:'Syne Mono',monospace;font-size:0.48rem;letter-spacing:0.2em;
+      color:#AAAAAA;text-transform:uppercase;margin-bottom:0.5rem;}
+    .dp-chips{display:flex;flex-wrap:wrap;gap:0.3rem;}
+    .dp-chip{font-family:'Syne Mono',monospace;font-size:0.5rem;letter-spacing:0.06em;
+      color:var(--muted);border:1px solid var(--faint);padding:0.2rem 0.5rem;cursor:pointer;
+      transition:all 0.15s;text-transform:uppercase;}
+    .dp-chip:hover{border-color:var(--mint);color:var(--mint);}
+    .dp-signal-item{border-top:1px solid var(--rule);padding:0.6rem 0;cursor:pointer;}
+    .dp-signal-item:first-child{border-top:none;}
+    .dp-signal-title{font-family:'Syne',sans-serif;font-size:0.62rem;color:var(--ink);
+      line-height:1.5;transition:color 0.15s;}
+    .dp-signal-item:hover .dp-signal-title{color:var(--mint);}
+    .dp-signal-meta{font-family:'Syne Mono',monospace;font-size:0.48rem;letter-spacing:0.08em;
+      color:#AAAAAA;text-transform:uppercase;margin-top:0.2rem;}
+    .dp-thread-text{font-family:'Instrument Serif',Georgia,serif;font-style:italic;
+      font-size:0.88rem;color:var(--muted);line-height:1.6;}
+    .dp-skills{flex-shrink:0;border-top:1px solid var(--rule);padding:0.9rem 1.4rem;display:flex;gap:0.8rem;flex-wrap:wrap;}
+    .dp-skill-link{font-family:'Syne Mono',monospace;font-size:0.54rem;letter-spacing:0.1em;
+      color:var(--muted);text-decoration:none;text-transform:uppercase;
+      transition:color 0.2s;display:flex;align-items:center;gap:0.3rem;}
+    .dp-skill-link:hover{color:var(--mint);}
+    .dp-skill-link .arr{color:var(--mint);}
 
     /* HOVER TOOLTIP */
     .tooltip{position:fixed;z-index:50;pointer-events:none;opacity:0;
@@ -120,7 +166,7 @@
 
 <!-- LOADING -->
 <div class="loading-overlay" id="loading">
-  <span class="loading-text">Building graph</span><span class="loading-dot"></span>
+  <span class="loading-text">initializing field intelligence</span><span class="loading-dot"></span>
 </div>
 
 <!-- NAV -->
@@ -128,12 +174,11 @@
   <div class="nav-left">
     <a href="adai-v18.html" class="brand">
       <div class="brand-mark">A<span class="paren">(</span>DAI<span class="paren">)</span></div>
-      <div class="breadcrumb"><span class="sep">/</span><span>Knowledge Graph</span></div>
+      <div class="breadcrumb"><span class="sep">/</span><span>graph</span></div>
     </a>
   </div>
   <div class="nav-right" style="display:flex;gap:1.5rem;align-items:center;">
-    <a href="adai-v18.html#process" class="nav-back">Process</a>
-    <a href="adai-v18.html" class="nav-back">Back to A(DAI)</a>
+    <a href="field-intelligence.html" class="nav-back">/query →</a>
   </div>
 </div>
 
@@ -155,18 +200,30 @@
 <!-- TOOLTIP -->
 <div class="tooltip" id="tooltip"></div>
 
-<!-- STATS BAR -->
+<!-- FILTER BAR -->
 <div class="stats-bar">
-  <div class="stats-left">
-    <div class="stat-item"><span class="stat-num" id="sNodes">—</span>nodes</div>
-    <div class="stat-item"><span class="stat-num" id="sEdges">—</span>edges</div>
+  <div class="filter-chips">
+    <div class="fchip fc-all active" data-filter="all">[all]</div>
+    <div class="fchip fc-concept active" data-filter="concept">[concepts]</div>
+    <div class="fchip fc-practitioner active" data-filter="practitioner">[practitioners]</div>
+    <div class="fchip fc-scene active" data-filter="scene">[scenes]</div>
+    <div class="fchip fc-thread active" data-filter="thread">[threads]</div>
   </div>
-  <div class="stats-right">
-    <div class="legend-item"><div class="legend-dot" style="background:#7aff9c;"></div>Concept</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#85b0e1;"></div>Practitioner</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#c2dbbf;"></div>Scene</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#444444;"></div>Thread</div>
+  <div class="filter-counts" id="filterCounts"></div>
+</div>
+
+<!-- DETAIL PANEL -->
+<div class="detail-panel" id="detailPanel">
+  <div class="dp-header">
+    <span class="dp-type" id="dpType">concept</span>
+    <button class="dp-close" id="dpClose">×</button>
   </div>
+  <div class="dp-body">
+    <div class="dp-name" id="dpName"></div>
+    <div class="dp-count" id="dpCount"></div>
+    <div id="dpContent"></div>
+  </div>
+  <div class="dp-skills" id="dpSkills"></div>
 </div>
 
 <script>
@@ -197,6 +254,9 @@
   var hoveredNode = null, highlightSet = null;
   var searchMatch = null;
   var nearbySet = null; // nodes spatially close to hovered node
+  var graphData = null;
+  var signalMap = {};
+  var hiddenTypes = new Set(); // types currently hidden by filter
 
   // Camera
   var cam = {x:0, y:0, zoom:1};
@@ -211,7 +271,8 @@
   resize();
 
   // ── LOAD DATA ──
-  fetch('adai-graph-data.json').then(function(r){return r.json();}).then(function(data){
+  fetch('graph-data.json').then(function(r){return r.json();}).then(function(data){
+    graphData = data;
     buildGraph(data);
     document.getElementById('loading').classList.add('hidden');
     simulate();
@@ -222,105 +283,54 @@
 
   // ── BUILD GRAPH ──
   function buildGraph(data){
-    var maxMention = 1;
+    var typeMap = {'Concept':'concept','Practitioner':'practitioner','Scene':'scene','Thread':'thread'};
+    var maxCount = 1;
 
-    // Add concept nodes
-    data.concepts.forEach(function(c){
-      if(c.mention_count > maxMention) maxMention = c.mention_count;
+    // Find max signal_count for sizing
+    (data.nodes||[]).forEach(function(d){
+      if((d.signal_count||0) > maxCount) maxCount = d.signal_count;
     });
-    data.concepts.forEach(function(c){
+
+    // Add all nodes
+    (data.nodes||[]).forEach(function(d){
+      var type = typeMap[d.type] || d.type.toLowerCase();
+      var count = d.signal_count || 0;
+      var label = d.label || d.id;
+      var r;
+      if(type === 'concept')       r = MIN_NODE_R + (count / maxCount) * (MAX_NODE_R - MIN_NODE_R);
+      else if(type === 'practitioner') r = MIN_NODE_R + (count / maxCount) * (MAX_NODE_R*0.7 - MIN_NODE_R);
+      else if(type === 'scene')    r = MIN_NODE_R + 4;
+      else                         r = MIN_NODE_R + 3;
+
       var n = {
-        id: c.name, type:'concept', label:c.name, count:c.mention_count,
-        r: MIN_NODE_R + (c.mention_count / maxMention) * (MAX_NODE_R - MIN_NODE_R),
+        id: d.id, type: type, label: label.length>40 ? label.slice(0,40)+'...' : label,
+        fullLabel: label, count: count, r: r,
         x: (Math.random()-0.5)*600, y: (Math.random()-0.5)*600,
-        vx:0, vy:0, connections:[], signals:c.signals
+        vx:0, vy:0, connections:[], signals: d.signals || []
       };
       nodes.push(n);
-      nodeMap[c.name.toLowerCase()] = n;
+      nodeMap[d.id.toLowerCase()] = n;
+      // Also map by label for search
+      if(d.label) nodeMap[d.label.toLowerCase()] = n;
     });
 
-    // Add practitioner nodes (top 30 by mentions)
-    var topPract = data.practitioners.slice(0,30);
-    var maxPractMention = 1;
-    topPract.forEach(function(p){ if(p.mention_count>maxPractMention)maxPractMention=p.mention_count; });
-    topPract.forEach(function(p){
-      var n = {
-        id: p.name, type:'practitioner', label:p.name, count:p.mention_count,
-        r: MIN_NODE_R + (p.mention_count / maxPractMention) * (MAX_NODE_R*0.7 - MIN_NODE_R),
-        x: (Math.random()-0.5)*600, y: (Math.random()-0.5)*600,
-        vx:0, vy:0, connections:[], signals:p.signals
-      };
-      nodes.push(n);
-      nodeMap[p.name.toLowerCase()] = n;
-    });
-
-    // Add scene nodes
-    data.scenes.forEach(function(s){
-      var n = {
-        id: s.name, type:'scene', label:s.name, count:s.signal_count,
-        r: MIN_NODE_R + 4,
-        x: (Math.random()-0.5)*600, y: (Math.random()-0.5)*600,
-        vx:0, vy:0, connections:[], signals:s.signals
-      };
-      nodes.push(n);
-      nodeMap[s.name.toLowerCase()] = n;
-    });
-
-    // Add thread nodes (top 15)
-    data.threads.slice(0,15).forEach(function(t){
-      var n = {
-        id: t.title, type:'thread', label: t.title.length>40 ? t.title.slice(0,40)+'...' : t.title,
-        fullLabel: t.title, count:t.signal_count,
-        r: MIN_NODE_R + 3,
-        x: (Math.random()-0.5)*600, y: (Math.random()-0.5)*600,
-        vx:0, vy:0, connections:[], signals:t.signals
-      };
-      nodes.push(n);
-      nodeMap[t.title.toLowerCase()] = n;
-    });
-
-    // Build edges from co-occurrences
-    data.co_occurrences.forEach(function(e){
+    // Build edges
+    (data.edges||[]).forEach(function(e){
       var sNode = nodeMap[e.source.toLowerCase()];
       var tNode = nodeMap[e.target.toLowerCase()];
       if(sNode && tNode){
-        var edge = {source:sNode, target:tNode, weight:e.weight};
+        var edge = {source:sNode, target:tNode, weight:e.weight||1};
         edges.push(edge);
         sNode.connections.push(tNode);
         tNode.connections.push(sNode);
       }
     });
 
-    // Also connect practitioners to concepts via shared signals
-    topPract.forEach(function(p){
-      var pNode = nodeMap[p.name.toLowerCase()];
-      if(!pNode) return;
-      var connected = {};
-      (p.signals||[]).forEach(function(sid){
-        data.concepts.forEach(function(c){
-          if((c.signals||[]).indexOf(sid)>=0 && !connected[c.name.toLowerCase()]){
-            var cNode = nodeMap[c.name.toLowerCase()];
-            if(cNode){
-              connected[c.name.toLowerCase()] = true;
-              // Only add edge if strong connection (3+ shared signals)
-              var shared = 0;
-              (p.signals||[]).forEach(function(s2){
-                if((c.signals||[]).indexOf(s2)>=0) shared++;
-              });
-              if(shared >= 2){
-                edges.push({source:pNode, target:cNode, weight:shared, cross:true});
-                pNode.connections.push(cNode);
-                cNode.connections.push(pNode);
-              }
-            }
-          }
-        });
-      });
-    });
+    // Assign breathing phase index
+    nodes.forEach(function(n,i){ n._idx = i; });
 
     // Stats
-    document.getElementById('sNodes').textContent = nodes.length;
-    document.getElementById('sEdges').textContent = edges.length;
+    updateFilterCounts();
 
     // Centre camera
     cam.x = 0; cam.y = 0;
@@ -385,7 +395,9 @@
   }
 
   // ── DRAW ──
+  var drawTime = 0;
   function draw(){
+    drawTime = performance.now() * 0.001;
     var W=canvas.width, H=canvas.height;
     ctx.clearRect(0,0,W,H);
     ctx.save();
@@ -394,6 +406,7 @@
 
     // Edges
     edges.forEach(function(e){
+      if(hiddenTypes.has(e.source.type) || hiddenTypes.has(e.target.type)) return;
       var highlighted = highlightSet && (highlightSet.has(e.source) && highlightSet.has(e.target));
       var dimmed = highlightSet && !highlighted;
       var isSearch = searchMatch && (searchMatch===e.source || searchMatch===e.target);
@@ -414,13 +427,17 @@
 
     // Nodes
     nodes.forEach(function(n){
+      if(hiddenTypes.has(n.type)) return;
       var isHover = n === hoveredNode;
       var isHighlight = highlightSet && highlightSet.has(n);
       var isSearch = searchMatch === n;
       var isNearby = nearbySet && nearbySet.has(n);
       var dimmed = highlightSet && !isHighlight && !isSearch && !isNearby;
 
-      var r = n.r;
+      // Breathing: subtle radius oscillation per node
+      var breathPhase = (n._idx || 0) * 1.618;
+      var breath = 1 + Math.sin(drawTime * 0.8 + breathPhase) * 0.12 + Math.sin(drawTime * 1.3 + breathPhase * 0.7) * 0.06;
+      var r = n.r * (isHover ? 1.3 : breath);
       var alpha = dimmed ? 0.08 : isNearby ? 0.7 : 1;
 
       // Glow for hovered or searched
@@ -452,18 +469,16 @@
       ctx.fill();
       ctx.globalAlpha = 1;
 
-      // Label (only show if zoomed enough or hovered/highlighted/searched)
-      var showLabel = cam.zoom > 0.6 || isHover || isHighlight || isSearch;
-      var bigNode = n.r > 8;
-      if(showLabel || bigNode){
-        var fontSize = isHover ? 11 : (isHighlight||isSearch) ? 9 : bigNode ? 8 : 7;
+      // Label (only show on hover, highlight, or search — hidden by default)
+      if(isHover || isHighlight || isSearch){
+        var fontSize = isHover ? 11 : 9;
         ctx.font = (isHover?'600 ':'500 ') + fontSize/cam.zoom + 'px Syne,sans-serif';
         ctx.textAlign = 'center';
-        ctx.globalAlpha = dimmed ? 0.1 : isHover ? 1 : (isHighlight||isSearch) ? 0.9 : 0.55;
-        ctx.fillStyle = isHover ? '#1A1A1A' : (isHighlight||isSearch) ? '#333333' : '#777777';
+        ctx.globalAlpha = dimmed ? 0.1 : isHover ? 1 : 0.9;
+        ctx.fillStyle = isHover ? '#1A1A1A' : '#333333';
 
         var lbl = n.label;
-        if(!isHover && !isHighlight && !isSearch && lbl.length>20) lbl = lbl.slice(0,18)+'..';
+        if(!isHover && lbl.length>20) lbl = lbl.slice(0,18)+'..';
         ctx.fillText(lbl, n.x, n.y + r + 12/cam.zoom);
         ctx.globalAlpha = 1;
       }
@@ -484,6 +499,7 @@
     var w = screenToWorld(sx, sy);
     var best = null, bestD2 = Infinity;
     nodes.forEach(function(n){
+      if(hiddenTypes.has(n.type)) return;
       var dx = w.x - n.x, dy = w.y - n.y;
       var hitR = Math.max(n.r, 10) + 4/cam.zoom;
       var d2 = dx*dx + dy*dy;
@@ -509,7 +525,7 @@
     html += '<div class="tooltip-meta">' + n.count + ' signal' + (n.count!==1?'s':'');
     html += ' &middot; ' + connCount + ' connection' + (connCount!==1?'s':'') + '</div>';
     if(connNames) html += '<div class="tooltip-connections">' + connNames + '</div>';
-    html += '<div class="tooltip-hint">Click to explore in Prompt &amp; Sense</div>';
+    html += '<div class="tooltip-hint">Click to explore</div>';
 
     tooltip.innerHTML = html;
     tooltip.classList.add('visible');
@@ -600,9 +616,9 @@
       if(moved < 5){
         var n = hitTest(e.clientX, e.clientY);
         if(n){
-          // Open specific item in Prompt and Sense via hash
-          var hash = encodeURIComponent(n.type + '::' + n.id);
-          window.open('field-intelligence.html#' + hash, '_blank');
+          openPanel(n);
+        } else {
+          closePanel();
         }
       }
     }
@@ -742,9 +758,130 @@
       searchMatch = null;
       highlightSet = null;
       hoveredNode = null;
+      closePanel();
       draw();
     }
   });
+
+  // ── FILTER COUNTS ──
+  function updateFilterCounts(){
+    var counts = {concept:0, practitioner:0, scene:0, thread:0};
+    nodes.forEach(function(n){ if(counts[n.type]!==undefined) counts[n.type]++; });
+    var el = document.getElementById('filterCounts');
+    if(el) el.textContent = counts.concept+' · '+counts.practitioner+' · '+counts.scene+' · '+counts.thread;
+  }
+
+  // ── FILTER CHIPS ──
+  document.querySelectorAll('.fchip').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var f = chip.getAttribute('data-filter');
+      if(f === 'all'){
+        // Toggle all: if any hidden, show all; else hide nothing matters — reset
+        hiddenTypes.clear();
+        document.querySelectorAll('.fchip').forEach(function(c){ c.classList.add('active'); });
+      } else {
+        // Toggle this type
+        document.querySelector('.fchip.fc-all').classList.remove('active');
+        if(hiddenTypes.has(f)){
+          hiddenTypes.delete(f);
+          chip.classList.add('active');
+          // If all types now visible, re-activate [all]
+          if(hiddenTypes.size === 0) document.querySelector('.fchip.fc-all').classList.add('active');
+        } else {
+          hiddenTypes.add(f);
+          chip.classList.remove('active');
+        }
+      }
+      // Clear hover/highlight state for hidden nodes
+      if(hoveredNode && hiddenTypes.has(hoveredNode.type)){
+        hoveredNode = null; highlightSet = null; nearbySet = null;
+        hideTooltip();
+      }
+      draw();
+    });
+  });
+
+  // ── DETAIL PANEL ──
+  var panel = document.getElementById('detailPanel');
+  var dpClose = document.getElementById('dpClose');
+  dpClose.addEventListener('click', closePanel);
+
+  function closePanel(){
+    panel.classList.remove('open');
+  }
+
+  function openPanel(n){
+    document.getElementById('dpType').textContent = n.type;
+    document.getElementById('dpName').textContent = n.fullLabel || n.label;
+    var countStr = n.count + ' signal' + (n.count !== 1 ? 's' : '');
+    if(n.connections && n.connections.length){
+      countStr += ' · ' + n.connections.length + ' connection' + (n.connections.length!==1?'s':'');
+    }
+    document.getElementById('dpCount').textContent = countStr;
+
+    var content = '';
+    var signals = (n.signals || []).slice(0, 8);
+
+    if(n.type === 'concept'){
+      // Co-occurring concepts
+      var coNodes = n.connections.filter(function(c){ return c.type==='concept'; }).slice(0,12);
+      if(coNodes.length){
+        content += '<div class="dp-section"><div class="dp-section-label">co-occurring concepts</div>';
+        content += '<div class="dp-chips">';
+        coNodes.forEach(function(c){
+          content += '<span class="dp-chip" data-navnode="'+escHtml(c.id)+'">'+escHtml(c.label)+'</span>';
+        });
+        content += '</div></div>';
+      }
+    }
+
+    if(n.type === 'thread'){
+      content += '<div class="dp-section"><div class="dp-thread-text">'+escHtml(n.fullLabel||n.label)+'</div></div>';
+    }
+
+    if(signals.length && graphData){
+      content += '<div class="dp-section"><div class="dp-section-label">signals</div>';
+      signals.forEach(function(sid){
+        var s = signalMap[sid];
+        if(!s) return;
+        content += '<div class="dp-signal-item">';
+        content += '<div class="dp-signal-title">'+escHtml(s.title)+'</div>';
+        content += '<div class="dp-signal-meta">'+escHtml(s.quality||'')+(s.date?' · '+s.date:'')+'</div>';
+        content += '</div>';
+      });
+      content += '</div>';
+    }
+
+    document.getElementById('dpContent').innerHTML = content;
+
+    // Wire chip navigation
+    document.querySelectorAll('#dpContent .dp-chip[data-navnode]').forEach(function(chip){
+      chip.addEventListener('click', function(){
+        var key = chip.getAttribute('data-navnode').toLowerCase();
+        var target = nodeMap[key];
+        if(target){
+          openPanel(target);
+          // Pan to node
+          cam.x = -target.x * cam.zoom;
+          cam.y = -target.y * cam.zoom;
+          highlightSet = new Set([target].concat(target.connections));
+          draw();
+        }
+      });
+    });
+
+    // Skills row
+    var queryUrl = 'field-intelligence.html#' + encodeURIComponent(n.type+'::'+n.id);
+    var skillsHtml = '<a class="dp-skill-link" href="'+queryUrl+'"><span class="arr">→</span>/query</a>';
+    skillsHtml += '<a class="dp-skill-link" href="https://transcriber-ruddy.vercel.app" target="_blank"><span class="arr">→</span>/contribute</a>';
+    document.getElementById('dpSkills').innerHTML = skillsHtml;
+
+    panel.classList.add('open');
+  }
+
+  function escHtml(s){
+    return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
 
 })();
 </script>

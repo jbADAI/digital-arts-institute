@@ -1,0 +1,5801 @@
+{
+  "nodes": [
+    {
+      "id": "concept-institutional-gatekeeping",
+      "type": "Concept",
+      "label": "institutional gatekeeping",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0",
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "concept-parallel-art-economies",
+      "type": "Concept",
+      "label": "parallel art economies",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2",
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "concept-institutional-contraction",
+      "type": "Concept",
+      "label": "institutional contraction",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "concept-curatorial-obsolescence",
+      "type": "Concept",
+      "label": "curatorial obsolescence",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "concept-platform-native-curation",
+      "type": "Concept",
+      "label": "platform-native curation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "concept-arts-education-crisis",
+      "type": "Concept",
+      "label": "arts education crisis",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "concept-institutional-absorption",
+      "type": "Concept",
+      "label": "institutional absorption",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-fashion-art-convergence",
+      "type": "Concept",
+      "label": "fashion-art convergence",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-collective-practice",
+      "type": "Concept",
+      "label": "collective practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-biennial-inclusion",
+      "type": "Concept",
+      "label": "biennial inclusion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-networked-collaboration",
+      "type": "Concept",
+      "label": "networked collaboration",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-cultural-legitimization",
+      "type": "Concept",
+      "label": "cultural legitimization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "concept-working-class-cultural-production",
+      "type": "Concept",
+      "label": "working-class cultural production",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "concept-digital-arts-class-exclusion",
+      "type": "Concept",
+      "label": "digital arts class exclusion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "concept-practice-led-memoir",
+      "type": "Concept",
+      "label": "practice-led memoir",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "concept-margins-to-center-organizing",
+      "type": "Concept",
+      "label": "margins-to-center organizing",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "concept-institutional-blindness",
+      "type": "Concept",
+      "label": "institutional blindness",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "concept-cultural-capital-gatekeeping",
+      "type": "Concept",
+      "label": "cultural capital gatekeeping",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "concept-analog-institutional-infrastructure",
+      "type": "Concept",
+      "label": "analog institutional infrastructure",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "concept-market-legitimacy-boundaries",
+      "type": "Concept",
+      "label": "market legitimacy boundaries",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "concept-virtue-ethical-ai-alignment",
+      "type": "Concept",
+      "label": "virtue-ethical AI alignment",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-orthogonality-thesis-critique",
+      "type": "Concept",
+      "label": "orthogonality thesis critique",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-practice-based-agency",
+      "type": "Concept",
+      "label": "practice-based agency",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-goal-directed-behavior-rejection",
+      "type": "Concept",
+      "label": "goal-directed behavior rejection",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-rational-agency-redefinition",
+      "type": "Concept",
+      "label": "rational agency redefinition",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-emergent-computational-ethics",
+      "type": "Concept",
+      "label": "emergent computational ethics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "concept-ai-financialization",
+      "type": "Concept",
+      "label": "AI financialization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "concept-generative-technology-capture",
+      "type": "Concept",
+      "label": "generative technology capture",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "concept-llm-commodification",
+      "type": "Concept",
+      "label": "LLM commodification",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "concept-creative-to-capital-pipeline",
+      "type": "Concept",
+      "label": "creative-to-capital pipeline",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "concept-technological-artistic-potential",
+      "type": "Concept",
+      "label": "technological artistic potential",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "concept-platform-consolidation",
+      "type": "Concept",
+      "label": "platform consolidation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "concept-discourse-gatekeeping",
+      "type": "Concept",
+      "label": "discourse gatekeeping",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "concept-media-sustainability-crisis",
+      "type": "Concept",
+      "label": "media sustainability crisis",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "concept-information-access-inequality",
+      "type": "Concept",
+      "label": "information access inequality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "concept-cultural-journalism-precarity",
+      "type": "Concept",
+      "label": "cultural journalism precarity",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "concept-institutional-validation-pipeline",
+      "type": "Concept",
+      "label": "institutional validation pipeline",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "concept-underrepresented-histories",
+      "type": "Concept",
+      "label": "underrepresented histories",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "concept-critical-infrastructure-building",
+      "type": "Concept",
+      "label": "critical infrastructure building",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "concept-material-practice-legitimacy",
+      "type": "Concept",
+      "label": "material practice legitimacy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "concept-fellowship-publication-complex",
+      "type": "Concept",
+      "label": "fellowship-publication complex",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "concept-fair-based-legitimation",
+      "type": "Concept",
+      "label": "fair-based legitimation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "concept-object-market-exclusion",
+      "type": "Concept",
+      "label": "object market exclusion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "concept-physical-presence-premium",
+      "type": "Concept",
+      "label": "physical presence premium",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "concept-collector-validation-systems",
+      "type": "Concept",
+      "label": "collector validation systems",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "concept-institutional-legitimacy",
+      "type": "Concept",
+      "label": "institutional legitimacy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "concept-cultural-infrastructure-allocation",
+      "type": "Concept",
+      "label": "cultural infrastructure allocation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "concept-modernist-monumentalization",
+      "type": "Concept",
+      "label": "modernist monumentalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "concept-digital-marginalization",
+      "type": "Concept",
+      "label": "digital marginalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "concept-legacy-artist-valorization",
+      "type": "Concept",
+      "label": "legacy artist valorization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "concept-cultural-bureaucracy",
+      "type": "Concept",
+      "label": "cultural bureaucracy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "concept-municipal-arts-funding",
+      "type": "Concept",
+      "label": "municipal arts funding",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "concept-cultural-policy-formation",
+      "type": "Concept",
+      "label": "cultural policy formation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "concept-posthuman-materiality",
+      "type": "Concept",
+      "label": "posthuman materiality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-object-oriented-ontology",
+      "type": "Concept",
+      "label": "object-oriented ontology",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-body-horror-aesthetics",
+      "type": "Concept",
+      "label": "body horror aesthetics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-furniture-fetishism",
+      "type": "Concept",
+      "label": "furniture fetishism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-liminal-embodiment",
+      "type": "Concept",
+      "label": "liminal embodiment",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-material-transformation",
+      "type": "Concept",
+      "label": "material transformation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "concept-embodied-intelligence",
+      "type": "Concept",
+      "label": "embodied intelligence",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "concept-multimodal-ai-critique",
+      "type": "Concept",
+      "label": "multimodal AI critique",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "concept-tacit-understanding",
+      "type": "Concept",
+      "label": "tacit understanding",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "concept-language-centric-intelligence-models",
+      "type": "Concept",
+      "label": "language-centric intelligence models",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "concept-agi-skepticism",
+      "type": "Concept",
+      "label": "AGI skepticism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "concept-cultural-soft-power-infrastructure",
+      "type": "Concept",
+      "label": "cultural soft-power infrastructure",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-geopolitical-art-ecosystem-vulnerability",
+      "type": "Concept",
+      "label": "geopolitical art ecosystem vulnerability",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-institutional-crisis-protocols",
+      "type": "Concept",
+      "label": "institutional crisis protocols",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-gulf-cultural-mega-projects",
+      "type": "Concept",
+      "label": "Gulf cultural mega-projects",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-regional-art-market-fragility",
+      "type": "Concept",
+      "label": "regional art market fragility",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-security-culture-hierarchy",
+      "type": "Concept",
+      "label": "security-culture hierarchy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "concept-queer-domesticity",
+      "type": "Concept",
+      "label": "queer domesticity",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-institutional-legitimation",
+      "type": "Concept",
+      "label": "institutional legitimation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-family-portraiture",
+      "type": "Concept",
+      "label": "family portraiture",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-photographic-continuity",
+      "type": "Concept",
+      "label": "photographic continuity",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-visibility-politics",
+      "type": "Concept",
+      "label": "visibility politics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-establishment-capture",
+      "type": "Concept",
+      "label": "establishment capture",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "concept-content-farm-infiltration",
+      "type": "Concept",
+      "label": "content farm infiltration",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "concept-platform-integrity",
+      "type": "Concept",
+      "label": "platform integrity",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "concept-signal-contamination",
+      "type": "Concept",
+      "label": "signal contamination",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "concept-institutional-vulnerability",
+      "type": "Concept",
+      "label": "institutional vulnerability",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "concept-algorithmic-spam",
+      "type": "Concept",
+      "label": "algorithmic spam",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "concept-counterculture-legitimation",
+      "type": "Concept",
+      "label": "counterculture legitimation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "concept-transgressive-institutionalization",
+      "type": "Concept",
+      "label": "transgressive institutionalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "concept-sex-as-resistance-strategy",
+      "type": "Concept",
+      "label": "sex-as-resistance strategy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "concept-platform-censorship-precedents",
+      "type": "Concept",
+      "label": "platform censorship precedents",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "concept-antiwar-aesthetic-tactics",
+      "type": "Concept",
+      "label": "antiwar aesthetic tactics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "concept-institutional-market-bias",
+      "type": "Concept",
+      "label": "institutional market bias",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "concept-analog-digital-value-hierarchy",
+      "type": "Concept",
+      "label": "analog-digital value hierarchy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "concept-auction-house-gatekeeping",
+      "type": "Concept",
+      "label": "auction house gatekeeping",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "concept-traditional-media-privilege",
+      "type": "Concept",
+      "label": "traditional media privilege",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "concept-art-market-exclusion",
+      "type": "Concept",
+      "label": "art market exclusion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "concept-colonial-corrective-curation",
+      "type": "Concept",
+      "label": "colonial corrective curation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "concept-historical-juxtaposition-exhibition",
+      "type": "Concept",
+      "label": "historical juxtaposition exhibition",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "concept-indigenous-counter-documentation",
+      "type": "Concept",
+      "label": "Indigenous counter-documentation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "concept-foundation-mediated-regionalism",
+      "type": "Concept",
+      "label": "foundation-mediated regionalism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "concept-reactive-institutional-positioning",
+      "type": "Concept",
+      "label": "reactive institutional positioning",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "concept-interspecies-empathy",
+      "type": "Concept",
+      "label": "interspecies empathy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-collaborative-fiction",
+      "type": "Concept",
+      "label": "collaborative fiction",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-post-anthropocentric-practice",
+      "type": "Concept",
+      "label": "post-anthropocentric practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-embodied-digital-arts",
+      "type": "Concept",
+      "label": "embodied digital arts",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-speculative-rituals",
+      "type": "Concept",
+      "label": "speculative rituals",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-ecological-imagination",
+      "type": "Concept",
+      "label": "ecological imagination",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "concept-post-attention-architectures",
+      "type": "Concept",
+      "label": "post-attention architectures",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "concept-computational-sustainability",
+      "type": "Concept",
+      "label": "computational sustainability",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "concept-long-sequence-generation",
+      "type": "Concept",
+      "label": "long-sequence generation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "concept-infrastructure-pluralism",
+      "type": "Concept",
+      "label": "infrastructure pluralism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "concept-temporal-scalability",
+      "type": "Concept",
+      "label": "temporal scalability",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "concept-performative-localism",
+      "type": "Concept",
+      "label": "performative localism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "concept-crisis-commodification",
+      "type": "Concept",
+      "label": "crisis commodification",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "concept-institutional-virtue-washing",
+      "type": "Concept",
+      "label": "institutional virtue washing",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "concept-celebrity-art-consumption",
+      "type": "Concept",
+      "label": "celebrity art consumption",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "concept-community-extraction-mechanisms",
+      "type": "Concept",
+      "label": "community extraction mechanisms",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "concept-productive-erasure",
+      "type": "Concept",
+      "label": "productive erasure",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "concept-analog-resistance",
+      "type": "Concept",
+      "label": "analog resistance",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "concept-counter-technological-practice",
+      "type": "Concept",
+      "label": "counter-technological practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "concept-institutional-valorization-of-disconnection",
+      "type": "Concept",
+      "label": "institutional valorization of disconnection",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "concept-painting-as-anti-digital-medium",
+      "type": "Concept",
+      "label": "painting as anti-digital medium",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "concept-process-based-investigation",
+      "type": "Concept",
+      "label": "process-based investigation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-systematic-transformation",
+      "type": "Concept",
+      "label": "systematic transformation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-geometric-seriality",
+      "type": "Concept",
+      "label": "geometric seriality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-conceptual-computation",
+      "type": "Concept",
+      "label": "conceptual computation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-time-based-form-studies",
+      "type": "Concept",
+      "label": "time-based form studies",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-rule-based-art-systems",
+      "type": "Concept",
+      "label": "rule-based art systems",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "concept-embedding-inversion",
+      "type": "Concept",
+      "label": "embedding inversion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "concept-ai-privacy-assumptions",
+      "type": "Concept",
+      "label": "AI privacy assumptions",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "concept-data-reversibility",
+      "type": "Concept",
+      "label": "data reversibility",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "concept-machine-learning-security",
+      "type": "Concept",
+      "label": "machine learning security",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "concept-computational-transparency",
+      "type": "Concept",
+      "label": "computational transparency",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "concept-community-larp",
+      "type": "Concept",
+      "label": "community LARP",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-multispecies-urbanism",
+      "type": "Concept",
+      "label": "multispecies urbanism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-speculative-place-making",
+      "type": "Concept",
+      "label": "speculative place-making",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-post-gallery-institutionality",
+      "type": "Concept",
+      "label": "post-gallery institutionality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-climate-responsive-art-practice",
+      "type": "Concept",
+      "label": "climate-responsive art practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-ecological-role-play",
+      "type": "Concept",
+      "label": "ecological role-play",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "concept-benchmark-optimization",
+      "type": "Concept",
+      "label": "benchmark optimization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "concept-user-experience-saturation",
+      "type": "Concept",
+      "label": "user experience saturation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "concept-purposeful-interaction-design",
+      "type": "Concept",
+      "label": "purposeful interaction design",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "concept-ai-tool-instrumentalization",
+      "type": "Concept",
+      "label": "AI tool instrumentalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "concept-creative-partnership-friction",
+      "type": "Concept",
+      "label": "creative partnership friction",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "concept-computational-authentication",
+      "type": "Concept",
+      "label": "computational authentication",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "concept-institutional-validation-apparatus",
+      "type": "Concept",
+      "label": "institutional validation apparatus",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "concept-forensic-materialism",
+      "type": "Concept",
+      "label": "forensic materialism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "concept-digital-provenance-infrastructure",
+      "type": "Concept",
+      "label": "digital provenance infrastructure",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "concept-institutional-decentering",
+      "type": "Concept",
+      "label": "institutional decentering",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "concept-post-metropolitan-digital-arts",
+      "type": "Concept",
+      "label": "post-metropolitan digital arts",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "concept-community-engaged-critical-practice",
+      "type": "Concept",
+      "label": "community-engaged critical practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "concept-geographical-decentralization",
+      "type": "Concept",
+      "label": "geographical decentralization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "concept-regional-digital-arts-programming",
+      "type": "Concept",
+      "label": "regional digital arts programming",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "concept-institutional-pedagogy",
+      "type": "Concept",
+      "label": "institutional pedagogy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "concept-gamified-criticism",
+      "type": "Concept",
+      "label": "gamified criticism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "concept-biennial-positioning",
+      "type": "Concept",
+      "label": "biennial positioning",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "concept-cultural-literacy-testing",
+      "type": "Concept",
+      "label": "cultural literacy testing",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "concept-audience-activation-strategies",
+      "type": "Concept",
+      "label": "audience activation strategies",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "concept-institutional-invisibility",
+      "type": "Concept",
+      "label": "institutional invisibility",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "concept-gallery-system-exclusion",
+      "type": "Concept",
+      "label": "gallery-system exclusion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "concept-physical-digital-art-market-divide",
+      "type": "Concept",
+      "label": "physical-digital art market divide",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "concept-tastemaker-gatekeeping",
+      "type": "Concept",
+      "label": "tastemaker gatekeeping",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "concept-place-based-art-world-hierarchy",
+      "type": "Concept",
+      "label": "place-based art world hierarchy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "concept-algorithmic-bias-discourse",
+      "type": "Concept",
+      "label": "algorithmic bias discourse",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "concept-technical-critique-containment",
+      "type": "Concept",
+      "label": "technical critique containment",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "concept-infrastructural-legitimacy",
+      "type": "Concept",
+      "label": "infrastructural legitimacy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "concept-bias-acknowledgment-protocols",
+      "type": "Concept",
+      "label": "bias acknowledgment protocols",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "concept-algorithmic-liberalism",
+      "type": "Concept",
+      "label": "algorithmic liberalism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "concept-positive-ai-visioning",
+      "type": "Concept",
+      "label": "positive AI visioning",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-wellbeing-centered-technology",
+      "type": "Concept",
+      "label": "wellbeing-centered technology",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-post-dystopian-futures",
+      "type": "Concept",
+      "label": "post-dystopian futures",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-technological-world-building",
+      "type": "Concept",
+      "label": "technological world-building",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-creative-community-agency",
+      "type": "Concept",
+      "label": "creative community agency",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-ai-impact-narratives",
+      "type": "Concept",
+      "label": "AI impact narratives",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "concept-platform-contamination",
+      "type": "Concept",
+      "label": "platform contamination",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91"
+      ]
+    },
+    {
+      "id": "concept-discourse-integrity",
+      "type": "Concept",
+      "label": "discourse integrity",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91"
+      ]
+    },
+    {
+      "id": "concept-algorithmic-content-pollution",
+      "type": "Concept",
+      "label": "algorithmic content pollution",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91"
+      ]
+    },
+    {
+      "id": "concept-critical-space-preservation",
+      "type": "Concept",
+      "label": "critical space preservation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91"
+      ]
+    },
+    {
+      "id": "concept-attention-economy-capture",
+      "type": "Concept",
+      "label": "attention economy capture",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "concept-institutional-scope-creep",
+      "type": "Concept",
+      "label": "institutional scope creep",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "concept-networked-temporality",
+      "type": "Concept",
+      "label": "networked temporality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "concept-platform-content-drift",
+      "type": "Concept",
+      "label": "platform content drift",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "concept-arts-writing-boundaries",
+      "type": "Concept",
+      "label": "arts writing boundaries",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "concept-institutional-blind-spot",
+      "type": "Concept",
+      "label": "institutional blind spot",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "concept-cultural-bifurcation",
+      "type": "Concept",
+      "label": "cultural bifurcation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "concept-legacy-institution-programming",
+      "type": "Concept",
+      "label": "legacy institution programming",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "concept-technological-disruption-avoidance",
+      "type": "Concept",
+      "label": "technological disruption avoidance",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "concept-pre-digital-consolidation",
+      "type": "Concept",
+      "label": "pre-digital consolidation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "concept-mathematical-mystification",
+      "type": "Concept",
+      "label": "mathematical mystification",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-compute-first-methodology",
+      "type": "Concept",
+      "label": "compute-first methodology",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-theoretical-obsolescence",
+      "type": "Concept",
+      "label": "theoretical obsolescence",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-black-box-optimization",
+      "type": "Concept",
+      "label": "black-box optimization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-principled-architecture-design",
+      "type": "Concept",
+      "label": "principled architecture design",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-scaling-paradigm",
+      "type": "Concept",
+      "label": "scaling paradigm",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "concept-confessional-art-practice",
+      "type": "Concept",
+      "label": "confessional art practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-institutional-canonization",
+      "type": "Concept",
+      "label": "institutional canonization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-trauma-commodification",
+      "type": "Concept",
+      "label": "trauma commodification",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-young-british-artists-legacy",
+      "type": "Concept",
+      "label": "Young British Artists legacy",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-enfant-terrible-archetype",
+      "type": "Concept",
+      "label": "enfant terrible archetype",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-vulnerability-as-cultural-capital",
+      "type": "Concept",
+      "label": "vulnerability as cultural capital",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "concept-institutional-displacement",
+      "type": "Concept",
+      "label": "institutional displacement",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "concept-geographic-gatekeeping",
+      "type": "Concept",
+      "label": "geographic gatekeeping",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "concept-legacy-funding-models",
+      "type": "Concept",
+      "label": "legacy funding models",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "concept-distributed-practice",
+      "type": "Concept",
+      "label": "distributed practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "concept-arts-infrastructure-mismatch",
+      "type": "Concept",
+      "label": "arts infrastructure mismatch",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "concept-climate-adaptation-art",
+      "type": "Concept",
+      "label": "climate adaptation art",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-community-scale-immersion",
+      "type": "Concept",
+      "label": "community-scale immersion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-anticipatory-media",
+      "type": "Concept",
+      "label": "anticipatory media",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-utilitarian-aesthetics",
+      "type": "Concept",
+      "label": "utilitarian aesthetics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-environmental-preparedness-practice",
+      "type": "Concept",
+      "label": "environmental preparedness practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-post-aesthetic-functionality",
+      "type": "Concept",
+      "label": "post-aesthetic functionality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "concept-post-digital-materiality",
+      "type": "Concept",
+      "label": "post-digital materiality",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-place-based-digital-practice",
+      "type": "Concept",
+      "label": "place-based digital practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-ecological-art-methodology",
+      "type": "Concept",
+      "label": "ecological art methodology",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-community-engaged-workshops",
+      "type": "Concept",
+      "label": "community-engaged workshops",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-coastal-town-reimagining",
+      "type": "Concept",
+      "label": "coastal town reimagining",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-art-ecology-crossovers",
+      "type": "Concept",
+      "label": "art-ecology crossovers",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "concept-conversational-ai-paradigm",
+      "type": "Concept",
+      "label": "conversational AI paradigm",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-platform-retrofitting",
+      "type": "Concept",
+      "label": "platform retrofitting",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-general-purpose-ai-expansion",
+      "type": "Concept",
+      "label": "general-purpose AI expansion",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-domain-specific-ai-resistance",
+      "type": "Concept",
+      "label": "domain-specific AI resistance",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-technical-solutionism",
+      "type": "Concept",
+      "label": "technical solutionism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-interface-universalization",
+      "type": "Concept",
+      "label": "interface universalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "concept-place-based-larp",
+      "type": "Concept",
+      "label": "place-based LARP",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-civic-speculation",
+      "type": "Concept",
+      "label": "civic speculation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-participatory-futuring",
+      "type": "Concept",
+      "label": "participatory futuring",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-institutional-pivot",
+      "type": "Concept",
+      "label": "institutional pivot",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-post-internet-localism",
+      "type": "Concept",
+      "label": "post-internet localism",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-play-as-politics",
+      "type": "Concept",
+      "label": "play-as-politics",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "concept-curatorial-consolidation",
+      "type": "Concept",
+      "label": "curatorial consolidation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "concept-institutional-program-pruning",
+      "type": "Concept",
+      "label": "institutional program pruning",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "concept-specialized-arts-education-contraction",
+      "type": "Concept",
+      "label": "specialized arts education contraction",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "concept-curatorial-practice-professionalization",
+      "type": "Concept",
+      "label": "curatorial practice professionalization",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "practitioner-furtherfield",
+      "type": "Practitioner",
+      "label": "Furtherfield",
+      "signal_count": 10,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0",
+        "3187b5c8-7020-816a-858f-f0009984c0df",
+        "3187b5c8-7020-8174-85fe-fb2743a6050e",
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee",
+        "3187b5c8-7020-81ab-8429-dab748424192",
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91",
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097",
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36",
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83",
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "practitioner-hyperallergic",
+      "type": "Practitioner",
+      "label": "Hyperallergic",
+      "signal_count": 7,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075",
+        "3187b5c8-7020-8119-851a-c88384d566a2",
+        "3187b5c8-7020-8153-9329-f13b97a89f8e",
+        "3187b5c8-7020-816c-b709-f9e7012380d6",
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566",
+        "3187b5c8-7020-81c0-8471-efa0f281ef18",
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "practitioner-ruth-catlow",
+      "type": "Practitioner",
+      "label": "Ruth Catlow",
+      "signal_count": 3,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e",
+        "3187b5c8-7020-81ab-8429-dab748424192",
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "practitioner-emma-watson",
+      "type": "Practitioner",
+      "label": "Emma Watson",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2",
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "practitioner-christoph-waltz",
+      "type": "Practitioner",
+      "label": "Christoph Waltz",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2",
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "practitioner-david-hockney",
+      "type": "Practitioner",
+      "label": "David Hockney",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13",
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "practitioner-hamilton-mas",
+      "type": "Practitioner",
+      "label": "Hamilton MAS",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192",
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "practitioner-sva",
+      "type": "Practitioner",
+      "label": "SVA",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "practitioner-cfgny",
+      "type": "Practitioner",
+      "label": "CFGNY",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "practitioner-whitney-biennial",
+      "type": "Practitioner",
+      "label": "Whitney Biennial",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "practitioner-pioneer-works",
+      "type": "Practitioner",
+      "label": "Pioneer Works",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "practitioner-amant",
+      "type": "Practitioner",
+      "label": "Amant",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "practitioner-marc-garrett",
+      "type": "Practitioner",
+      "label": "Marc Garrett",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "practitioner-njideka-akunyili-crosby",
+      "type": "Practitioner",
+      "label": "Njideka Akunyili Crosby",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "practitioner-david-zwirner",
+      "type": "Practitioner",
+      "label": "David Zwirner",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "practitioner-thaddaeus-ropac",
+      "type": "Practitioner",
+      "label": "Thaddaeus Ropac",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "practitioner-creative-applications-network",
+      "type": "Practitioner",
+      "label": "Creative Applications Network",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "practitioner-center-for-craft",
+      "type": "Practitioner",
+      "label": "Center for Craft",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "practitioner-heather-marx",
+      "type": "Practitioner",
+      "label": "Heather Marx",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "practitioner-alberto-giacometti",
+      "type": "Practitioner",
+      "label": "Alberto Giacometti",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "practitioner-fondation-alberto-et-annette-giacometti",
+      "type": "Practitioner",
+      "label": "Fondation Alberto et Annette Giacometti",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "practitioner-catherine-grenier",
+      "type": "Practitioner",
+      "label": "Catherine Grenier",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "practitioner-institut-giacometti",
+      "type": "Practitioner",
+      "label": "Institut Giacometti",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "practitioner-diya-vij",
+      "type": "Practitioner",
+      "label": "Diya Vij",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "practitioner-department-of-cultural-affairs",
+      "type": "Practitioner",
+      "label": "Department of Cultural Affairs",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "practitioner-amanda-kramer",
+      "type": "Practitioner",
+      "label": "Amanda Kramer",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "practitioner-juliette-lewis",
+      "type": "Practitioner",
+      "label": "Juliette Lewis",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "practitioner-terry-winograd",
+      "type": "Practitioner",
+      "label": "Terry Winograd",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "practitioner-jameel-arts-centre",
+      "type": "Practitioner",
+      "label": "Jameel Arts Centre",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-sharjah-art-museum",
+      "type": "Practitioner",
+      "label": "Sharjah Art Museum",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-louvre-abu-dhabi",
+      "type": "Practitioner",
+      "label": "Louvre Abu Dhabi",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-sharjah-art-foundation",
+      "type": "Practitioner",
+      "label": "Sharjah Art Foundation",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-leila-heller-gallery",
+      "type": "Practitioner",
+      "label": "Leila Heller Gallery",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-firetti-contemporary",
+      "type": "Practitioner",
+      "label": "Firetti Contemporary",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-taymour-grahne-projects",
+      "type": "Practitioner",
+      "label": "Taymour Grahne Projects",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-perrotin",
+      "type": "Practitioner",
+      "label": "Perrotin",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-antonia-carver",
+      "type": "Practitioner",
+      "label": "Antonia Carver",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "practitioner-catherine-opie",
+      "type": "Practitioner",
+      "label": "Catherine Opie",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "practitioner-national-portrait-gallery-london",
+      "type": "Practitioner",
+      "label": "National Portrait Gallery London",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "practitioner-sir-elton-john",
+      "type": "Practitioner",
+      "label": "Sir Elton John",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "practitioner-david-furnish",
+      "type": "Practitioner",
+      "label": "David Furnish",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "practitioner-wally-hedrick",
+      "type": "Practitioner",
+      "label": "Wally Hedrick",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "practitioner-sothebys",
+      "type": "Practitioner",
+      "label": "Sotheby's",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "practitioner-francis-bacon",
+      "type": "Practitioner",
+      "label": "Francis Bacon",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13"
+      ]
+    },
+    {
+      "id": "practitioner-will-wilson",
+      "type": "Practitioner",
+      "label": "Will Wilson",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "practitioner-edward-sheriff-curtis",
+      "type": "Practitioner",
+      "label": "Edward Sheriff Curtis",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "practitioner-visual-arts-center-of-new-jersey",
+      "type": "Practitioner",
+      "label": "Visual Arts Center of New Jersey",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "practitioner-art-bridges",
+      "type": "Practitioner",
+      "label": "Art Bridges",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "practitioner-christine-messineo",
+      "type": "Practitioner",
+      "label": "Christine Messineo",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "practitioner-franois-arnaud",
+      "type": "Practitioner",
+      "label": "Fran\u00e7ois Arnaud",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "practitioner-joe-montana",
+      "type": "Practitioner",
+      "label": "Joe Montana",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "practitioner-freya-douglas-morris",
+      "type": "Practitioner",
+      "label": "Freya Douglas-Morris",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "practitioner-lehmann-maupin",
+      "type": "Practitioner",
+      "label": "Lehmann Maupin",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "practitioner-alexander-berggruen",
+      "type": "Practitioner",
+      "label": "Alexander Berggruen",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "practitioner-dra-maurer",
+      "type": "Practitioner",
+      "label": "D\u00f3ra Maurer",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-tibor-gyor",
+      "type": "Practitioner",
+      "label": "Tibor G\u00e1yor",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-white-cube",
+      "type": "Practitioner",
+      "label": "White Cube",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-carl-kostyl",
+      "type": "Practitioner",
+      "label": "Carl Kosty\u00e1l",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-whitechapel-gallery",
+      "type": "Practitioner",
+      "label": "Whitechapel Gallery",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-szchenyi-academy-of-literature-and-art",
+      "type": "Practitioner",
+      "label": "Sz\u00e9chenyi Academy of Literature and Art",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8186-8fde-f25d344dbe01"
+      ]
+    },
+    {
+      "id": "practitioner-rijksmuseum",
+      "type": "Practitioner",
+      "label": "Rijksmuseum",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "practitioner-taco-dibbits",
+      "type": "Practitioner",
+      "label": "Taco Dibbits",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "practitioner-whitney-museum",
+      "type": "Practitioner",
+      "label": "Whitney Museum",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "practitioner-dean-valentine",
+      "type": "Practitioner",
+      "label": "Dean Valentine",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "practitioner-al-morn",
+      "type": "Practitioner",
+      "label": "Al Mor\u00e1n",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "practitioner-mills-morn",
+      "type": "Practitioner",
+      "label": "Mills Mor\u00e1n",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "practitioner-moma",
+      "type": "Practitioner",
+      "label": "MoMA",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "practitioner-the-met",
+      "type": "Practitioner",
+      "label": "The Met",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "practitioner-marcel-duchamp",
+      "type": "Practitioner",
+      "label": "Marcel Duchamp",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "practitioner-raphael",
+      "type": "Practitioner",
+      "label": "Raphael",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "practitioner-tracey-emin",
+      "type": "Practitioner",
+      "label": "Tracey Emin",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "practitioner-maria-balshaw",
+      "type": "Practitioner",
+      "label": "Maria Balshaw",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "practitioner-tate-modern",
+      "type": "Practitioner",
+      "label": "Tate Modern",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "practitioner-young-british-artists",
+      "type": "Practitioner",
+      "label": "Young British Artists",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "practitioner-king-charles-iii",
+      "type": "Practitioner",
+      "label": "King Charles III",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "practitioner-vermont-studio-center",
+      "type": "Practitioner",
+      "label": "Vermont Studio Center",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "practitioner-japanese-american-national-museum",
+      "type": "Practitioner",
+      "label": "Japanese American National Museum",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "practitioner-elly-clarke",
+      "type": "Practitioner",
+      "label": "Elly Clarke",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "practitioner-school-of-visual-arts",
+      "type": "Practitioner",
+      "label": "School of Visual Arts",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "scene-post-internet",
+      "type": "Scene",
+      "label": "post-internet",
+      "signal_count": 23,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075",
+        "3187b5c8-7020-8103-97bb-d823d07e9eac",
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0",
+        "3187b5c8-7020-8107-93d7-e4a5573895e2",
+        "3187b5c8-7020-8119-851a-c88384d566a2",
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1",
+        "3187b5c8-7020-8153-9329-f13b97a89f8e",
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98",
+        "3187b5c8-7020-816c-b709-f9e7012380d6",
+        "3187b5c8-7020-816e-8e5c-dddb62e56c13",
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034",
+        "3187b5c8-7020-8174-85fe-fb2743a6050e",
+        "3187b5c8-7020-8177-873a-c935b481ddac",
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2",
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee",
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91",
+        "3187b5c8-7020-81ab-8429-dab748424192",
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566",
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3",
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097",
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196",
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83",
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "scene-algorithmic",
+      "type": "Scene",
+      "label": "algorithmic",
+      "signal_count": 11,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08",
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21",
+        "3187b5c8-7020-815a-991b-c49688682f59",
+        "3187b5c8-7020-8176-9704-c149e13e0289",
+        "3187b5c8-7020-8186-8fde-f25d344dbe01",
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b",
+        "3187b5c8-7020-819f-b960-f69a769eeb71",
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb",
+        "3187b5c8-7020-81b9-bc02-f3a558a64360",
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782",
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "scene-ai-art",
+      "type": "Scene",
+      "label": "ai-art",
+      "signal_count": 10,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08",
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21",
+        "3187b5c8-7020-815a-991b-c49688682f59",
+        "3187b5c8-7020-8176-9704-c149e13e0289",
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b",
+        "3187b5c8-7020-819f-b960-f69a769eeb71",
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb",
+        "3187b5c8-7020-81b9-bc02-f3a558a64360",
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782",
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "scene-net-art",
+      "type": "Scene",
+      "label": "net-art",
+      "signal_count": 5,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0",
+        "3187b5c8-7020-816a-858f-f0009984c0df",
+        "3187b5c8-7020-81ba-bd15-ca2a09f6fd91",
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097",
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "scene-institutional",
+      "type": "Scene",
+      "label": "institutional",
+      "signal_count": 4,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24",
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36",
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f",
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    },
+    {
+      "id": "scene-generative",
+      "type": "Scene",
+      "label": "generative",
+      "signal_count": 3,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289",
+        "3187b5c8-7020-8186-8fde-f25d344dbe01",
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "scene-game-art",
+      "type": "Scene",
+      "label": "game-art",
+      "signal_count": 2,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee",
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "scene-creative-coding",
+      "type": "Scene",
+      "label": "creative-coding",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "scene-speculative-ecology",
+      "type": "Scene",
+      "label": "speculative-ecology",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "scene-institutional-analysis",
+      "type": "Scene",
+      "label": "institutional-analysis",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "scene-xr",
+      "type": "Scene",
+      "label": "XR",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "scene-community-engaged-practice",
+      "type": "Scene",
+      "label": "community-engaged-practice",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "thread-is-the-collapse-of-traditional-curatorial-education-clearing-space-for-new-models-of-cultural-mediation",
+      "type": "Thread",
+      "label": "Is the collapse of traditional curatorial education clearing space for new models of cultural mediation?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8101-a2ed-f5fef53e5075"
+      ]
+    },
+    {
+      "id": "thread-is-institutional-adoption-of-digital-native-collectives-expanding-or-domesticating-experimental-practice",
+      "type": "Thread",
+      "label": "Is institutional adoption of digital-native collectives expanding or domesticating experimental practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8103-97bb-d823d07e9eac"
+      ]
+    },
+    {
+      "id": "thread-how-is-class-analysis-emerging-within-digital-arts-discourse",
+      "type": "Thread",
+      "label": "How is class analysis emerging within digital arts discourse?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8106-8a2d-cc1a64dfeba0"
+      ]
+    },
+    {
+      "id": "thread-are-traditional-art-institutions-creating-their-own-obsolescence-through-digital-art-blindness",
+      "type": "Thread",
+      "label": "Are traditional art institutions creating their own obsolescence through digital art blindness?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8107-93d7-e4a5573895e2"
+      ]
+    },
+    {
+      "id": "thread-how-do-emerging-post-goal-ai-paradigms-reshape-artistic-collaboration-with-machines",
+      "type": "Thread",
+      "label": "How do emerging post-goal AI paradigms reshape artistic collaboration with machines?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-810d-a049-c6892b0b6b08"
+      ]
+    },
+    {
+      "id": "thread-are-ai-art-tools-becoming-financialized-before-their-creative-potential-is-realized",
+      "type": "Thread",
+      "label": "Are AI art tools becoming financialized before their creative potential is realized?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8110-aa9b-fd10d6624f21"
+      ]
+    },
+    {
+      "id": "thread-is-the-paywall-ification-of-digital-arts-media-creating-a-two-tiered-discourse-system",
+      "type": "Thread",
+      "label": "Is the paywall-ification of digital arts media creating a two-tiered discourse system?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8112-a816-f89493d60f22"
+      ]
+    },
+    {
+      "id": "thread-are-traditional-material-practices-adopting-digital-arts-legitimacy-strategies",
+      "type": "Thread",
+      "label": "Are traditional material practices adopting digital arts' legitimacy strategies?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8119-851a-c88384d566a2"
+      ]
+    },
+    {
+      "id": "thread-why-do-digital-arts-remain-structurally-excluded-from-major-commercial-art-circuits",
+      "type": "Thread",
+      "label": "Why do digital arts remain structurally excluded from major commercial art circuits?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-811a-881b-f244628ada24"
+      ]
+    },
+    {
+      "id": "thread-why-does-digital-art-lack-institutional-monuments-while-analog-practices-secure-permanent-cultural-infrastructure",
+      "type": "Thread",
+      "label": "Why does digital art lack institutional monuments while analog practices secure permanent cultural infrastructure?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8138-97e1-c83dcbdeeaa5"
+      ]
+    },
+    {
+      "id": "thread-how-do-new-institutional-appointments-reshape-digital-arts-legitimacy-and-funding",
+      "type": "Thread",
+      "label": "How do new institutional appointments reshape digital arts legitimacy and funding?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8151-ad8f-f112c4e262f1"
+      ]
+    },
+    {
+      "id": "thread-how-is-posthuman-materiality-becoming-central-to-digital-arts-discourse",
+      "type": "Thread",
+      "label": "How is posthuman materiality becoming central to digital arts discourse?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8153-9329-f13b97a89f8e"
+      ]
+    },
+    {
+      "id": "thread-are-ai-art-tools-built-on-fundamentally-flawed-assumptions-about-intelligence",
+      "type": "Thread",
+      "label": "Are AI art tools built on fundamentally flawed assumptions about intelligence?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-815a-991b-c49688682f59"
+      ]
+    },
+    {
+      "id": "thread-how-do-geopolitical-crises-reshape-the-operational-logic-of-cultural-mega-projects",
+      "type": "Thread",
+      "label": "How do geopolitical crises reshape the operational logic of cultural mega-projects?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8160-ab5f-c75baed2dd36"
+      ]
+    },
+    {
+      "id": "thread-are-traditional-media-dominating-institutional-validation-of-progressive-cultural-representation",
+      "type": "Thread",
+      "label": "Are traditional media dominating institutional validation of progressive cultural representation?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8167-be2c-c9eeef0a1b98"
+      ]
+    },
+    {
+      "id": "thread-are-digital-arts-platforms-prepared-for-the-coming-wave-of-ai-content-pollution",
+      "type": "Thread",
+      "label": "Are digital arts platforms prepared for the coming wave of AI content pollution?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816a-858f-f0009984c0df"
+      ]
+    },
+    {
+      "id": "thread-how-do-platform-censorship-battles-today-mirror-historical-patterns-of-artistic-transgression-and-institutional-capture",
+      "type": "Thread",
+      "label": "How do platform censorship battles today mirror historical patterns of artistic transgression and institutional capture?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-816c-b709-f9e7012380d6"
+      ]
+    },
+    {
+      "id": "thread-are-historical-corrective-exhibitions-expanding-or-constraining-how-contemporary-indigenous-digital-practice-gets-institutionally-framed",
+      "type": "Thread",
+      "label": "Are historical corrective exhibitions expanding or constraining how contemporary Indigenous digital practice gets institutionally framed?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8172-9f3e-ec08b8c51034"
+      ]
+    },
+    {
+      "id": "thread-how-is-the-digital-arts-field-moving-beyond-human-centered-technological-practice",
+      "type": "Thread",
+      "label": "How is the digital arts field moving beyond human-centered technological practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8174-85fe-fb2743a6050e"
+      ]
+    },
+    {
+      "id": "thread-how-will-architectural-diversity-in-ai-models-reshape-the-computational-possibilities-for-digital-art-practice",
+      "type": "Thread",
+      "label": "How will architectural diversity in AI models reshape the computational possibilities for digital art practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8176-9704-c149e13e0289"
+      ]
+    },
+    {
+      "id": "thread-how-do-major-art-institutions-convert-local-crisis-into-cultural-legitimacy-capital",
+      "type": "Thread",
+      "label": "How do major art institutions convert local crisis into cultural legitimacy capital?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8177-873a-c935b481ddac"
+      ]
+    },
+    {
+      "id": "thread-is-the-institutional-promotion-of-analog-resistance-a-genuine-counter-practice-or-market-recuperation-of-anti-digital-sentiment",
+      "type": "Thread",
+      "label": "Is the institutional promotion of 'analog resistance' a genuine counter-practice or market recuperation of anti-digital sentiment?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-817a-aef7-c3734b3f0ce2"
+      ]
+    },
+    {
+      "id": "thread-are-ai-creative-tools-fundamentally-incompatible-with-artist-privacy",
+      "type": "Thread",
+      "label": "Are AI creative tools fundamentally incompatible with artist privacy?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-8189-a93d-f5abf3d0344b"
+      ]
+    },
+    {
+      "id": "thread-are-digital-arts-institutions-becoming-post-gallery-community-organizing-platforms",
+      "type": "Thread",
+      "label": "Are digital arts institutions becoming post-gallery community organizing platforms?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819b-a80f-f0a3742c74ee"
+      ]
+    },
+    {
+      "id": "thread-are-ai-tools-becoming-less-useful-to-artists-as-they-become-more-technically-sophisticated",
+      "type": "Thread",
+      "label": "Are AI tools becoming less useful to artists as they become more technically sophisticated?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-819f-b960-f69a769eeb71"
+      ]
+    },
+    {
+      "id": "thread-how-are-digital-forensic-technologies-reshaping-the-authentication-of-cultural-objects",
+      "type": "Thread",
+      "label": "How are digital forensic technologies reshaping the authentication of cultural objects?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81a9-a376-deb5fcdabc91"
+      ]
+    },
+    {
+      "id": "thread-are-digital-arts-institutions-seeking-post-metropolitan-relevance-through-geographical-decentralization",
+      "type": "Thread",
+      "label": "Are digital arts institutions seeking post-metropolitan relevance through geographical decentralization?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ab-8429-dab748424192"
+      ]
+    },
+    {
+      "id": "thread-how-is-gamification-reshaping-the-transmission-of-cultural-knowledge-in-art-institutions",
+      "type": "Thread",
+      "label": "How is gamification reshaping the transmission of cultural knowledge in art institutions?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b0-8caf-f0cf41b9d566"
+      ]
+    },
+    {
+      "id": "thread-why-do-digital-arts-remain-institutionally-invisible-in-traditional-art-world-coverage",
+      "type": "Thread",
+      "label": "Why do digital arts remain institutionally invisible in traditional art world coverage?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b1-9c89-fec7d1d7a9a3"
+      ]
+    },
+    {
+      "id": "thread-does-institutional-bias-critique-enable-or-constrain-radical-ai-art-practice",
+      "type": "Thread",
+      "label": "Does institutional bias critique enable or constrain radical AI art practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b4-b132-cb3d6ebe1acb"
+      ]
+    },
+    {
+      "id": "thread-is-the-digital-arts-field-ready-to-move-from-ai-critique-to-ai-world-building",
+      "type": "Thread",
+      "label": "Is the digital arts field ready to move from AI critique to AI world-building?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81b9-bc02-f3a558a64360"
+      ]
+    },
+    {
+      "id": "thread-are-digital-arts-institutions-losing-critical-focus-in-pursuit-of-platform-relevance",
+      "type": "Thread",
+      "label": "Are digital arts institutions losing critical focus in pursuit of platform relevance?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81bd-a4e1-caffdcda1097"
+      ]
+    },
+    {
+      "id": "thread-are-legacy-institutions-structurally-incapable-of-engaging-digital-arts-practices",
+      "type": "Thread",
+      "label": "Are legacy institutions structurally incapable of engaging digital arts practices?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81c0-8471-efa0f281ef18"
+      ]
+    },
+    {
+      "id": "thread-is-the-shift-from-mathematical-to-computational-approaches-in-ai-creating-new-forms-of-artistic-dependency",
+      "type": "Thread",
+      "label": "Is the shift from mathematical to computational approaches in AI creating new forms of artistic dependency?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81ce-9b77-f129fd8f0782"
+      ]
+    },
+    {
+      "id": "thread-how-does-institutional-canonization-change-the-meaning-of-transgressive-digital-art-practice",
+      "type": "Thread",
+      "label": "How does institutional canonization change the meaning of transgressive digital art practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d0-89a2-d22f7ff3c196"
+      ]
+    },
+    {
+      "id": "thread-are-traditional-residency-models-becoming-obsolete-for-digital-arts-practice",
+      "type": "Thread",
+      "label": "Are traditional residency models becoming obsolete for digital arts practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d1-bd5b-e3b7e818799f"
+      ]
+    },
+    {
+      "id": "thread-is-climate-crisis-pushing-digital-art-toward-post-aesthetic-functionality",
+      "type": "Thread",
+      "label": "Is climate crisis pushing digital art toward post-aesthetic functionality?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-b7fb-f29b8cdf5c36"
+      ]
+    },
+    {
+      "id": "thread-is-the-digital-arts-field-experiencing-a-post-digital-turn-toward-place-based-practice",
+      "type": "Thread",
+      "label": "Is the digital arts field experiencing a post-digital turn toward place-based practice?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81d6-bf0e-e288f9dd8b83"
+      ]
+    },
+    {
+      "id": "thread-are-conversational-ai-interfaces-becoming-the-universal-paradigm-for-creative-tools",
+      "type": "Thread",
+      "label": "Are conversational AI interfaces becoming the universal paradigm for creative tools?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-ae69-e507703e7617"
+      ]
+    },
+    {
+      "id": "thread-are-digital-arts-institutions-becoming-civic-infrastructure",
+      "type": "Thread",
+      "label": "Are digital arts institutions becoming civic infrastructure?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81e6-b394-dabed2da062d"
+      ]
+    },
+    {
+      "id": "thread-is-the-consolidation-of-curatorial-education-standardizing-digital-arts-presentation",
+      "type": "Thread",
+      "label": "Is the consolidation of curatorial education standardizing digital arts presentation?",
+      "signal_count": 1,
+      "signals": [
+        "3187b5c8-7020-81f6-88b3-e169dfeb80f5"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "concept-curatorial-obsolescence",
+      "target": "concept-institutional-contraction",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-contraction",
+      "target": "concept-platform-native-curation",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-education-crisis",
+      "target": "concept-institutional-contraction",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-obsolescence",
+      "target": "concept-platform-native-curation",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-education-crisis",
+      "target": "concept-curatorial-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-education-crisis",
+      "target": "concept-platform-native-curation",
+      "weight": 1
+    },
+    {
+      "source": "concept-fashion-art-convergence",
+      "target": "concept-institutional-absorption",
+      "weight": 1
+    },
+    {
+      "source": "concept-collective-practice",
+      "target": "concept-institutional-absorption",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-inclusion",
+      "target": "concept-institutional-absorption",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-absorption",
+      "target": "concept-networked-collaboration",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-legitimization",
+      "target": "concept-institutional-absorption",
+      "weight": 1
+    },
+    {
+      "source": "concept-collective-practice",
+      "target": "concept-fashion-art-convergence",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-inclusion",
+      "target": "concept-fashion-art-convergence",
+      "weight": 1
+    },
+    {
+      "source": "concept-fashion-art-convergence",
+      "target": "concept-networked-collaboration",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-legitimization",
+      "target": "concept-fashion-art-convergence",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-inclusion",
+      "target": "concept-collective-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-collective-practice",
+      "target": "concept-networked-collaboration",
+      "weight": 1
+    },
+    {
+      "source": "concept-collective-practice",
+      "target": "concept-cultural-legitimization",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-inclusion",
+      "target": "concept-networked-collaboration",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-inclusion",
+      "target": "concept-cultural-legitimization",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-legitimization",
+      "target": "concept-networked-collaboration",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-arts-class-exclusion",
+      "target": "concept-working-class-cultural-production",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-gatekeeping",
+      "target": "concept-working-class-cultural-production",
+      "weight": 1
+    },
+    {
+      "source": "concept-practice-led-memoir",
+      "target": "concept-working-class-cultural-production",
+      "weight": 1
+    },
+    {
+      "source": "concept-margins-to-center-organizing",
+      "target": "concept-working-class-cultural-production",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-arts-class-exclusion",
+      "target": "concept-institutional-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-arts-class-exclusion",
+      "target": "concept-practice-led-memoir",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-arts-class-exclusion",
+      "target": "concept-margins-to-center-organizing",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-gatekeeping",
+      "target": "concept-practice-led-memoir",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-gatekeeping",
+      "target": "concept-margins-to-center-organizing",
+      "weight": 1
+    },
+    {
+      "source": "concept-margins-to-center-organizing",
+      "target": "concept-practice-led-memoir",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-blindness",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-capital-gatekeeping",
+      "target": "concept-institutional-blindness",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-institutional-infrastructure",
+      "target": "concept-institutional-blindness",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-blindness",
+      "target": "concept-market-legitimacy-boundaries",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-capital-gatekeeping",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-institutional-infrastructure",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-market-legitimacy-boundaries",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-institutional-infrastructure",
+      "target": "concept-cultural-capital-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-capital-gatekeeping",
+      "target": "concept-market-legitimacy-boundaries",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-institutional-infrastructure",
+      "target": "concept-market-legitimacy-boundaries",
+      "weight": 1
+    },
+    {
+      "source": "concept-orthogonality-thesis-critique",
+      "target": "concept-virtue-ethical-ai-alignment",
+      "weight": 1
+    },
+    {
+      "source": "concept-practice-based-agency",
+      "target": "concept-virtue-ethical-ai-alignment",
+      "weight": 1
+    },
+    {
+      "source": "concept-goal-directed-behavior-rejection",
+      "target": "concept-virtue-ethical-ai-alignment",
+      "weight": 1
+    },
+    {
+      "source": "concept-rational-agency-redefinition",
+      "target": "concept-virtue-ethical-ai-alignment",
+      "weight": 1
+    },
+    {
+      "source": "concept-emergent-computational-ethics",
+      "target": "concept-virtue-ethical-ai-alignment",
+      "weight": 1
+    },
+    {
+      "source": "concept-orthogonality-thesis-critique",
+      "target": "concept-practice-based-agency",
+      "weight": 1
+    },
+    {
+      "source": "concept-goal-directed-behavior-rejection",
+      "target": "concept-orthogonality-thesis-critique",
+      "weight": 1
+    },
+    {
+      "source": "concept-orthogonality-thesis-critique",
+      "target": "concept-rational-agency-redefinition",
+      "weight": 1
+    },
+    {
+      "source": "concept-emergent-computational-ethics",
+      "target": "concept-orthogonality-thesis-critique",
+      "weight": 1
+    },
+    {
+      "source": "concept-goal-directed-behavior-rejection",
+      "target": "concept-practice-based-agency",
+      "weight": 1
+    },
+    {
+      "source": "concept-practice-based-agency",
+      "target": "concept-rational-agency-redefinition",
+      "weight": 1
+    },
+    {
+      "source": "concept-emergent-computational-ethics",
+      "target": "concept-practice-based-agency",
+      "weight": 1
+    },
+    {
+      "source": "concept-goal-directed-behavior-rejection",
+      "target": "concept-rational-agency-redefinition",
+      "weight": 1
+    },
+    {
+      "source": "concept-emergent-computational-ethics",
+      "target": "concept-goal-directed-behavior-rejection",
+      "weight": 1
+    },
+    {
+      "source": "concept-emergent-computational-ethics",
+      "target": "concept-rational-agency-redefinition",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-financialization",
+      "target": "concept-generative-technology-capture",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-financialization",
+      "target": "concept-llm-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-financialization",
+      "target": "concept-creative-to-capital-pipeline",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-financialization",
+      "target": "concept-technological-artistic-potential",
+      "weight": 1
+    },
+    {
+      "source": "concept-generative-technology-capture",
+      "target": "concept-llm-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-to-capital-pipeline",
+      "target": "concept-generative-technology-capture",
+      "weight": 1
+    },
+    {
+      "source": "concept-generative-technology-capture",
+      "target": "concept-technological-artistic-potential",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-to-capital-pipeline",
+      "target": "concept-llm-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-llm-commodification",
+      "target": "concept-technological-artistic-potential",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-to-capital-pipeline",
+      "target": "concept-technological-artistic-potential",
+      "weight": 1
+    },
+    {
+      "source": "concept-discourse-gatekeeping",
+      "target": "concept-platform-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-media-sustainability-crisis",
+      "target": "concept-platform-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-information-access-inequality",
+      "target": "concept-platform-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-journalism-precarity",
+      "target": "concept-platform-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-discourse-gatekeeping",
+      "target": "concept-media-sustainability-crisis",
+      "weight": 1
+    },
+    {
+      "source": "concept-discourse-gatekeeping",
+      "target": "concept-information-access-inequality",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-journalism-precarity",
+      "target": "concept-discourse-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-information-access-inequality",
+      "target": "concept-media-sustainability-crisis",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-journalism-precarity",
+      "target": "concept-media-sustainability-crisis",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-journalism-precarity",
+      "target": "concept-information-access-inequality",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-validation-pipeline",
+      "target": "concept-underrepresented-histories",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-infrastructure-building",
+      "target": "concept-institutional-validation-pipeline",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-validation-pipeline",
+      "target": "concept-material-practice-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-fellowship-publication-complex",
+      "target": "concept-institutional-validation-pipeline",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-infrastructure-building",
+      "target": "concept-underrepresented-histories",
+      "weight": 1
+    },
+    {
+      "source": "concept-material-practice-legitimacy",
+      "target": "concept-underrepresented-histories",
+      "weight": 1
+    },
+    {
+      "source": "concept-fellowship-publication-complex",
+      "target": "concept-underrepresented-histories",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-infrastructure-building",
+      "target": "concept-material-practice-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-infrastructure-building",
+      "target": "concept-fellowship-publication-complex",
+      "weight": 1
+    },
+    {
+      "source": "concept-fellowship-publication-complex",
+      "target": "concept-material-practice-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-fair-based-legitimation",
+      "target": "concept-object-market-exclusion",
+      "weight": 1
+    },
+    {
+      "source": "concept-fair-based-legitimation",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-fair-based-legitimation",
+      "target": "concept-physical-presence-premium",
+      "weight": 1
+    },
+    {
+      "source": "concept-collector-validation-systems",
+      "target": "concept-fair-based-legitimation",
+      "weight": 1
+    },
+    {
+      "source": "concept-object-market-exclusion",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-object-market-exclusion",
+      "target": "concept-physical-presence-premium",
+      "weight": 1
+    },
+    {
+      "source": "concept-collector-validation-systems",
+      "target": "concept-object-market-exclusion",
+      "weight": 1
+    },
+    {
+      "source": "concept-parallel-art-economies",
+      "target": "concept-physical-presence-premium",
+      "weight": 1
+    },
+    {
+      "source": "concept-collector-validation-systems",
+      "target": "concept-parallel-art-economies",
+      "weight": 1
+    },
+    {
+      "source": "concept-collector-validation-systems",
+      "target": "concept-physical-presence-premium",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-infrastructure-allocation",
+      "target": "concept-institutional-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-legitimacy",
+      "target": "concept-modernist-monumentalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-marginalization",
+      "target": "concept-institutional-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-legitimacy",
+      "target": "concept-legacy-artist-valorization",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-infrastructure-allocation",
+      "target": "concept-modernist-monumentalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-infrastructure-allocation",
+      "target": "concept-digital-marginalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-infrastructure-allocation",
+      "target": "concept-legacy-artist-valorization",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-marginalization",
+      "target": "concept-modernist-monumentalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-legacy-artist-valorization",
+      "target": "concept-modernist-monumentalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-marginalization",
+      "target": "concept-legacy-artist-valorization",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bureaucracy",
+      "target": "concept-institutional-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bureaucracy",
+      "target": "concept-municipal-arts-funding",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bureaucracy",
+      "target": "concept-cultural-policy-formation",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-gatekeeping",
+      "target": "concept-municipal-arts-funding",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-policy-formation",
+      "target": "concept-institutional-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-policy-formation",
+      "target": "concept-municipal-arts-funding",
+      "weight": 1
+    },
+    {
+      "source": "concept-object-oriented-ontology",
+      "target": "concept-posthuman-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-body-horror-aesthetics",
+      "target": "concept-posthuman-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-furniture-fetishism",
+      "target": "concept-posthuman-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-liminal-embodiment",
+      "target": "concept-posthuman-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-material-transformation",
+      "target": "concept-posthuman-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-body-horror-aesthetics",
+      "target": "concept-object-oriented-ontology",
+      "weight": 1
+    },
+    {
+      "source": "concept-furniture-fetishism",
+      "target": "concept-object-oriented-ontology",
+      "weight": 1
+    },
+    {
+      "source": "concept-liminal-embodiment",
+      "target": "concept-object-oriented-ontology",
+      "weight": 1
+    },
+    {
+      "source": "concept-material-transformation",
+      "target": "concept-object-oriented-ontology",
+      "weight": 1
+    },
+    {
+      "source": "concept-body-horror-aesthetics",
+      "target": "concept-furniture-fetishism",
+      "weight": 1
+    },
+    {
+      "source": "concept-body-horror-aesthetics",
+      "target": "concept-liminal-embodiment",
+      "weight": 1
+    },
+    {
+      "source": "concept-body-horror-aesthetics",
+      "target": "concept-material-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-furniture-fetishism",
+      "target": "concept-liminal-embodiment",
+      "weight": 1
+    },
+    {
+      "source": "concept-furniture-fetishism",
+      "target": "concept-material-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-liminal-embodiment",
+      "target": "concept-material-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-intelligence",
+      "target": "concept-multimodal-ai-critique",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-intelligence",
+      "target": "concept-tacit-understanding",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-intelligence",
+      "target": "concept-language-centric-intelligence-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-agi-skepticism",
+      "target": "concept-embodied-intelligence",
+      "weight": 1
+    },
+    {
+      "source": "concept-multimodal-ai-critique",
+      "target": "concept-tacit-understanding",
+      "weight": 1
+    },
+    {
+      "source": "concept-language-centric-intelligence-models",
+      "target": "concept-multimodal-ai-critique",
+      "weight": 1
+    },
+    {
+      "source": "concept-agi-skepticism",
+      "target": "concept-multimodal-ai-critique",
+      "weight": 1
+    },
+    {
+      "source": "concept-language-centric-intelligence-models",
+      "target": "concept-tacit-understanding",
+      "weight": 1
+    },
+    {
+      "source": "concept-agi-skepticism",
+      "target": "concept-tacit-understanding",
+      "weight": 1
+    },
+    {
+      "source": "concept-agi-skepticism",
+      "target": "concept-language-centric-intelligence-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-soft-power-infrastructure",
+      "target": "concept-geopolitical-art-ecosystem-vulnerability",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-soft-power-infrastructure",
+      "target": "concept-institutional-crisis-protocols",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-soft-power-infrastructure",
+      "target": "concept-gulf-cultural-mega-projects",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-soft-power-infrastructure",
+      "target": "concept-regional-art-market-fragility",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-soft-power-infrastructure",
+      "target": "concept-security-culture-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-geopolitical-art-ecosystem-vulnerability",
+      "target": "concept-institutional-crisis-protocols",
+      "weight": 1
+    },
+    {
+      "source": "concept-geopolitical-art-ecosystem-vulnerability",
+      "target": "concept-gulf-cultural-mega-projects",
+      "weight": 1
+    },
+    {
+      "source": "concept-geopolitical-art-ecosystem-vulnerability",
+      "target": "concept-regional-art-market-fragility",
+      "weight": 1
+    },
+    {
+      "source": "concept-geopolitical-art-ecosystem-vulnerability",
+      "target": "concept-security-culture-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-gulf-cultural-mega-projects",
+      "target": "concept-institutional-crisis-protocols",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-crisis-protocols",
+      "target": "concept-regional-art-market-fragility",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-crisis-protocols",
+      "target": "concept-security-culture-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-gulf-cultural-mega-projects",
+      "target": "concept-regional-art-market-fragility",
+      "weight": 1
+    },
+    {
+      "source": "concept-gulf-cultural-mega-projects",
+      "target": "concept-security-culture-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-regional-art-market-fragility",
+      "target": "concept-security-culture-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-legitimation",
+      "target": "concept-queer-domesticity",
+      "weight": 1
+    },
+    {
+      "source": "concept-family-portraiture",
+      "target": "concept-queer-domesticity",
+      "weight": 1
+    },
+    {
+      "source": "concept-photographic-continuity",
+      "target": "concept-queer-domesticity",
+      "weight": 1
+    },
+    {
+      "source": "concept-queer-domesticity",
+      "target": "concept-visibility-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-establishment-capture",
+      "target": "concept-queer-domesticity",
+      "weight": 1
+    },
+    {
+      "source": "concept-family-portraiture",
+      "target": "concept-institutional-legitimation",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-legitimation",
+      "target": "concept-photographic-continuity",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-legitimation",
+      "target": "concept-visibility-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-establishment-capture",
+      "target": "concept-institutional-legitimation",
+      "weight": 1
+    },
+    {
+      "source": "concept-family-portraiture",
+      "target": "concept-photographic-continuity",
+      "weight": 1
+    },
+    {
+      "source": "concept-family-portraiture",
+      "target": "concept-visibility-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-establishment-capture",
+      "target": "concept-family-portraiture",
+      "weight": 1
+    },
+    {
+      "source": "concept-photographic-continuity",
+      "target": "concept-visibility-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-establishment-capture",
+      "target": "concept-photographic-continuity",
+      "weight": 1
+    },
+    {
+      "source": "concept-establishment-capture",
+      "target": "concept-visibility-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-content-farm-infiltration",
+      "target": "concept-platform-integrity",
+      "weight": 1
+    },
+    {
+      "source": "concept-content-farm-infiltration",
+      "target": "concept-signal-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-content-farm-infiltration",
+      "target": "concept-institutional-vulnerability",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-spam",
+      "target": "concept-content-farm-infiltration",
+      "weight": 1
+    },
+    {
+      "source": "concept-platform-integrity",
+      "target": "concept-signal-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-vulnerability",
+      "target": "concept-platform-integrity",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-spam",
+      "target": "concept-platform-integrity",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-vulnerability",
+      "target": "concept-signal-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-spam",
+      "target": "concept-signal-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-spam",
+      "target": "concept-institutional-vulnerability",
+      "weight": 1
+    },
+    {
+      "source": "concept-counterculture-legitimation",
+      "target": "concept-transgressive-institutionalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-counterculture-legitimation",
+      "target": "concept-sex-as-resistance-strategy",
+      "weight": 1
+    },
+    {
+      "source": "concept-counterculture-legitimation",
+      "target": "concept-platform-censorship-precedents",
+      "weight": 1
+    },
+    {
+      "source": "concept-antiwar-aesthetic-tactics",
+      "target": "concept-counterculture-legitimation",
+      "weight": 1
+    },
+    {
+      "source": "concept-sex-as-resistance-strategy",
+      "target": "concept-transgressive-institutionalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-platform-censorship-precedents",
+      "target": "concept-transgressive-institutionalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-antiwar-aesthetic-tactics",
+      "target": "concept-transgressive-institutionalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-platform-censorship-precedents",
+      "target": "concept-sex-as-resistance-strategy",
+      "weight": 1
+    },
+    {
+      "source": "concept-antiwar-aesthetic-tactics",
+      "target": "concept-sex-as-resistance-strategy",
+      "weight": 1
+    },
+    {
+      "source": "concept-antiwar-aesthetic-tactics",
+      "target": "concept-platform-censorship-precedents",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-digital-value-hierarchy",
+      "target": "concept-institutional-market-bias",
+      "weight": 1
+    },
+    {
+      "source": "concept-auction-house-gatekeeping",
+      "target": "concept-institutional-market-bias",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-market-bias",
+      "target": "concept-traditional-media-privilege",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-market-exclusion",
+      "target": "concept-institutional-market-bias",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-digital-value-hierarchy",
+      "target": "concept-auction-house-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-digital-value-hierarchy",
+      "target": "concept-traditional-media-privilege",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-digital-value-hierarchy",
+      "target": "concept-art-market-exclusion",
+      "weight": 1
+    },
+    {
+      "source": "concept-auction-house-gatekeeping",
+      "target": "concept-traditional-media-privilege",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-market-exclusion",
+      "target": "concept-auction-house-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-market-exclusion",
+      "target": "concept-traditional-media-privilege",
+      "weight": 1
+    },
+    {
+      "source": "concept-colonial-corrective-curation",
+      "target": "concept-historical-juxtaposition-exhibition",
+      "weight": 1
+    },
+    {
+      "source": "concept-colonial-corrective-curation",
+      "target": "concept-indigenous-counter-documentation",
+      "weight": 1
+    },
+    {
+      "source": "concept-colonial-corrective-curation",
+      "target": "concept-foundation-mediated-regionalism",
+      "weight": 1
+    },
+    {
+      "source": "concept-colonial-corrective-curation",
+      "target": "concept-reactive-institutional-positioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-historical-juxtaposition-exhibition",
+      "target": "concept-indigenous-counter-documentation",
+      "weight": 1
+    },
+    {
+      "source": "concept-foundation-mediated-regionalism",
+      "target": "concept-historical-juxtaposition-exhibition",
+      "weight": 1
+    },
+    {
+      "source": "concept-historical-juxtaposition-exhibition",
+      "target": "concept-reactive-institutional-positioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-foundation-mediated-regionalism",
+      "target": "concept-indigenous-counter-documentation",
+      "weight": 1
+    },
+    {
+      "source": "concept-indigenous-counter-documentation",
+      "target": "concept-reactive-institutional-positioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-foundation-mediated-regionalism",
+      "target": "concept-reactive-institutional-positioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-collaborative-fiction",
+      "target": "concept-interspecies-empathy",
+      "weight": 1
+    },
+    {
+      "source": "concept-interspecies-empathy",
+      "target": "concept-post-anthropocentric-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-digital-arts",
+      "target": "concept-interspecies-empathy",
+      "weight": 1
+    },
+    {
+      "source": "concept-interspecies-empathy",
+      "target": "concept-speculative-rituals",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-imagination",
+      "target": "concept-interspecies-empathy",
+      "weight": 1
+    },
+    {
+      "source": "concept-collaborative-fiction",
+      "target": "concept-post-anthropocentric-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-collaborative-fiction",
+      "target": "concept-embodied-digital-arts",
+      "weight": 1
+    },
+    {
+      "source": "concept-collaborative-fiction",
+      "target": "concept-speculative-rituals",
+      "weight": 1
+    },
+    {
+      "source": "concept-collaborative-fiction",
+      "target": "concept-ecological-imagination",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-digital-arts",
+      "target": "concept-post-anthropocentric-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-anthropocentric-practice",
+      "target": "concept-speculative-rituals",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-imagination",
+      "target": "concept-post-anthropocentric-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-embodied-digital-arts",
+      "target": "concept-speculative-rituals",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-imagination",
+      "target": "concept-embodied-digital-arts",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-imagination",
+      "target": "concept-speculative-rituals",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-sustainability",
+      "target": "concept-post-attention-architectures",
+      "weight": 1
+    },
+    {
+      "source": "concept-long-sequence-generation",
+      "target": "concept-post-attention-architectures",
+      "weight": 1
+    },
+    {
+      "source": "concept-infrastructure-pluralism",
+      "target": "concept-post-attention-architectures",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-attention-architectures",
+      "target": "concept-temporal-scalability",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-sustainability",
+      "target": "concept-long-sequence-generation",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-sustainability",
+      "target": "concept-infrastructure-pluralism",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-sustainability",
+      "target": "concept-temporal-scalability",
+      "weight": 1
+    },
+    {
+      "source": "concept-infrastructure-pluralism",
+      "target": "concept-long-sequence-generation",
+      "weight": 1
+    },
+    {
+      "source": "concept-long-sequence-generation",
+      "target": "concept-temporal-scalability",
+      "weight": 1
+    },
+    {
+      "source": "concept-infrastructure-pluralism",
+      "target": "concept-temporal-scalability",
+      "weight": 1
+    },
+    {
+      "source": "concept-crisis-commodification",
+      "target": "concept-performative-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-virtue-washing",
+      "target": "concept-performative-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-celebrity-art-consumption",
+      "target": "concept-performative-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-extraction-mechanisms",
+      "target": "concept-performative-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-crisis-commodification",
+      "target": "concept-institutional-virtue-washing",
+      "weight": 1
+    },
+    {
+      "source": "concept-celebrity-art-consumption",
+      "target": "concept-crisis-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-extraction-mechanisms",
+      "target": "concept-crisis-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-celebrity-art-consumption",
+      "target": "concept-institutional-virtue-washing",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-extraction-mechanisms",
+      "target": "concept-institutional-virtue-washing",
+      "weight": 1
+    },
+    {
+      "source": "concept-celebrity-art-consumption",
+      "target": "concept-community-extraction-mechanisms",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-resistance",
+      "target": "concept-productive-erasure",
+      "weight": 1
+    },
+    {
+      "source": "concept-counter-technological-practice",
+      "target": "concept-productive-erasure",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-valorization-of-disconnection",
+      "target": "concept-productive-erasure",
+      "weight": 1
+    },
+    {
+      "source": "concept-painting-as-anti-digital-medium",
+      "target": "concept-productive-erasure",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-resistance",
+      "target": "concept-counter-technological-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-resistance",
+      "target": "concept-institutional-valorization-of-disconnection",
+      "weight": 1
+    },
+    {
+      "source": "concept-analog-resistance",
+      "target": "concept-painting-as-anti-digital-medium",
+      "weight": 1
+    },
+    {
+      "source": "concept-counter-technological-practice",
+      "target": "concept-institutional-valorization-of-disconnection",
+      "weight": 1
+    },
+    {
+      "source": "concept-counter-technological-practice",
+      "target": "concept-painting-as-anti-digital-medium",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-valorization-of-disconnection",
+      "target": "concept-painting-as-anti-digital-medium",
+      "weight": 1
+    },
+    {
+      "source": "concept-process-based-investigation",
+      "target": "concept-systematic-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-geometric-seriality",
+      "target": "concept-process-based-investigation",
+      "weight": 1
+    },
+    {
+      "source": "concept-conceptual-computation",
+      "target": "concept-process-based-investigation",
+      "weight": 1
+    },
+    {
+      "source": "concept-process-based-investigation",
+      "target": "concept-time-based-form-studies",
+      "weight": 1
+    },
+    {
+      "source": "concept-process-based-investigation",
+      "target": "concept-rule-based-art-systems",
+      "weight": 1
+    },
+    {
+      "source": "concept-geometric-seriality",
+      "target": "concept-systematic-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-conceptual-computation",
+      "target": "concept-systematic-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-systematic-transformation",
+      "target": "concept-time-based-form-studies",
+      "weight": 1
+    },
+    {
+      "source": "concept-rule-based-art-systems",
+      "target": "concept-systematic-transformation",
+      "weight": 1
+    },
+    {
+      "source": "concept-conceptual-computation",
+      "target": "concept-geometric-seriality",
+      "weight": 1
+    },
+    {
+      "source": "concept-geometric-seriality",
+      "target": "concept-time-based-form-studies",
+      "weight": 1
+    },
+    {
+      "source": "concept-geometric-seriality",
+      "target": "concept-rule-based-art-systems",
+      "weight": 1
+    },
+    {
+      "source": "concept-conceptual-computation",
+      "target": "concept-time-based-form-studies",
+      "weight": 1
+    },
+    {
+      "source": "concept-conceptual-computation",
+      "target": "concept-rule-based-art-systems",
+      "weight": 1
+    },
+    {
+      "source": "concept-rule-based-art-systems",
+      "target": "concept-time-based-form-studies",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-privacy-assumptions",
+      "target": "concept-embedding-inversion",
+      "weight": 1
+    },
+    {
+      "source": "concept-data-reversibility",
+      "target": "concept-embedding-inversion",
+      "weight": 1
+    },
+    {
+      "source": "concept-embedding-inversion",
+      "target": "concept-machine-learning-security",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-transparency",
+      "target": "concept-embedding-inversion",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-privacy-assumptions",
+      "target": "concept-data-reversibility",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-privacy-assumptions",
+      "target": "concept-machine-learning-security",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-privacy-assumptions",
+      "target": "concept-computational-transparency",
+      "weight": 1
+    },
+    {
+      "source": "concept-data-reversibility",
+      "target": "concept-machine-learning-security",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-transparency",
+      "target": "concept-data-reversibility",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-transparency",
+      "target": "concept-machine-learning-security",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-larp",
+      "target": "concept-multispecies-urbanism",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-larp",
+      "target": "concept-speculative-place-making",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-larp",
+      "target": "concept-post-gallery-institutionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-responsive-art-practice",
+      "target": "concept-community-larp",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-larp",
+      "target": "concept-ecological-role-play",
+      "weight": 1
+    },
+    {
+      "source": "concept-multispecies-urbanism",
+      "target": "concept-speculative-place-making",
+      "weight": 1
+    },
+    {
+      "source": "concept-multispecies-urbanism",
+      "target": "concept-post-gallery-institutionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-responsive-art-practice",
+      "target": "concept-multispecies-urbanism",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-role-play",
+      "target": "concept-multispecies-urbanism",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-gallery-institutionality",
+      "target": "concept-speculative-place-making",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-responsive-art-practice",
+      "target": "concept-speculative-place-making",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-role-play",
+      "target": "concept-speculative-place-making",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-responsive-art-practice",
+      "target": "concept-post-gallery-institutionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-role-play",
+      "target": "concept-post-gallery-institutionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-responsive-art-practice",
+      "target": "concept-ecological-role-play",
+      "weight": 1
+    },
+    {
+      "source": "concept-benchmark-optimization",
+      "target": "concept-user-experience-saturation",
+      "weight": 1
+    },
+    {
+      "source": "concept-benchmark-optimization",
+      "target": "concept-purposeful-interaction-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-tool-instrumentalization",
+      "target": "concept-benchmark-optimization",
+      "weight": 1
+    },
+    {
+      "source": "concept-benchmark-optimization",
+      "target": "concept-creative-partnership-friction",
+      "weight": 1
+    },
+    {
+      "source": "concept-purposeful-interaction-design",
+      "target": "concept-user-experience-saturation",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-tool-instrumentalization",
+      "target": "concept-user-experience-saturation",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-partnership-friction",
+      "target": "concept-user-experience-saturation",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-tool-instrumentalization",
+      "target": "concept-purposeful-interaction-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-partnership-friction",
+      "target": "concept-purposeful-interaction-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-tool-instrumentalization",
+      "target": "concept-creative-partnership-friction",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-authentication",
+      "target": "concept-institutional-validation-apparatus",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-authentication",
+      "target": "concept-forensic-materialism",
+      "weight": 1
+    },
+    {
+      "source": "concept-computational-authentication",
+      "target": "concept-digital-provenance-infrastructure",
+      "weight": 1
+    },
+    {
+      "source": "concept-forensic-materialism",
+      "target": "concept-institutional-validation-apparatus",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-provenance-infrastructure",
+      "target": "concept-institutional-validation-apparatus",
+      "weight": 1
+    },
+    {
+      "source": "concept-digital-provenance-infrastructure",
+      "target": "concept-forensic-materialism",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-decentering",
+      "target": "concept-post-metropolitan-digital-arts",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-critical-practice",
+      "target": "concept-institutional-decentering",
+      "weight": 1
+    },
+    {
+      "source": "concept-geographical-decentralization",
+      "target": "concept-institutional-decentering",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-decentering",
+      "target": "concept-regional-digital-arts-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-critical-practice",
+      "target": "concept-post-metropolitan-digital-arts",
+      "weight": 1
+    },
+    {
+      "source": "concept-geographical-decentralization",
+      "target": "concept-post-metropolitan-digital-arts",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-metropolitan-digital-arts",
+      "target": "concept-regional-digital-arts-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-critical-practice",
+      "target": "concept-geographical-decentralization",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-critical-practice",
+      "target": "concept-regional-digital-arts-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-geographical-decentralization",
+      "target": "concept-regional-digital-arts-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-gamified-criticism",
+      "target": "concept-institutional-pedagogy",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-positioning",
+      "target": "concept-institutional-pedagogy",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-literacy-testing",
+      "target": "concept-institutional-pedagogy",
+      "weight": 1
+    },
+    {
+      "source": "concept-audience-activation-strategies",
+      "target": "concept-institutional-pedagogy",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-positioning",
+      "target": "concept-gamified-criticism",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-literacy-testing",
+      "target": "concept-gamified-criticism",
+      "weight": 1
+    },
+    {
+      "source": "concept-audience-activation-strategies",
+      "target": "concept-gamified-criticism",
+      "weight": 1
+    },
+    {
+      "source": "concept-biennial-positioning",
+      "target": "concept-cultural-literacy-testing",
+      "weight": 1
+    },
+    {
+      "source": "concept-audience-activation-strategies",
+      "target": "concept-biennial-positioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-audience-activation-strategies",
+      "target": "concept-cultural-literacy-testing",
+      "weight": 1
+    },
+    {
+      "source": "concept-gallery-system-exclusion",
+      "target": "concept-institutional-invisibility",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-invisibility",
+      "target": "concept-physical-digital-art-market-divide",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-invisibility",
+      "target": "concept-tastemaker-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-invisibility",
+      "target": "concept-place-based-art-world-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-gallery-system-exclusion",
+      "target": "concept-physical-digital-art-market-divide",
+      "weight": 1
+    },
+    {
+      "source": "concept-gallery-system-exclusion",
+      "target": "concept-tastemaker-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-gallery-system-exclusion",
+      "target": "concept-place-based-art-world-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-physical-digital-art-market-divide",
+      "target": "concept-tastemaker-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-physical-digital-art-market-divide",
+      "target": "concept-place-based-art-world-hierarchy",
+      "weight": 1
+    },
+    {
+      "source": "concept-place-based-art-world-hierarchy",
+      "target": "concept-tastemaker-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-bias-discourse",
+      "target": "concept-technical-critique-containment",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-bias-discourse",
+      "target": "concept-infrastructural-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-bias-discourse",
+      "target": "concept-bias-acknowledgment-protocols",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-bias-discourse",
+      "target": "concept-algorithmic-liberalism",
+      "weight": 1
+    },
+    {
+      "source": "concept-infrastructural-legitimacy",
+      "target": "concept-technical-critique-containment",
+      "weight": 1
+    },
+    {
+      "source": "concept-bias-acknowledgment-protocols",
+      "target": "concept-technical-critique-containment",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-liberalism",
+      "target": "concept-technical-critique-containment",
+      "weight": 1
+    },
+    {
+      "source": "concept-bias-acknowledgment-protocols",
+      "target": "concept-infrastructural-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-liberalism",
+      "target": "concept-infrastructural-legitimacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-liberalism",
+      "target": "concept-bias-acknowledgment-protocols",
+      "weight": 1
+    },
+    {
+      "source": "concept-positive-ai-visioning",
+      "target": "concept-wellbeing-centered-technology",
+      "weight": 1
+    },
+    {
+      "source": "concept-positive-ai-visioning",
+      "target": "concept-post-dystopian-futures",
+      "weight": 1
+    },
+    {
+      "source": "concept-positive-ai-visioning",
+      "target": "concept-technological-world-building",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-community-agency",
+      "target": "concept-positive-ai-visioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-impact-narratives",
+      "target": "concept-positive-ai-visioning",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-dystopian-futures",
+      "target": "concept-wellbeing-centered-technology",
+      "weight": 1
+    },
+    {
+      "source": "concept-technological-world-building",
+      "target": "concept-wellbeing-centered-technology",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-community-agency",
+      "target": "concept-wellbeing-centered-technology",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-impact-narratives",
+      "target": "concept-wellbeing-centered-technology",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-dystopian-futures",
+      "target": "concept-technological-world-building",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-community-agency",
+      "target": "concept-post-dystopian-futures",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-impact-narratives",
+      "target": "concept-post-dystopian-futures",
+      "weight": 1
+    },
+    {
+      "source": "concept-creative-community-agency",
+      "target": "concept-technological-world-building",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-impact-narratives",
+      "target": "concept-technological-world-building",
+      "weight": 1
+    },
+    {
+      "source": "concept-ai-impact-narratives",
+      "target": "concept-creative-community-agency",
+      "weight": 1
+    },
+    {
+      "source": "concept-discourse-integrity",
+      "target": "concept-platform-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-content-pollution",
+      "target": "concept-platform-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-space-preservation",
+      "target": "concept-platform-contamination",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-content-pollution",
+      "target": "concept-discourse-integrity",
+      "weight": 1
+    },
+    {
+      "source": "concept-critical-space-preservation",
+      "target": "concept-discourse-integrity",
+      "weight": 1
+    },
+    {
+      "source": "concept-algorithmic-content-pollution",
+      "target": "concept-critical-space-preservation",
+      "weight": 1
+    },
+    {
+      "source": "concept-attention-economy-capture",
+      "target": "concept-institutional-scope-creep",
+      "weight": 1
+    },
+    {
+      "source": "concept-attention-economy-capture",
+      "target": "concept-networked-temporality",
+      "weight": 1
+    },
+    {
+      "source": "concept-attention-economy-capture",
+      "target": "concept-platform-content-drift",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-writing-boundaries",
+      "target": "concept-attention-economy-capture",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-scope-creep",
+      "target": "concept-networked-temporality",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-scope-creep",
+      "target": "concept-platform-content-drift",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-writing-boundaries",
+      "target": "concept-institutional-scope-creep",
+      "weight": 1
+    },
+    {
+      "source": "concept-networked-temporality",
+      "target": "concept-platform-content-drift",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-writing-boundaries",
+      "target": "concept-networked-temporality",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-writing-boundaries",
+      "target": "concept-platform-content-drift",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bifurcation",
+      "target": "concept-institutional-blind-spot",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-blind-spot",
+      "target": "concept-legacy-institution-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-blind-spot",
+      "target": "concept-technological-disruption-avoidance",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-blind-spot",
+      "target": "concept-pre-digital-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bifurcation",
+      "target": "concept-legacy-institution-programming",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bifurcation",
+      "target": "concept-technological-disruption-avoidance",
+      "weight": 1
+    },
+    {
+      "source": "concept-cultural-bifurcation",
+      "target": "concept-pre-digital-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-legacy-institution-programming",
+      "target": "concept-technological-disruption-avoidance",
+      "weight": 1
+    },
+    {
+      "source": "concept-legacy-institution-programming",
+      "target": "concept-pre-digital-consolidation",
+      "weight": 1
+    },
+    {
+      "source": "concept-pre-digital-consolidation",
+      "target": "concept-technological-disruption-avoidance",
+      "weight": 1
+    },
+    {
+      "source": "concept-compute-first-methodology",
+      "target": "concept-mathematical-mystification",
+      "weight": 1
+    },
+    {
+      "source": "concept-mathematical-mystification",
+      "target": "concept-theoretical-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-black-box-optimization",
+      "target": "concept-mathematical-mystification",
+      "weight": 1
+    },
+    {
+      "source": "concept-mathematical-mystification",
+      "target": "concept-principled-architecture-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-mathematical-mystification",
+      "target": "concept-scaling-paradigm",
+      "weight": 1
+    },
+    {
+      "source": "concept-compute-first-methodology",
+      "target": "concept-theoretical-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-black-box-optimization",
+      "target": "concept-compute-first-methodology",
+      "weight": 1
+    },
+    {
+      "source": "concept-compute-first-methodology",
+      "target": "concept-principled-architecture-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-compute-first-methodology",
+      "target": "concept-scaling-paradigm",
+      "weight": 1
+    },
+    {
+      "source": "concept-black-box-optimization",
+      "target": "concept-theoretical-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-principled-architecture-design",
+      "target": "concept-theoretical-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-scaling-paradigm",
+      "target": "concept-theoretical-obsolescence",
+      "weight": 1
+    },
+    {
+      "source": "concept-black-box-optimization",
+      "target": "concept-principled-architecture-design",
+      "weight": 1
+    },
+    {
+      "source": "concept-black-box-optimization",
+      "target": "concept-scaling-paradigm",
+      "weight": 1
+    },
+    {
+      "source": "concept-principled-architecture-design",
+      "target": "concept-scaling-paradigm",
+      "weight": 1
+    },
+    {
+      "source": "concept-confessional-art-practice",
+      "target": "concept-institutional-canonization",
+      "weight": 1
+    },
+    {
+      "source": "concept-confessional-art-practice",
+      "target": "concept-trauma-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-confessional-art-practice",
+      "target": "concept-young-british-artists-legacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-confessional-art-practice",
+      "target": "concept-enfant-terrible-archetype",
+      "weight": 1
+    },
+    {
+      "source": "concept-confessional-art-practice",
+      "target": "concept-vulnerability-as-cultural-capital",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-canonization",
+      "target": "concept-trauma-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-canonization",
+      "target": "concept-young-british-artists-legacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-enfant-terrible-archetype",
+      "target": "concept-institutional-canonization",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-canonization",
+      "target": "concept-vulnerability-as-cultural-capital",
+      "weight": 1
+    },
+    {
+      "source": "concept-trauma-commodification",
+      "target": "concept-young-british-artists-legacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-enfant-terrible-archetype",
+      "target": "concept-trauma-commodification",
+      "weight": 1
+    },
+    {
+      "source": "concept-trauma-commodification",
+      "target": "concept-vulnerability-as-cultural-capital",
+      "weight": 1
+    },
+    {
+      "source": "concept-enfant-terrible-archetype",
+      "target": "concept-young-british-artists-legacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-vulnerability-as-cultural-capital",
+      "target": "concept-young-british-artists-legacy",
+      "weight": 1
+    },
+    {
+      "source": "concept-enfant-terrible-archetype",
+      "target": "concept-vulnerability-as-cultural-capital",
+      "weight": 1
+    },
+    {
+      "source": "concept-geographic-gatekeeping",
+      "target": "concept-institutional-displacement",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-displacement",
+      "target": "concept-legacy-funding-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-distributed-practice",
+      "target": "concept-institutional-displacement",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-infrastructure-mismatch",
+      "target": "concept-institutional-displacement",
+      "weight": 1
+    },
+    {
+      "source": "concept-geographic-gatekeeping",
+      "target": "concept-legacy-funding-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-distributed-practice",
+      "target": "concept-geographic-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-infrastructure-mismatch",
+      "target": "concept-geographic-gatekeeping",
+      "weight": 1
+    },
+    {
+      "source": "concept-distributed-practice",
+      "target": "concept-legacy-funding-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-infrastructure-mismatch",
+      "target": "concept-legacy-funding-models",
+      "weight": 1
+    },
+    {
+      "source": "concept-arts-infrastructure-mismatch",
+      "target": "concept-distributed-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-adaptation-art",
+      "target": "concept-community-scale-immersion",
+      "weight": 1
+    },
+    {
+      "source": "concept-anticipatory-media",
+      "target": "concept-climate-adaptation-art",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-adaptation-art",
+      "target": "concept-utilitarian-aesthetics",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-adaptation-art",
+      "target": "concept-environmental-preparedness-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-climate-adaptation-art",
+      "target": "concept-post-aesthetic-functionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-anticipatory-media",
+      "target": "concept-community-scale-immersion",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-scale-immersion",
+      "target": "concept-utilitarian-aesthetics",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-scale-immersion",
+      "target": "concept-environmental-preparedness-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-scale-immersion",
+      "target": "concept-post-aesthetic-functionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-anticipatory-media",
+      "target": "concept-utilitarian-aesthetics",
+      "weight": 1
+    },
+    {
+      "source": "concept-anticipatory-media",
+      "target": "concept-environmental-preparedness-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-anticipatory-media",
+      "target": "concept-post-aesthetic-functionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-environmental-preparedness-practice",
+      "target": "concept-utilitarian-aesthetics",
+      "weight": 1
+    },
+    {
+      "source": "concept-post-aesthetic-functionality",
+      "target": "concept-utilitarian-aesthetics",
+      "weight": 1
+    },
+    {
+      "source": "concept-environmental-preparedness-practice",
+      "target": "concept-post-aesthetic-functionality",
+      "weight": 1
+    },
+    {
+      "source": "concept-place-based-digital-practice",
+      "target": "concept-post-digital-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-art-methodology",
+      "target": "concept-post-digital-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-workshops",
+      "target": "concept-post-digital-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-coastal-town-reimagining",
+      "target": "concept-post-digital-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-ecology-crossovers",
+      "target": "concept-post-digital-materiality",
+      "weight": 1
+    },
+    {
+      "source": "concept-ecological-art-methodology",
+      "target": "concept-place-based-digital-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-workshops",
+      "target": "concept-place-based-digital-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-coastal-town-reimagining",
+      "target": "concept-place-based-digital-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-ecology-crossovers",
+      "target": "concept-place-based-digital-practice",
+      "weight": 1
+    },
+    {
+      "source": "concept-community-engaged-workshops",
+      "target": "concept-ecological-art-methodology",
+      "weight": 1
+    },
+    {
+      "source": "concept-coastal-town-reimagining",
+      "target": "concept-ecological-art-methodology",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-ecology-crossovers",
+      "target": "concept-ecological-art-methodology",
+      "weight": 1
+    },
+    {
+      "source": "concept-coastal-town-reimagining",
+      "target": "concept-community-engaged-workshops",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-ecology-crossovers",
+      "target": "concept-community-engaged-workshops",
+      "weight": 1
+    },
+    {
+      "source": "concept-art-ecology-crossovers",
+      "target": "concept-coastal-town-reimagining",
+      "weight": 1
+    },
+    {
+      "source": "concept-conversational-ai-paradigm",
+      "target": "concept-platform-retrofitting",
+      "weight": 1
+    },
+    {
+      "source": "concept-conversational-ai-paradigm",
+      "target": "concept-general-purpose-ai-expansion",
+      "weight": 1
+    },
+    {
+      "source": "concept-conversational-ai-paradigm",
+      "target": "concept-domain-specific-ai-resistance",
+      "weight": 1
+    },
+    {
+      "source": "concept-conversational-ai-paradigm",
+      "target": "concept-technical-solutionism",
+      "weight": 1
+    },
+    {
+      "source": "concept-conversational-ai-paradigm",
+      "target": "concept-interface-universalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-general-purpose-ai-expansion",
+      "target": "concept-platform-retrofitting",
+      "weight": 1
+    },
+    {
+      "source": "concept-domain-specific-ai-resistance",
+      "target": "concept-platform-retrofitting",
+      "weight": 1
+    },
+    {
+      "source": "concept-platform-retrofitting",
+      "target": "concept-technical-solutionism",
+      "weight": 1
+    },
+    {
+      "source": "concept-interface-universalization",
+      "target": "concept-platform-retrofitting",
+      "weight": 1
+    },
+    {
+      "source": "concept-domain-specific-ai-resistance",
+      "target": "concept-general-purpose-ai-expansion",
+      "weight": 1
+    },
+    {
+      "source": "concept-general-purpose-ai-expansion",
+      "target": "concept-technical-solutionism",
+      "weight": 1
+    },
+    {
+      "source": "concept-general-purpose-ai-expansion",
+      "target": "concept-interface-universalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-domain-specific-ai-resistance",
+      "target": "concept-technical-solutionism",
+      "weight": 1
+    },
+    {
+      "source": "concept-domain-specific-ai-resistance",
+      "target": "concept-interface-universalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-interface-universalization",
+      "target": "concept-technical-solutionism",
+      "weight": 1
+    },
+    {
+      "source": "concept-civic-speculation",
+      "target": "concept-place-based-larp",
+      "weight": 1
+    },
+    {
+      "source": "concept-participatory-futuring",
+      "target": "concept-place-based-larp",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-pivot",
+      "target": "concept-place-based-larp",
+      "weight": 1
+    },
+    {
+      "source": "concept-place-based-larp",
+      "target": "concept-post-internet-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-place-based-larp",
+      "target": "concept-play-as-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-civic-speculation",
+      "target": "concept-participatory-futuring",
+      "weight": 1
+    },
+    {
+      "source": "concept-civic-speculation",
+      "target": "concept-institutional-pivot",
+      "weight": 1
+    },
+    {
+      "source": "concept-civic-speculation",
+      "target": "concept-post-internet-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-civic-speculation",
+      "target": "concept-play-as-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-pivot",
+      "target": "concept-participatory-futuring",
+      "weight": 1
+    },
+    {
+      "source": "concept-participatory-futuring",
+      "target": "concept-post-internet-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-participatory-futuring",
+      "target": "concept-play-as-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-pivot",
+      "target": "concept-post-internet-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-pivot",
+      "target": "concept-play-as-politics",
+      "weight": 1
+    },
+    {
+      "source": "concept-play-as-politics",
+      "target": "concept-post-internet-localism",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-consolidation",
+      "target": "concept-institutional-program-pruning",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-consolidation",
+      "target": "concept-specialized-arts-education-contraction",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-consolidation",
+      "target": "concept-curatorial-practice-professionalization",
+      "weight": 1
+    },
+    {
+      "source": "concept-institutional-program-pruning",
+      "target": "concept-specialized-arts-education-contraction",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-practice-professionalization",
+      "target": "concept-institutional-program-pruning",
+      "weight": 1
+    },
+    {
+      "source": "concept-curatorial-practice-professionalization",
+      "target": "concept-specialized-arts-education-contraction",
+      "weight": 1
+    }
+  ],
+  "meta": {
+    "total_signals": 44,
+    "total_nodes": 360,
+    "total_edges": 495,
+    "generated_at": "2026-03-05T14:16:59.914374+00:00"
+  }
+}
