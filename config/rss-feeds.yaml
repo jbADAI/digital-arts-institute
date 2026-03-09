@@ -7,16 +7,13 @@
 #   url:      RSS/Atom feed URL
 #   tier:     1 = core field publications, 2 = broader arts/tech with filtering
 #   tags:     Which categories this source primarily covers
+#
+# Last verified: 2026-03-09
+# Notes on dead/blocked sources at bottom of file.
 
 feeds:
 
   # ── Tier 1: Core digital arts publications ──────────────────────────────────
-
-  - name: Rhizome
-    url: https://rhizome.org/feed/
-    tier: 1
-    tags: [networked_web, generative_algorithmic, hybrid_postdigital]
-    notes: "Primary net art archive and criticism"
 
   - name: Creative Applications Network
     url: https://www.creativeapplications.net/feed/
@@ -25,7 +22,7 @@ feeds:
     notes: "Code-based art, creative technology projects"
 
   - name: We Make Money Not Art
-    url: https://we-make-money-not-art.com/feed/
+    url: https://we-make-money-not-art.com/feed/rss/
     tier: 1
     tags: [robotic_machine, immersive_experiential, hybrid_postdigital]
     notes: "Critical coverage of art+tech intersections"
@@ -42,7 +39,7 @@ feeds:
     tags: [live_performance]
     notes: "Live coding community — Algorave, TidalCycles, etc."
 
-  - name: Processing Foundation (Medium)
+  - name: Processing Foundation
     url: https://medium.com/feed/processing-foundation
     tier: 1
     tags: [generative_algorithmic]
@@ -50,41 +47,43 @@ feeds:
 
   # ── Tier 1: Institutional ────────────────────────────────────────────────────
 
-  - name: Ars Electronica Blog
-    url: https://ars.electronica.art/news/feed/
+  - name: Ars Electronica
+    url: https://ars.electronica.art/feed/
     tier: 1
     tags: [generative_algorithmic, immersive_experiential, robotic_machine, hybrid_postdigital]
     notes: "Major digital arts festival and research centre"
 
-  - name: ZKM Center for Art and Media
-    url: https://zkm.de/en/rss.xml
-    tier: 1
-    tags: [generative_algorithmic, immersive_experiential, live_performance]
-    notes: "Karlsruhe — seminal media art institution"
-
-  - name: V&A Digital
+  - name: V&A Blog
     url: https://www.vam.ac.uk/blog/feed
     tier: 1
     tags: [hybrid_postdigital, generative_algorithmic]
     notes: "V&A digital design and new media coverage"
 
-  - name: Tate Research
-    url: https://www.tate.org.uk/research/rss
-    tier: 1
-    tags: [hybrid_postdigital, networked_web]
-    notes: "Tate research publications"
-
   - name: Serpentine Galleries
-    url: https://www.serpentinegalleries.org/rss
+    url: https://www.serpentinegalleries.org/feed
     tier: 1
     tags: [immersive_experiential, hybrid_postdigital, generative_algorithmic]
     notes: "R&D programme — AI, futures, digital commissions"
 
-  - name: e-flux
-    url: https://www.e-flux.com/rss/
+  # ── Tier 1: Community and ecosystem ──────────────────────────────────────────
+
+  - name: fxhash
+    url: https://fxhash.substack.com/feed
     tier: 1
-    tags: [hybrid_postdigital, networked_web]
-    notes: "Critical writing, announcements — filter heavily"
+    tags: [generative_algorithmic, networked_web]
+    notes: "On-chain generative art platform — Substack feed"
+
+  - name: Eyeo Festival
+    url: https://vimeo.com/eyeofestival/videos/rss
+    tier: 1
+    tags: [generative_algorithmic, live_performance, hybrid_postdigital]
+    notes: "Creative code conference talks"
+
+  - name: ISEA Symposium
+    url: https://isea-archives.org/feed/
+    tier: 1
+    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
+    notes: "International symposium on electronic art"
 
   # ── Tier 2: Broader arts/tech — keyword filter essential ─────────────────────
 
@@ -101,69 +100,40 @@ feeds:
     notes: "Design/architecture — filter for interactive and digital"
 
   - name: The Art Newspaper
-    url: https://www.theartnewspaper.com/rss
+    url: https://www.theartnewspaper.com/rss.xml
     tier: 2
     tags: [hybrid_postdigital, networked_web]
     notes: "Broad art news — filter for digital/NFT/media art"
 
   - name: Artforum
-    url: https://www.artforum.com/rss/feed/
+    url: https://www.artforum.com/feed/
     tier: 2
     tags: [hybrid_postdigital, generative_algorithmic]
     notes: "Critical art writing — filter for new media coverage"
 
-  - name: Frieze
-    url: https://www.frieze.com/feed
-    tier: 2
-    tags: [hybrid_postdigital, networked_web]
-    notes: "Contemporary art — filter for digital and tech-adjacent"
-
-  - name: Wired (Design & Culture)
-    url: https://www.wired.com/feed/category/design/latest/rss
+  - name: Wired
+    url: https://www.wired.com/feed/
     tier: 2
     tags: [generative_algorithmic, robotic_machine, hybrid_postdigital]
     notes: "Tech culture — filter for art-focused pieces only"
 
-  - name: MIT Media Lab
-    url: https://www.media.mit.edu/posts/feed/
-    tier: 2
-    tags: [robotic_machine, generative_algorithmic, immersive_experiential]
-    notes: "Research lab — filter for artistic/cultural projects"
-
-  # ── Tier 2: Community and ecosystem ──────────────────────────────────────────
-
-  - name: fxhash Blog
-    url: https://www.fxhash.xyz/blog/feed
-    tier: 1
-    tags: [generative_algorithmic, networked_web]
-    notes: "On-chain generative art platform"
-
-  - name: Art Blocks Blog
-    url: https://medium.com/feed/art-blocks
-    tier: 1
-    tags: [generative_algorithmic, networked_web]
-    notes: "On-chain generative art — Art Blocks platform"
-
-  - name: Eyeo Festival (Vimeo)
-    url: https://vimeo.com/eyeofestival/videos/rss
-    tier: 1
-    tags: [generative_algorithmic, live_performance, hybrid_postdigital]
-    notes: "Creative code conference talks"
-
-  - name: ISEA Symposium
-    url: https://isea-archives.org/feed/
-    tier: 1
-    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
-    notes: "International symposium on electronic art"
-
-  - name: DAM Berlin (Digital Art Museum)
-    url: https://dam.org/feed/
-    tier: 1
-    tags: [generative_algorithmic, hybrid_postdigital]
-    notes: "Digital art history — strong on early computer art"
-
-  - name: Creators Project (Vice Arts archive)
-    url: https://www.vice.com/en/section/the-creators-project/rss
-    tier: 2
-    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
-    notes: "Art+tech coverage — check if still active"
+# ── Dead / blocked sources (do not re-add without verifying) ────────────────
+#
+# Rhizome (rhizome.org/feed/) — 403 on all URLs, blocking bots entirely
+#   → Monitor manually or check for API access
+#
+# ZKM (zkm.de) — no working RSS URL found as of 2026-03-09
+#
+# Tate Research (tate.org.uk/research/rss) — 404, no working alternative found
+#
+# e-flux (e-flux.com/rss/) — 404, no RSS feed available
+#
+# Frieze (frieze.com/feed) — 403 blocked
+#
+# MIT Media Lab (media.mit.edu/posts/feed/) — 404
+#
+# Art Blocks Blog (medium.com/feed/art-blocks) — 404
+#
+# DAM Berlin (dam.org/feed/) — 404, site may be down
+#
+# Creators Project / Vice Arts — site defunct
