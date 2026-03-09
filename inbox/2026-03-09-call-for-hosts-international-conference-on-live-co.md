@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://blog.toplap.org/2024/12/04/call-for-hosts-international-conference-on-live-coding-2026/
 source_name: TOPLAP (Live Coding)
 captured: 2026-03-09

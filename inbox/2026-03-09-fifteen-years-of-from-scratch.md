@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://blog.toplap.org/2025/12/05/fifteen-years-of-from-scratch/
 source_name: TOPLAP (Live Coding)
 captured: 2026-03-09

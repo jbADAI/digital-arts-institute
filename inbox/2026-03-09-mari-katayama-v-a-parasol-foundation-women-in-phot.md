@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://www.vam.ac.uk/blog/museum-life/mari-katayama-va-parasol-foundation-women-in-photography-commission-tree-of-life
 source_name: V&A Blog
 captured: 2026-03-09

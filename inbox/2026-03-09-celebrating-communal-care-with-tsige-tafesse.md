@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://medium.com/processing-foundation/celebrating-communal-care-with-tsige-tafesse-f4225a86f731?source=rss----2a37167d7d06---4
 source_name: Processing Foundation
 captured: 2026-03-09

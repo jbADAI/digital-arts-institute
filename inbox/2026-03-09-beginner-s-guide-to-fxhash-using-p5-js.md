@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://fxhash.substack.com/p/beginners-guide-to-fxhash-using-p5js
 source_name: fxhash
 captured: 2026-03-09

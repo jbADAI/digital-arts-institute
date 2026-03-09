@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://medium.com/processing-foundation/fellows-in-focus-disability-justice-digital-archives-with-anh-autumn-pham-3bc4ae0eb967?source=rss----2a37167d7d06---4
 source_name: Processing Foundation
 captured: 2026-03-09

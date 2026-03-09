@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://medium.com/processing-foundation/fellows-in-focus-creative-coding-in-brazilian-sign-language-with-lu%C3%ADs-dos-santos-miguel-a45bf9f3d404?source=rss----2a37167d7d06---4
 source_name: Processing Foundation
 captured: 2026-03-09

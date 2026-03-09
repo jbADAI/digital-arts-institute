@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://fxhash.substack.com/p/sketch-book-behind-the-scenes
 source_name: fxhash
 captured: 2026-03-09

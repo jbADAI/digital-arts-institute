@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://medium.com/processing-foundation/processing-foundation-is-hiring-a-program-manager-d79c72d8a37b?source=rss----2a37167d7d06---4
 source_name: Processing Foundation
 captured: 2026-03-09

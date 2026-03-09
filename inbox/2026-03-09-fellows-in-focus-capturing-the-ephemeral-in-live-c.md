@@ -1,4 +1,5 @@
 ---
+status: processed
 source_url: https://medium.com/processing-foundation/fellows-in-focus-capturing-the-ephemeral-in-live-coding-with-roxanne-harris-317930f48f2e?source=rss----2a37167d7d06---4
 source_name: Processing Foundation
 captured: 2026-03-09
