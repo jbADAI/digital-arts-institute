@@ -1,0 +1,352 @@
+# config/keyword-filters.yaml
+# Keyword filtering for the A(DAI) RSS reader and scout agent.
+# Based on the A(DAI) definition of the Digital Arts field.
+#
+# Logic:
+#   1. If any `exclude` term matches → skip
+#   2. If no `required_any` term matches → skip
+#   3. Score against `categories` → accept if matched_categories >= threshold
+
+threshold: 1  # minimum number of categories that must match
+
+# ── Exclusions ────────────────────────────────────────────────────────────────
+# Terms that indicate the signal is NOT about digital art practice,
+# regardless of other keyword matches.
+exclude:
+  - digital marketing
+  - digital transformation
+  - digital banking
+  - digital payments
+  - digital currency
+  - cryptocurrency trading
+  - crypto trading
+  - nft trading
+  - nft investment
+  - nft market cap
+  - floor price
+  - token price
+  - digital health
+  - digital therapeutics
+  - digital twin (engineering)
+  - digital signage
+  - programmatic advertising
+  - social media marketing
+  - growth hacking
+  - influencer marketing
+  - seo
+  - saas
+  - b2b software
+  - enterprise software
+  - press release
+  - sponsored content
+
+# ── Required gate ─────────────────────────────────────────────────────────────
+# At least ONE of these must appear for the signal to be considered.
+# Broad enough to catch the field; narrow enough to filter general tech news.
+required_any:
+  # Field identity
+  - digital art
+  - digital arts
+  - new media art
+  - new media
+  - media art
+  - electronic art
+  - computer art
+  - software art
+  - computational art
+  - code art
+  - creative coding
+  - creative technolog
+
+  # Practice terms
+  - generative art
+  - algorithmic art
+  - interactive art
+  - immersive art
+  - net art
+  - internet art
+  - web art
+  - live coding
+  - audiovisual
+  - data art
+  - data visuali
+  - robotic art
+  - kinetic art
+  - post-digital
+  - hybrid art
+
+  # Tools & platforms (highly specific to the field)
+  - processing sketch
+  - p5.js
+  - openframeworks
+  - touchdesigner
+  - max/msp
+  - supercollider
+  - tidalcycles
+  - sonic pi
+  - algorave
+  - art blocks
+  - fxhash
+  - toplap
+
+  # Institutional signals
+  - ars electronica
+  - zkm
+  - rhizome
+  - eyeo
+  - isea
+  - siggraph art
+
+# ── Categories ────────────────────────────────────────────────────────────────
+# The six pillars of the Digital Arts field.
+# Used to tag signals and score relevance.
+
+categories:
+
+  generative_algorithmic:
+    label: "Generative & Algorithmic Art"
+    keywords:
+      - generative art
+      - generative system
+      - algorithmic art
+      - algorithmic drawing
+      - plotter art
+      - plotter drawing
+      - pen plotter
+      - axidraw
+      - creative coding
+      - code-based art
+      - software art
+      - computational art
+      - processing sketch
+      - p5.js
+      - openframeworks
+      - touchdesigner
+      - max/msp
+      - pure data
+      - supercollider
+      - vvvv
+      - cinder
+      - art blocks
+      - fxhash
+      - on-chain generative
+      - generative nft
+      - procedural art
+      - procedural generation
+      - evolutionary art
+      - parametric art
+      - real-time rendering
+      - shader art
+      - glsl
+      - ai-generated art
+      - ai art
+      - machine learning art
+      - neural network art
+      - diffusion model art
+      - stable diffusion art
+      - midjourney art
+      - gan art
+
+  immersive_experiential:
+    label: "Immersive & Experiential Art"
+    keywords:
+      - immersive art
+      - immersive installation
+      - immersive experience
+      - projection mapping
+      - video mapping
+      - spatial projection
+      - led installation
+      - led architecture
+      - light installation
+      - teamlab
+      - outernet
+      - virtual reality art
+      - vr installation
+      - vr art
+      - augmented reality art
+      - ar art
+      - mixed reality art
+      - xr art
+      - extended reality
+      - spatial computing art
+      - multi-sensory
+      - multi-channel sound
+      - ambisonics
+      - embodied interaction
+      - motion tracking art
+      - sensor-based art
+      - interactive installation
+      - responsive environment
+      - experiential art
+      - immersive theatre (digital)
+      - spatial audio art
+
+  live_performance:
+    label: "Live Digital Performance"
+    keywords:
+      - live coding
+      - algorave
+      - tidalcycles
+      - sonic pi
+      - toplap
+      - livecode
+      - vj performance
+      - vjing
+      - audiovisual performance
+      - av performance
+      - live electronics
+      - live visuals
+      - laptop performance
+      - streaming art
+      - livestream performance
+      - stream as art
+      - twitch art
+      - youtube live art
+      - digital performance
+      - virtual performer
+      - digital avatar performance
+      - vtuber art
+      - biofeedback performance
+      - human-machine performance
+      - ai improvisation
+      - robotic performer
+      - generative music performance
+      - networked performance
+      - telematic performance
+
+  networked_web:
+    label: "Networked, Online & Web-Based Art"
+    keywords:
+      - net art
+      - net.art
+      - internet art
+      - web art
+      - browser art
+      - browser-based art
+      - online art
+      - digital native art
+      - nft art
+      - crypto art
+      - blockchain art
+      - on-chain art
+      - smart contract art
+      - metaverse art
+      - virtual world art
+      - game engine art
+      - game art
+      - machinima
+      - second life art
+      - decentraland art
+      - social media art
+      - post-internet art
+      - rhizome
+      - olia lialina
+      - jodi.org
+      - ascii art (contemporary)
+      - meme art
+      - glitch art
+
+  robotic_machine:
+    label: "Robotic, Sensorial & Machine-Integrated Art"
+    keywords:
+      - robotic art
+      - robot art
+      - kinetic sculpture
+      - kinetic installation
+      - kinetic art
+      - cybernetic art
+      - cybernetics art
+      - biofeedback art
+      - biosensor art
+      - machine vision art
+      - computer vision art
+      - interactive sculpture
+      - responsive sculpture
+      - mechatronic art
+      - autonomous systems art
+      - swarm robotics art
+      - drone art
+      - stelarc
+      - teamlab (robot)
+      - animatronic art
+      - pneumatic sculpture
+      - soft robotics art
+
+  hybrid_postdigital:
+    label: "Hybrid & Post-Digital Practice"
+    keywords:
+      - post-digital
+      - hybrid art
+      - digital fabrication art
+      - cnc art
+      - cnc sculpture
+      - laser cut art
+      - laser etching art
+      - 3d printed art
+      - additive manufacturing art
+      - ai choreography
+      - motion capture art
+      - mocap art
+      - data-driven art
+      - data sculpture
+      - data visualisation art
+      - data visualization art
+      - digital sculpture
+      - digital textile
+      - digital ceramics
+      - generative fashion
+      - digital architecture art
+      - parametric architecture
+      - new media
+      - transmedia art
+      - intermedia
+      - mixed media digital
+
+# ── Historical practitioners (always pass gate) ───────────────────────────────
+# Named practitioners whose appearance in any signal is inherently relevant.
+# Used by scout.py — rss_reader.py scores these as high-relevance.
+practitioners_always_include:
+  - vera molnár
+  - harold cohen
+  - manfred mohr
+  - frieder nake
+  - georg nees
+  - john whitney
+  - charles csuri
+  - lillian schwartz
+  - nam june paik
+  - steina vasulka
+  - woody vasulka
+  - bill viola
+  - gary hill
+  - peter campus
+  - lynn hershman leeson
+  - myron krueger
+  - jeffrey shaw
+  - stelarc
+  - jean-pierre hébert
+  - paul brown
+  - roman verostko
+  - a michael noll
+  - muriel cooper
+  - john maeda
+  - casey reas
+  - ben fry
+  - ryoji ikeda
+  - granular synthesis
+  - teamlab
+  - refik anadol
+  - memo akten
+  - sofia crespo
+  - holly herndon
+  - hito steyerl
+  - trevor paglen
+  - ian cheng
+  - LaTurbo Avedon
+  - constant dullaart
+  - olia lialina
+  - jodi
+  - rafael lozano-hemmer
+  - chris milk
+  - david rokeby

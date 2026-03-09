@@ -1,0 +1,169 @@
+# config/rss-feeds.yaml
+# Curated RSS feeds for the A(DAI) intelligence pipeline.
+# Read by scripts/rss_reader.py
+#
+# Each feed has:
+#   name:     Display name for provenance tracking
+#   url:      RSS/Atom feed URL
+#   tier:     1 = core field publications, 2 = broader arts/tech with filtering
+#   tags:     Which categories this source primarily covers
+
+feeds:
+
+  # ── Tier 1: Core digital arts publications ──────────────────────────────────
+
+  - name: Rhizome
+    url: https://rhizome.org/feed/
+    tier: 1
+    tags: [networked_web, generative_algorithmic, hybrid_postdigital]
+    notes: "Primary net art archive and criticism"
+
+  - name: Creative Applications Network
+    url: https://www.creativeapplications.net/feed/
+    tier: 1
+    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
+    notes: "Code-based art, creative technology projects"
+
+  - name: We Make Money Not Art
+    url: https://we-make-money-not-art.com/feed/
+    tier: 1
+    tags: [robotic_machine, immersive_experiential, hybrid_postdigital]
+    notes: "Critical coverage of art+tech intersections"
+
+  - name: Neural Magazine
+    url: https://neural.it/feed/
+    tier: 1
+    tags: [generative_algorithmic, networked_web, live_performance]
+    notes: "New media art and electronic music"
+
+  - name: TOPLAP (Live Coding)
+    url: https://toplap.org/feed/
+    tier: 1
+    tags: [live_performance]
+    notes: "Live coding community — Algorave, TidalCycles, etc."
+
+  - name: Processing Foundation (Medium)
+    url: https://medium.com/feed/processing-foundation
+    tier: 1
+    tags: [generative_algorithmic]
+    notes: "Processing and p5.js ecosystem"
+
+  # ── Tier 1: Institutional ────────────────────────────────────────────────────
+
+  - name: Ars Electronica Blog
+    url: https://ars.electronica.art/news/feed/
+    tier: 1
+    tags: [generative_algorithmic, immersive_experiential, robotic_machine, hybrid_postdigital]
+    notes: "Major digital arts festival and research centre"
+
+  - name: ZKM Center for Art and Media
+    url: https://zkm.de/en/rss.xml
+    tier: 1
+    tags: [generative_algorithmic, immersive_experiential, live_performance]
+    notes: "Karlsruhe — seminal media art institution"
+
+  - name: V&A Digital
+    url: https://www.vam.ac.uk/blog/feed
+    tier: 1
+    tags: [hybrid_postdigital, generative_algorithmic]
+    notes: "V&A digital design and new media coverage"
+
+  - name: Tate Research
+    url: https://www.tate.org.uk/research/rss
+    tier: 1
+    tags: [hybrid_postdigital, networked_web]
+    notes: "Tate research publications"
+
+  - name: Serpentine Galleries
+    url: https://www.serpentinegalleries.org/rss
+    tier: 1
+    tags: [immersive_experiential, hybrid_postdigital, generative_algorithmic]
+    notes: "R&D programme — AI, futures, digital commissions"
+
+  - name: e-flux
+    url: https://www.e-flux.com/rss/
+    tier: 1
+    tags: [hybrid_postdigital, networked_web]
+    notes: "Critical writing, announcements — filter heavily"
+
+  # ── Tier 2: Broader arts/tech — keyword filter essential ─────────────────────
+
+  - name: Hyperallergic
+    url: https://hyperallergic.com/feed/
+    tier: 2
+    tags: [hybrid_postdigital, generative_algorithmic, networked_web]
+    notes: "General contemporary art — filter for digital coverage"
+
+  - name: Dezeen
+    url: https://www.dezeen.com/feed/
+    tier: 2
+    tags: [immersive_experiential, hybrid_postdigital, robotic_machine]
+    notes: "Design/architecture — filter for interactive and digital"
+
+  - name: The Art Newspaper
+    url: https://www.theartnewspaper.com/rss
+    tier: 2
+    tags: [hybrid_postdigital, networked_web]
+    notes: "Broad art news — filter for digital/NFT/media art"
+
+  - name: Artforum
+    url: https://www.artforum.com/rss/feed/
+    tier: 2
+    tags: [hybrid_postdigital, generative_algorithmic]
+    notes: "Critical art writing — filter for new media coverage"
+
+  - name: Frieze
+    url: https://www.frieze.com/feed
+    tier: 2
+    tags: [hybrid_postdigital, networked_web]
+    notes: "Contemporary art — filter for digital and tech-adjacent"
+
+  - name: Wired (Design & Culture)
+    url: https://www.wired.com/feed/category/design/latest/rss
+    tier: 2
+    tags: [generative_algorithmic, robotic_machine, hybrid_postdigital]
+    notes: "Tech culture — filter for art-focused pieces only"
+
+  - name: MIT Media Lab
+    url: https://www.media.mit.edu/posts/feed/
+    tier: 2
+    tags: [robotic_machine, generative_algorithmic, immersive_experiential]
+    notes: "Research lab — filter for artistic/cultural projects"
+
+  # ── Tier 2: Community and ecosystem ──────────────────────────────────────────
+
+  - name: fxhash Blog
+    url: https://www.fxhash.xyz/blog/feed
+    tier: 1
+    tags: [generative_algorithmic, networked_web]
+    notes: "On-chain generative art platform"
+
+  - name: Art Blocks Blog
+    url: https://medium.com/feed/art-blocks
+    tier: 1
+    tags: [generative_algorithmic, networked_web]
+    notes: "On-chain generative art — Art Blocks platform"
+
+  - name: Eyeo Festival (Vimeo)
+    url: https://vimeo.com/eyeofestival/videos/rss
+    tier: 1
+    tags: [generative_algorithmic, live_performance, hybrid_postdigital]
+    notes: "Creative code conference talks"
+
+  - name: ISEA Symposium
+    url: https://isea-archives.org/feed/
+    tier: 1
+    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
+    notes: "International symposium on electronic art"
+
+  - name: DAM Berlin (Digital Art Museum)
+    url: https://dam.org/feed/
+    tier: 1
+    tags: [generative_algorithmic, hybrid_postdigital]
+    notes: "Digital art history — strong on early computer art"
+
+  - name: Creators Project (Vice Arts archive)
+    url: https://www.vice.com/en/section/the-creators-project/rss
+    tier: 2
+    tags: [generative_algorithmic, immersive_experiential, robotic_machine]
+    notes: "Art+tech coverage — check if still active"
