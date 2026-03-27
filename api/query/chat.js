@@ -48,7 +48,7 @@ ${graphSummary || "No graph data available yet."}`;
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-3-5-sonnet-20241022",
+        model: "claude-3-haiku-20240307",
         max_tokens: 300,
         system: system,
         messages: messages,
